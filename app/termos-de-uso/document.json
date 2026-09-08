@@ -2,7 +2,7 @@
   "eyebrow": "CONDIÇÕES DE ACESSO E UTILIZAÇÃO",
   "title": "Termos De Uso",
   "intro": [
-    "Estes Termos de Uso regulam o acesso e a utilização do site, páginas de campanha, formulários, conteúdos, materiais, diagnósticos e demais canais digitais disponibilizados pela HYPA E-COM NEGÓCIOS DIGITAIS LTDA, nome fantasia WAVY MARKETING, doravante denominada “WAVY”.",
+    "Estes Termos de Uso regulam o acesso e a utilização do site, páginas de campanha, formulários, conteúdos, materiais, diagnósticos e demais canais digitais disponibilizados pela HYPA E-COM NEGÓCIOS DIGITAIS LTDA, nome fantasia WAVY MARKETING, doravante denominada “WAVY”, incluindo as plataformas WAVY Dashboard e WAVY CRM.",
     "Leia este documento em conjunto com a Política de Privacidade da WAVY. Condições comerciais, escopo, prazos, remuneração e responsabilidades relativas aos serviços contratados serão definidos em proposta, contrato ou instrumento específico."
   ],
   "sections": [
@@ -53,6 +53,23 @@
       "paragraphs": [
         "Os Canais Digitais podem conter links, incorporações ou integrações com plataformas como Google, Meta, WhatsApp, ferramentas de CRM, hospedagem, vídeo, agenda ou analytics. Esses serviços possuem termos e políticas próprios.",
         "A WAVY não controla mudanças, bloqueios, indisponibilidades, limitações de API ou decisões tomadas por terceiros. Quando a utilização depender dessas plataformas, o usuário também deverá respeitar as regras do respectivo fornecedor."
+      ]
+    },
+    {
+      "title": "WAVY CRM: uso da plataforma e responsabilidades do cliente",
+      "paragraphs": [
+        "O WAVY CRM é disponibilizado como ferramenta de atendimento e gestão comercial. A empresa contratante é responsável pelo conteúdo das mensagens enviadas por meio da plataforma e pela relação mantida com os seus próprios contatos. A WAVY atua como provedora de tecnologia e não interfere no teor das comunicações.",
+        "Ao utilizar o WAVY CRM, a empresa contratante se compromete a:",
+        "• conectar somente contas de WhatsApp e de Instagram das quais seja titular ou tenha autorização expressa para administrar;\n• obter e manter comprovação do consentimento (opt-in) dos contatos antes de enviar mensagens iniciadas pela empresa;\n• utilizar exclusivamente modelos de mensagem aprovados pela Meta fora da janela de atendimento de 24 horas;\n• atender de imediato aos pedidos de descadastro (opt-out) e não reinserir contatos que tenham solicitado a interrupção;\n• não utilizar a plataforma para envio de mensagens não solicitadas, conteúdo enganoso ou ilícito, ou que viole direitos de terceiros;\n• observar a Política de Mensagens do WhatsApp Business, os Termos da Plataforma Meta e a legislação aplicável, incluindo a LGPD e o Código de Defesa do Consumidor.",
+        "O descumprimento dessas obrigações pode resultar em medidas aplicadas pela própria Meta à conta da empresa contratante, como redução da classificação de qualidade, restrição de envio ou bloqueio — providências que independem da WAVY. A WAVY poderá suspender o acesso à plataforma diante de indício de uso irregular, comunicando a empresa contratante sempre que possível."
+      ]
+    },
+    {
+      "title": "Integrações com plataformas da Meta",
+      "paragraphs": [
+        "A conexão das contas é iniciada pela empresa contratante no ambiente oficial da Meta, onde as permissões solicitadas são exibidas antes do aceite. A WAVY não acessa contas que não tenham sido expressamente autorizadas.",
+        "As funcionalidades disponíveis dependem das APIs mantidas pela Meta e das permissões aprovadas. Alterações, indisponibilidades ou descontinuações promovidas pela Meta podem afetar o funcionamento das integrações sem que isso configure inadimplemento da WAVY, que envidará os esforços razoáveis para adequação.",
+        "O acesso pode ser revogado a qualquer momento nas configurações da conta Meta ou mediante solicitação de desconexão pelo e-mail contato@wavymarketing.com.br. A revogação interrompe o recebimento de novas mensagens na plataforma. O tratamento de dados pessoais decorrente dessas integrações é descrito na Política de Privacidade da WAVY."
       ]
     },
     {

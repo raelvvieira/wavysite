@@ -3,7 +3,7 @@
   "title": "Política De Privacidade",
   "intro": [
     "A WAVY respeita sua privacidade e busca tratar dados pessoais de forma transparente, segura e compatível com a Lei nº 13.709/2018 — Lei Geral de Proteção de Dados Pessoais (LGPD). Esta Política explica quais dados podemos coletar, por que os utilizamos, com quem podemos compartilhá-los, por quanto tempo os mantemos e como você pode exercer seus direitos.",
-    "Esta Política se aplica ao site oficial da WAVY, às páginas de campanha e formulários vinculados à marca, aos perfis oficiais em redes sociais e aos canais de contato utilizados pela agência, como WhatsApp, e-mail e reuniões on-line, em conjunto denominados “Canais Digitais”."
+    "Esta Política se aplica ao site oficial da WAVY, às páginas de campanha e formulários vinculados à marca, aos perfis oficiais em redes sociais, aos canais de contato utilizados pela agência, como WhatsApp, e-mail e reuniões on-line, e às plataformas desenvolvidas e operadas pela WAVY, incluindo o WAVY Dashboard e o WAVY CRM, em conjunto denominados “Canais Digitais”."
   ],
   "sections": [
     {
@@ -17,7 +17,7 @@
       "title": "Quais dados podemos coletar",
       "paragraphs": [
         "Coletamos apenas dados compatíveis com as finalidades informadas e com a relação mantida com você. Dependendo da sua interação com a WAVY, isso pode incluir:",
-        "• dados de identificação e contato: nome, e-mail, telefone, empresa, cargo e cidade;\n• dados comerciais e profissionais: interesse em serviços, orçamento, estágio do negócio, mensagens, histórico de atendimento e informações fornecidas em reuniões;\n• dados contratuais e cadastrais: razão social, CNPJ, endereço, representante legal e informações necessárias à contratação e cobrança;\n• dados técnicos e de navegação: endereço IP, dispositivo, navegador, páginas visitadas, data e hora, origem da visita, identificadores de cookies, eventos e conversões;\n• dados de interação com campanhas: anúncios visualizados ou clicados, formulários enviados e informações de atribuição de marketing."
+        "• dados de identificação e contato: nome, e-mail, telefone, empresa, cargo e cidade;\n• dados comerciais e profissionais: interesse em serviços, orçamento, estágio do negócio, mensagens, histórico de atendimento e informações fornecidas em reuniões;\n• dados contratuais e cadastrais: razão social, CNPJ, endereço, representante legal e informações necessárias à contratação e cobrança;\n• dados técnicos e de navegação: endereço IP, dispositivo, navegador, páginas visitadas, data e hora, origem da visita, identificadores de cookies, eventos e conversões;\n• dados de interação com campanhas: anúncios visualizados ou clicados, formulários enviados e informações de atribuição de marketing.\n• dados de mensageria tratados no WAVY CRM: conteúdo, data, hora e status das mensagens trocadas entre a empresa contratante e os seus contatos nas contas de WhatsApp e de Instagram conectadas, conforme detalhado na seção específica desta Política."
       ]
     },
     {
@@ -105,6 +105,31 @@
         "Os dados obtidos por meio das APIs do Google não são vendidos. O acesso se limita aos usuários autorizados do cliente, aos profissionais da WAVY responsáveis pelo serviço e aos fornecedores de infraestrutura estritamente necessários, sujeitos a obrigações de segurança e confidencialidade.",
         "O uso e a transferência, pelo WAVY Dashboard, das informações recebidas das APIs do Google obedecerão à Google API Services User Data Policy, incluindo os requisitos de Limited Use.",
         "O usuário pode interromper a integração revogando o acesso nas configurações de segurança da Conta Google ou solicitando desconexão ou exclusão pelo e-mail contato@wavymarketing.com.br. Após a revogação, não serão realizadas novas consultas. Dados previamente armazenados serão eliminados ou anonimizados conforme a solicitação, as obrigações contratuais e os prazos legais aplicáveis."
+      ]
+    },
+    {
+      "title": "WAVY CRM e integrações de mensageria da Meta",
+      "paragraphs": [
+        "O WAVY CRM é uma plataforma de atendimento e gestão comercial desenvolvida e operada pela WAVY Marketing. Ela reúne, em uma única caixa de entrada, as conversas recebidas pelas contas de WhatsApp e de Instagram que a empresa contratante autorizou conectar, e organiza contatos, oportunidades e histórico de atendimento.",
+        "Nas conversas entre a empresa contratante e os seus próprios contatos, a empresa contratante atua como controladora dos dados pessoais e a WAVY atua como operadora, tratando os dados conforme as instruções recebidas e as finalidades previstas em contrato e nesta Política. Em relação aos dados dos usuários da plataforma e ao relacionamento comercial mantido com a WAVY, a WAVY atua como controladora.",
+        "As contas são conectadas somente após autorização do responsável, realizada no ambiente oficial da Meta, onde as permissões solicitadas são apresentadas antes do aceite. Nenhuma conta é conectada sem esse consentimento.",
+        "Por meio das APIs da Meta, o WAVY CRM pode tratar: identificação da conta do WhatsApp Business e do perfil profissional do Instagram conectados; número de telefone, nome e nome de usuário informados pelo contato; conteúdo, data, hora e status de entrega das mensagens trocadas; arquivos e mídias enviados na conversa; modelos de mensagem e o respectivo status de aprovação; e registros de eventos necessários ao funcionamento e à segurança do serviço.",
+        "Esses dados são utilizados para exibir e responder as conversas na caixa de entrada, manter o histórico do contato, organizar as oportunidades no funil, executar automações configuradas pela empresa contratante, enviar modelos de mensagem aprovados a contatos que autorizaram o recebimento e gerar indicadores de atendimento. O conteúdo das conversas não é utilizado para segmentação publicitária de terceiros nem para treinamento de modelos de terceiros.",
+        "Conversas iniciadas pelo contato são respondidas dentro da janela de atendimento de 24 horas prevista pelas regras da Meta. Fora dessa janela, o contato somente é retomado por meio de modelo de mensagem previamente aprovado pela Meta e apenas quando houver consentimento (opt-in) para o recebimento. Pedidos de descadastro (opt-out) são respeitados e registrados.",
+        "Tokens de acesso são processados e armazenados no ambiente de servidor, sem exposição no navegador. Aplicamos controles de acesso, autenticação, segregação por cliente e gestão de permissões, de modo que cada empresa visualize exclusivamente as conversas e os contatos das contas que conectou.",
+        "Os dados obtidos por meio das APIs da Meta não são vendidos, alugados nem cedidos a terceiros. O acesso se limita aos usuários autorizados da empresa contratante, aos profissionais da WAVY responsáveis pelo serviço e aos fornecedores de infraestrutura estritamente necessários, sujeitos a obrigações de segurança e confidencialidade.",
+        "O uso e a transferência das informações recebidas das APIs da Meta observam os Termos da Plataforma Meta, as Políticas para Desenvolvedores, a Política de Mensagens do WhatsApp Business e a legislação aplicável.",
+        "Os dados são mantidos apenas pelo período necessário para prestar o serviço, cumprir obrigações contratuais e legais e proteger direitos. A integração pode ser interrompida a qualquer momento, removendo a autorização nas configurações da conta Meta ou solicitando a desconexão pelo e-mail contato@wavymarketing.com.br. Após a revogação, novas mensagens deixam de ser recebidas e os dados previamente armazenados são eliminados ou anonimizados conforme a solicitação e os prazos legais aplicáveis."
+      ]
+    },
+    {
+      "title": "Solicitação de exclusão de dados",
+      "paragraphs": [
+        "Você pode solicitar, a qualquer momento e sem custo, a exclusão dos dados pessoais que a WAVY mantém sobre você. Para isso:",
+        "• envie um e-mail para contato@wavymarketing.com.br com o assunto “Solicitação de exclusão de dados”;\n• informe o nome e o dado de contato utilizado — e-mail, telefone ou nome de usuário — para que possamos localizar os registros;\n• se a solicitação envolver conversas de WhatsApp ou Instagram tratadas no WAVY CRM, informe também a empresa com a qual você conversou.",
+        "Confirmada a sua identidade, a exclusão é realizada em até 30 (trinta) dias e a conclusão é informada pelo mesmo canal. Poderemos reter dados estritamente necessários ao cumprimento de obrigação legal ou regulatória, ao exercício regular de direitos em processo ou às demais hipóteses do art. 16 da LGPD, informando você a respeito.",
+        "Quando a conversa tiver ocorrido com uma empresa que utiliza o WAVY CRM, essa empresa é a controladora dos dados da conversa. Nesse caso, encaminhamos a sua solicitação a ela e atuamos conforme as suas instruções, sem prejuízo do atendimento direto pela WAVY nas situações em que a WAVY seja a controladora.",
+        "Para interromper o acesso da WAVY às suas contas na Meta, acesse as configurações de segurança da Conta Meta ou do WhatsApp Business e remova a autorização concedida ao aplicativo."
       ]
     },
     {

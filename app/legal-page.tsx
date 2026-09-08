@@ -8,10 +8,16 @@ export function LegalPage({ document }: { document: LegalDocument }) {
     <section className="legal-hero section-shell"><p>{document.eyebrow}</p><h1>{document.title}</h1></section>
     <article className="legal-content section-shell">
       <div className="legal-intro">{document.intro.map((text, i) => <p key={i}>{renderLinks(text)}</p>)}</div>
-      {document.sections.map((section, index) => <section className="legal-section" key={section.title}><span>{String(index + 1).padStart(2, "0")}</span><div><h2>{section.title}</h2>{section.paragraphs.map((text, i) => renderParagraph(text, i))}</div></section>)}
+      {document.sections.map((section, index) => <section className="legal-section" id={slug(section.title)} key={section.title}><span>{String(index + 1).padStart(2, "0")}</span><div><h2>{section.title}</h2>{section.paragraphs.map((text, i) => renderParagraph(text, i))}</div></section>)}
     </article>
     <footer className="legal-footer section-shell"><div><a className="legal-logo" href="/"><img src="/assets/wavy-logo.png" alt="WAVY" /></a><p>Performance conectada à operação comercial.</p></div><nav aria-label="Links jurídicos"><a href="/politica-de-privacidade">Política de Privacidade</a><a href="/termos-de-uso">Termos de Uso</a></nav><p>© 2026 WAVY MARKETING</p></footer>
   </main>;
+}
+
+// Âncora estável por seção, para que a URL possa apontar direto ao trecho
+// (a Meta pede uma URL específica de instruções de exclusão de dados).
+function slug(title: string) {
+  return title.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
 function renderParagraph(text: string, key: number) {
