@@ -62,10 +62,10 @@ function AIFlow(){return <div className="ai-console"><div className="console-bar
 
 function Footer() {
   return <footer className="footer section-shell">
-    <div className="footer-brand"><Logo/><p>Performance conectada à operação comercial.</p><span>Florianópolis — SC</span><span>CNPJ 46.975.244/0001-90</span><nav className="footer-brand-legal" aria-label="Documentos e produtos"><a href="/dashboard">WAVY Dashboard</a><a href="/politica-de-privacidade">Política de Privacidade</a><a href="/termos-de-uso">Termos de Uso</a></nav></div>
+    <div className="footer-brand"><Logo/><p>Performance conectada à operação comercial.</p><span>Belo Horizonte — MG</span><span>CNPJ 46.975.244/0001-90</span><nav className="footer-brand-legal" aria-label="Documentos e produtos"><a href="/dashboard">WAVY Dashboard</a><a href="/politica-de-privacidade">Política de Privacidade</a><a href="/termos-de-uso">Termos de Uso</a></nav></div>
     <div><small>NAVEGAÇÃO</small><a href="#problema">Como funciona</a><a href="#sistema">Growth System</a><a href="#pilares">Soluções</a><a href="#resultados">Resultados</a></div>
     <div><small>CONTATO</small><a href={WHATSAPP} target="_blank" rel="noreferrer">WhatsApp <Arrow/></a><a className="instagram-link" href="https://www.instagram.com/wavy.mkt/" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" className="instagram-dot"/></svg>Instagram</a><a href="mailto:contato@wavymarketing.com.br">contato@wavymarketing.com.br</a></div>
-    <p className="copyright">© 2026 WAVY MARKETING — FLORIANÓPOLIS, SC</p>
+    <p className="copyright">© 2026 WAVY MARKETING — BELO HORIZONTE, MG</p>
   </footer>;
 }
 
