@@ -102,3 +102,9 @@
 .crm-flow{padding-top:85px;padding-bottom:85px;grid-template-columns:1fr;gap:55px}
 .crm-use-card{padding:28px}
 }
+
+/* Botão do CRM na navegação da home. Fica dentro do nav porque o cabeçalho
+   é um grid de duas colunas (logo | nav): um terceiro filho quebra a linha. */
+.header nav .nav-cta{align-self:center;border:1px solid #343434;border-radius:3px;padding:9px 13px;color:var(--paper);transition:.25s}
+.header nav .nav-cta:hover{border-color:#666;background:#151515}
+.header nav .nav-cta span{margin-left:10px;color:var(--orange)}
