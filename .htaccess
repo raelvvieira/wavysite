@@ -1,0 +1,27 @@
+Options -MultiViews
+RewriteEngine On
+
+# O deploy Git da Hostinger copia a RAIZ do repositorio para public_html, mas os
+# arquivos publicaveis do site ficam em hostinger-files/. Este arquivo faz a
+# ponte: bloqueia o codigo-fonte e serve o site a partir daquela pasta.
+
+# Pedidos ja mapeados para hostinger-files/ seguem direto, sem reescrever de novo.
+RewriteRule ^hostinger-files/ - [L]
+
+# O codigo-fonte nunca deve ser acessivel por HTTP.
+RewriteRule ^(app|build|db|drizzle|examples|public|scripts|tests|worker|node_modules|dist)(/|$) - [F,L]
+RewriteRule ^\.(openai|vinext|git|wrangler|sites-runtime)(/|$) - [F,L]
+RewriteRule ^[^/]+\.(ts|tsx|mjs|md|json|lock)$ - [F,L]
+RewriteRule ^\.(npmrc|gitignore|env.*)$ - [F,L]
+
+# Arquivos reais (assets, imagens, favicon) sao servidos de hostinger-files/.
+RewriteCond %{DOCUMENT_ROOT}/hostinger-files/$1 -f
+RewriteRule ^(.+)$ hostinger-files/$1 [L]
+
+# Rotas publicas do site.
+RewriteRule ^dashboard/?$ hostinger-files/dashboard/index.html [L]
+RewriteRule ^politica-de-privacidade/?$ hostinger-files/politica-de-privacidade/index.html [L]
+RewriteRule ^termos-de-uso/?$ hostinger-files/termos-de-uso/index.html [L]
+
+# Pagina inicial e fallback.
+RewriteRule ^ hostinger-files/index.html [L]
