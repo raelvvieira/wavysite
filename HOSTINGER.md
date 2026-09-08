@@ -42,25 +42,30 @@ confira-as depois de publicar.
 
 ## Atualizar o site depois de editar o código
 
-**`npm run build` sozinho não atualiza `hostinger-files/`.**
-
-O build gera `dist/client/`, que contém os assets (JS, CSS, imagens) mas **não**
-os arquivos `index.html` das páginas — o vinext compila um Worker que renderiza
-o HTML sob demanda, e a Hostinger não executa esse Worker.
-
-Os HTML de `hostinger-files/` são capturas pré-renderizadas das páginas. Para
-atualizá-los é preciso subir o servidor e salvar o HTML de cada rota:
-
 ```bash
-npm run build
-npm start                      # em outro terminal
-curl -s localhost:3000/                        > hostinger-files/index.html
-curl -s localhost:3000/dashboard               > hostinger-files/dashboard/index.html
-curl -s localhost:3000/politica-de-privacidade > hostinger-files/politica-de-privacidade/index.html
-curl -s localhost:3000/termos-de-uso           > hostinger-files/termos-de-uso/index.html
+npm run build:static
 ```
 
-Também copie os assets novos de `dist/client/assets/` para
-`hostinger-files/assets/`, já que os nomes mudam a cada build (hash no nome).
+Um comando só. Depois: commit de `hostinger-files/`, push para `main` e
+publicar na Hostinger.
 
-Confirme a porta que o `npm start` informa antes de rodar os `curl`.
+**Não use `npm run build` sozinho para publicar.** Ele gera `dist/client/` com
+os assets, mas **não** os `index.html` das páginas: o vinext compila um Worker
+que renderiza o HTML sob demanda, e a hospedagem não executa Worker. Publicar
+depois de um `build` puro deixa o site com o HTML antigo — e nada acusa o erro.
+
+O `build:static` faz o ciclo inteiro: descobre as rotas varrendo
+`app/**/page.tsx`, roda o build, sobe o servidor de produção, recria
+`hostinger-files/` do zero com os assets novos e grava o HTML de cada rota.
+Como a pasta é reconstruída, não sobra arquivo de versões anteriores. O
+`.htaccess` é preservado entre execuções, já que é escrito à mão e não sai do
+build.
+
+Ele aborta em vez de publicar algo quebrado se uma rota não responder 200, se
+o HTML contiver caminho da máquina de build (`/workspace/...`, o problema
+antigo das fontes) ou se algum arquivo referenciado em `/assets/` não existir
+na pasta final.
+
+Rotas novas são detectadas sozinhas: basta criar `app/<rota>/page.tsx`. Some-se
+a isso registrar a rota nos dois `.htaccess` (o da raiz e o de
+`hostinger-files/`).
