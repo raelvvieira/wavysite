@@ -8,6 +8,7 @@ RewriteRule ^ - [L]
 
 # Rotas públicas do site.
 RewriteRule ^dashboard/?$ dashboard/index.html [L]
+RewriteRule ^crm/?$ crm/index.html [L]
 RewriteRule ^politica-de-privacidade/?$ politica-de-privacidade/index.html [L]
 RewriteRule ^termos-de-uso/?$ termos-de-uso/index.html [L]
 

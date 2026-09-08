@@ -20,6 +20,7 @@ RewriteRule ^(.+)$ hostinger-files/$1 [L]
 
 # Rotas publicas do site.
 RewriteRule ^dashboard/?$ hostinger-files/dashboard/index.html [L]
+RewriteRule ^crm/?$ hostinger-files/crm/index.html [L]
 RewriteRule ^politica-de-privacidade/?$ hostinger-files/politica-de-privacidade/index.html [L]
 RewriteRule ^termos-de-uso/?$ hostinger-files/termos-de-uso/index.html [L]
 
