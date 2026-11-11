@@ -426,3 +426,5 @@
 .crm-page .crm-use-card li{font-size:16px;line-height:1.5;padding-top:15px;padding-bottom:15px}
 .crm-page .security-grid h3{font-size:22px}
 .crm-page .about-dashboard h2{margin-bottom:28px}
+.founder h2 em{display:block;padding-bottom:.16em}
+.founder-stats{gap:24px 36px}
