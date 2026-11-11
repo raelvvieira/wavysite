@@ -153,7 +153,7 @@ export function PhoneChat() {
     <div className="phone-stage" role="img" aria-label="Simulação de conversa no WhatsApp em que o agente de IA atende um lead, tira dúvidas e agenda uma avaliação">
       <div className="phone-chip chip-ai" aria-hidden="true"><i>✦</i><div><small>AGENTE DE IA</small><b>Respondendo no WhatsApp</b></div><span className="wave"><u /><u /><u /><u /></span></div>
       <div className="phone" aria-hidden="true">
-        <img className="phone-photo" src="/assets/phone.webp" alt="" width={1024} height={1536} loading="lazy" decoding="async" />
+        <img className="phone-photo" src="/assets/phone-angle.webp" alt="" width={1024} height={1536} loading="lazy" decoding="async" />
         <div className="phone-screen">
           <div className="phone-notch" />
           <div className="phone-bar"><span>21:47</span><span className="phone-status"><i /><i /><i /></span></div>
