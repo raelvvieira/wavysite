@@ -250,3 +250,27 @@
 .problem>.compare{animation:none}
 }}
 .final-cta h2>.rotator{font-size:1em;letter-spacing:inherit;line-height:1.2;margin:0;color:inherit}
+
+/* ---- Comparativo e as cinco entregas ---- */
+.problem h2{max-width:1180px}
+.problem h2 em{display:block;margin-top:.12em}
+.compare-close{margin:26px 0 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);font:520 clamp(18px,1.6vw,23px)/1.35 var(--font-manrope),sans-serif;letter-spacing:-.03em;color:var(--paper)}
+.compare-col.wavy{display:flex;flex-direction:column}
+.compare-col.wavy .compare-close{margin-top:auto}
+.deliveries{padding-top:40px;padding-bottom:150px;background:#050505}
+.deliveries .section-heading>p{max-width:620px;color:var(--muted);font-size:17px!important;line-height:1.7}
+.delivery-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.delivery-grid li{position:relative;overflow:hidden;padding:30px 24px 32px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,#111113,#0a0a0b);transition:border-color .3s,translate .3s,background .3s}
+.delivery-grid li:hover{border-color:rgba(255,75,10,.5);translate:0 -6px;background:radial-gradient(circle at 80% 0%,rgba(255,75,10,.16),transparent 60%),#100c0a}
+.delivery-grid span{position:absolute;top:8px;left:18px;font:700 64px/1 var(--font-manrope),sans-serif;letter-spacing:-.06em;color:rgba(255,255,255,.05)}
+.delivery-grid i{position:relative;display:grid;place-items:center;width:48px;height:48px;margin-top:22px;border-radius:14px;background:rgba(255,75,10,.12);border:1px solid rgba(255,75,10,.3)}
+.delivery-grid svg{width:22px;height:22px;fill:none;stroke:var(--orange2);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.delivery-grid h3{font-size:22px;line-height:1.15;letter-spacing:-.04em;margin:26px 0 12px}
+.delivery-grid p{margin:0;font-size:14.5px;line-height:1.6;color:var(--muted)}
+@supports (animation-timeline:view()){@media (prefers-reduced-motion:no-preference){
+.deliveries .section-heading,.delivery-grid li{animation:revealUp linear both;animation-timeline:view();animation-range:entry 0% entry 42%}
+}}
+@media(max-width:1100px){.delivery-grid{grid-template-columns:repeat(2,1fr)}.delivery-grid li:last-child{grid-column:1/-1}}
+@media(max-width:900px){.deliveries{padding-top:10px;padding-bottom:100px}}
+@media(max-width:560px){.delivery-grid{grid-template-columns:1fr}.delivery-grid li:last-child{grid-column:auto}.delivery-grid li{padding:26px 22px 28px}}
+.compare-col small{display:block}
