@@ -3,7 +3,22 @@ import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const manrope = Manrope({ variable: "--font-manrope", subsets: ["latin"] });
-export const metadata: Metadata = { title: "WAVY — Transforme tráfego em mais vendas", description: "Tráfego pago, rastreamento e processo comercial conectados para atrair melhores oportunidades, perder menos vendas e crescer com mais clareza.", other: { "codex-preview": "development" }, icons: { icon: "/favicon.svg" } };
+export const metadata: Metadata = {
+  metadataBase: new URL("https://wavymarketing.com.br"),
+  title: "WAVY — Do anúncio à venda, em uma única operação",
+  description: "Tráfego pago, rastreamento, site e CRM operados por um só time, com um dashboard que mostra o que virou venda. Agende um diagnóstico.",
+  icons: { icon: "/favicon.svg" },
+  other: { "codex-preview": "development" },
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    siteName: "WAVY",
+    title: "WAVY — Do anúncio à venda, em uma única operação",
+    description: "Tráfego pago, rastreamento, site e CRM operados por um só time, com um dashboard que mostra o que virou venda.",
+    images: [{ url: "/assets/og-wavy.jpg", width: 1200, height: 630, alt: "WAVY" }],
+  },
+  twitter: { card: "summary_large_image" },
+};
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR">

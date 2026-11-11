@@ -15,6 +15,10 @@ RewriteRule ^termos-de-uso/?$ termos-de-uso/index.html [L]
 # Fallback para a página inicial.
 RewriteRule ^ index.html [L]
 
+# Garante o tipo correto das imagens modernas em servidores sem o mapeamento.
+AddType image/avif .avif
+AddType image/webp .webp
+
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType text/css "access plus 1 year"
@@ -22,6 +26,7 @@ RewriteRule ^ index.html [L]
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/avif "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
 </IfModule>
 

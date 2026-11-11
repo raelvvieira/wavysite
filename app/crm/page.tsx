@@ -50,7 +50,7 @@ const security = [
 
 export default function CrmPage() {
   return <main className="dashboard-page">
-    <header className="dashboard-header section-shell"><a href="/" className="dashboard-logo"><img src="/assets/wavy-logo.png" alt="WAVY"/></a><nav><a href="#recursos">Recursos</a><a href="#canais">Canais</a><a href="#consentimento">Consentimento</a><a href="#seguranca">Segurança</a></nav><a className="dashboard-access" href={CRM_URL}>Acessar o CRM <span>↗</span></a></header>
+    <header className="dashboard-header section-shell"><a href="/" className="dashboard-logo"><img src="/assets/wavy-logo.webp" alt="WAVY"/></a><nav><a href="#recursos">Recursos</a><a href="#canais">Canais</a><a href="#consentimento">Consentimento</a><a href="#seguranca">Segurança</a></nav><a className="dashboard-access" href={CRM_URL}>Acessar o CRM <span>↗</span></a></header>
 
     <section className="dashboard-hero section-shell"><div className="dashboard-hero-copy"><span className="dashboard-kicker">CRM DE ATENDIMENTO E VENDAS</span><h1>Instagram e WhatsApp <em>na mesma conversa.</em></h1><p>Toda mensagem que chega da sua empresa em um só lugar, organizada em funil, com o histórico de quem já falou com você. Sua equipe responde mais rápido e para de perder oportunidade no meio do caminho.</p><div><a className="dashboard-primary" href="mailto:contato@wavymarketing.com.br?subject=Conhecer%20o%20WAVY%20CRM">Falar com a WAVY <span>↗</span></a><a className="dashboard-secondary" href="#visao-geral">Conhecer o CRM ↓</a></div><small>Plataforma desenvolvida e operada pela WAVY Marketing.</small></div><CrmMockup/></section>
 
@@ -68,7 +68,7 @@ export default function CrmPage() {
 
     <section className="about-dashboard section-shell"><span>06 / SOBRE A WAVY</span><div><h2>Marketing, dados e inteligência comercial <em>trabalhando juntos.</em></h2><p>A WAVY é uma agência de gestão de tráfego e inteligência comercial que conecta mídia, tecnologia e processos de vendas. O WAVY CRM faz parte dessa estrutura: o anúncio gera a conversa, e a conversa passa a ser atendida, organizada e acompanhada até virar venda.</p><a href="mailto:contato@wavymarketing.com.br?subject=Conhecer%20o%20WAVY%20CRM">Falar com a WAVY <span>↗</span></a></div></section>
 
-    <footer className="dashboard-footer section-shell"><div><a href="/" className="dashboard-logo"><img src="/assets/wavy-logo.png" alt="WAVY"/></a><p>HYPA E-COM NEGÓCIOS DIGITAIS LTDA<br/>CNPJ 46.975.244/0001-90</p><a href="mailto:contato@wavymarketing.com.br">contato@wavymarketing.com.br</a></div><nav><a href="/politica-de-privacidade">Política de Privacidade</a><a href="/termos-de-uso">Termos de Uso</a><a href="/politica-de-privacidade#solicitacao-de-exclusao-de-dados">Solicitação de exclusão de dados</a><a href={CRM_URL}>Acessar o CRM</a><a href="/dashboard">WAVY Dashboard</a></nav><p>© 2026 WAVY MARKETING</p></footer>
+    <footer className="dashboard-footer section-shell"><div><a href="/" className="dashboard-logo"><img src="/assets/wavy-logo.webp" alt="WAVY"/></a><p>HYPA E-COM NEGÓCIOS DIGITAIS LTDA<br/>CNPJ 46.975.244/0001-90</p><a href="mailto:contato@wavymarketing.com.br">contato@wavymarketing.com.br</a></div><nav><a href="/politica-de-privacidade">Política de Privacidade</a><a href="/termos-de-uso">Termos de Uso</a><a href="/politica-de-privacidade#solicitacao-de-exclusao-de-dados">Solicitação de exclusão de dados</a><a href={CRM_URL}>Acessar o CRM</a><a href="/dashboard">WAVY Dashboard</a></nav><p>© 2026 WAVY MARKETING</p></footer>
   </main>;
 }
 

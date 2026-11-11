@@ -27,9 +27,9 @@
 .recognition-grid{grid-template-columns:.92fr 1.08fr;gap:8vw}.recognition h2{font-size:clamp(42px,4.7vw,68px);max-width:690px}.pain-list p{font-size:17px;line-height:1.65;color:#d0d1d3;padding-top:27px;padding-bottom:27px}.recognition-turn{display:block;text-align:center;margin-top:120px;padding:75px 4vw;border-color:#3b2118}.recognition-turn h3{margin:0 auto;max-width:1180px;font:500 clamp(36px,4.8vw,70px)/1.08 var(--font-manrope);letter-spacing:-.055em}.recognition-turn h3 em{font-style:normal}.recognition>.button{display:flex;width:max-content;margin:46px auto 0}
 @media(max-width:900px){.traffic-route{display:none}.recognition-grid{grid-template-columns:1fr}.recognition h2{font-size:43px}.pain-list p{font-size:16px}.recognition-turn{margin-top:80px;padding:55px 0}.recognition-turn h3{font-size:38px}.crm-board{height:230px}}
 .chips{gap:10px;margin-top:22px}.chips span{padding:10px 14px;font-size:11px;line-height:1;color:#d0d1d3;border-color:#414247;background:#101012}.pillar-copy>small{font-size:11px;color:#919398}.pillar-copy h3{font-size:48px;margin-top:12px}.standalone{padding:0;background:transparent;box-shadow:none;border:0;margin-top:70px}.standalone .conversion-card{box-shadow:0 30px 70px rgba(0,0,0,.3)}
-.word-motion{position:relative;isolation:isolate;background-image:linear-gradient(90deg,rgba(5,5,5,.92),rgba(5,5,5,.5),rgba(5,5,5,.88)),url('/assets/hero-wavy.png');background-size:cover;background-position:center}.word-motion:after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 58% 50%,rgba(255,75,10,.18),transparent 38%)}.word-motion div{position:relative;z-index:1;text-shadow:0 10px 50px rgba(0,0,0,.5)}.word-motion div:last-child{color:transparent;-webkit-text-stroke:0;background:linear-gradient(105deg,#ff9a32 0%,#ff4b0a 48%,#d82d20 100%);-webkit-background-clip:text;background-clip:text;filter:drop-shadow(0 14px 35px rgba(255,75,10,.18))}
+.word-motion{position:relative;isolation:isolate;background-image:linear-gradient(90deg,rgba(5,5,5,.92),rgba(5,5,5,.5),rgba(5,5,5,.88)),url('/assets/hero-wavy.webp');background-size:cover;background-position:center}.word-motion:after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 58% 50%,rgba(255,75,10,.18),transparent 38%)}.word-motion div{position:relative;z-index:1;text-shadow:0 10px 50px rgba(0,0,0,.5)}.word-motion div:last-child{color:transparent;-webkit-text-stroke:0;background:linear-gradient(105deg,#ff9a32 0%,#ff4b0a 48%,#d82d20 100%);-webkit-background-clip:text;background-clip:text;filter:drop-shadow(0 14px 35px rgba(255,75,10,.18))}
 @media(max-width:900px){.chips span{font-size:10px;padding:9px 12px}.pillar-copy h3{font-size:39px}.standalone{margin-top:50px}.word-motion{background-position:62% center}}
-.word-motion{background-color:#050505;background-image:linear-gradient(90deg,#050505 0%,rgba(5,5,5,.82) 35%,rgba(5,5,5,.3) 72%,rgba(5,5,5,.68) 100%),url('/assets/hero-wavy.png');background-size:100% 100%,min(1180px,72vw) auto;background-position:center,right center;background-repeat:no-repeat}.word-motion div:last-child{color:transparent!important;background-image:linear-gradient(105deg,#ff861f 0%,#ff4b0a 48%,#d82d20 100%)!important;background-size:100% 100%!important;background-position:center!important;background-repeat:no-repeat!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important}
+.word-motion{background-color:#050505;background-image:linear-gradient(90deg,#050505 0%,rgba(5,5,5,.82) 35%,rgba(5,5,5,.3) 72%,rgba(5,5,5,.68) 100%),url('/assets/hero-wavy.webp');background-size:100% 100%,min(1180px,72vw) auto;background-position:center,right center;background-repeat:no-repeat}.word-motion div:last-child{color:transparent!important;background-image:linear-gradient(105deg,#ff861f 0%,#ff4b0a 48%,#d82d20 100%)!important;background-size:100% 100%!important;background-position:center!important;background-repeat:no-repeat!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important}
 @media(max-width:900px){.word-motion{background-size:100% 100%,auto 100%;background-position:center,65% center}.word-motion div:last-child{background-image:linear-gradient(105deg,#ff861f 0%,#ff4b0a 52%,#d82d20 100%)!important}}
 .loop-item{display:grid;grid-template-columns:30px minmax(150px,230px);gap:13px;align-items:start;padding:12px 14px;background:rgba(244,241,235,.94)}.loop-item>span{font-size:12px;line-height:1.2;text-align:right;padding-top:3px;font-weight:650}.loop-item div{gap:5px}.loop-item b{font-size:19px;line-height:1.15;letter-spacing:-.025em}.loop-item small{font-size:12px;line-height:1.4;color:#666}.loop-item:nth-child(1){top:0;left:0}.loop-item:nth-child(2){top:9%;right:-2%}.loop-item:nth-child(3){bottom:10%;right:-2%}.loop-item:nth-child(4){bottom:0;left:0}
 @media(max-width:900px){.loop-item{grid-template-columns:27px minmax(145px,205px);gap:10px;padding:10px}.loop-item b{font-size:17px}.loop-item small{font-size:11px}.loop-item>span{font-size:11px}}
@@ -108,3 +108,73 @@
 .header nav .nav-cta{align-self:center;border:1px solid #343434;border-radius:3px;padding:9px 13px;color:var(--paper);transition:.25s}
 .header nav .nav-cta:hover{border-color:#666;background:#151515}
 .header nav .nav-cta span{margin-left:10px;color:var(--orange)}
+
+/* ---- Home: posicionamento "do anúncio à venda" ---- */
+.hero-cinematic .actions{flex-wrap:wrap;align-items:center;gap:14px}
+.hero-includes{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 0;padding:0}
+.hero-includes li{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#c9c9cb;border:1px solid rgba(255,255,255,.16);background:rgba(5,5,5,.45);backdrop-filter:blur(6px);padding:8px 12px;border-radius:999px}
+.hero-cinematic .button.secondary{min-height:58px;padding:0 22px;border-color:rgba(255,255,255,.22);background:rgba(5,5,5,.4);backdrop-filter:blur(6px)}
+
+.problem{min-height:0;padding-top:150px;padding-bottom:150px}
+.problem .eyebrow{margin-bottom:26px}
+.problem>p:not(.eyebrow){margin-top:36px;max-width:640px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:70px}
+.compare-col{border:1px solid var(--line);background:#0c0c0e;padding:36px}
+.compare-col small{font-size:11px;letter-spacing:.18em;color:#8f9195;font-weight:600}
+.compare-col ul{list-style:none;margin:26px 0 0;padding:0}
+.compare-col li{display:grid;grid-template-columns:26px 1fr;gap:14px;align-items:start;padding:18px 0;border-top:1px solid var(--line);font-size:16px;line-height:1.55;color:#8f9195}
+.compare-col li i{font-style:normal;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:13px;border:1px solid #3a3a3d;color:#77787b}
+.compare-col.wavy{border-color:rgba(255,75,10,.45);background:radial-gradient(circle at 85% 0%,rgba(255,75,10,.16),transparent 55%),#100c0a}
+.compare-col.wavy small{color:var(--orange2)}
+.compare-col.wavy li{color:var(--paper)}
+.compare-col.wavy li i{border-color:transparent;background:linear-gradient(135deg,#ff861f,#ff4b0a);color:#fff}
+
+.steps-section{padding-top:150px;padding-bottom:150px;background:#050505}
+.steps-section .eyebrow,.journey-section .eyebrow,.pillars .eyebrow,.faq .eyebrow{display:block;margin-bottom:26px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line)}
+.steps li{padding:34px 26px 10px 0;position:relative}
+.steps li+li{padding-left:26px;border-left:1px solid var(--line)}
+.steps li:before{content:"";position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:50%;background:var(--orange);box-shadow:0 0 14px var(--orange)}
+.steps li+li:before{left:-4px}
+.steps span{font-size:11px;color:var(--orange);letter-spacing:.12em}
+.steps h3{font-size:24px;line-height:1.1;margin:44px 0 14px;letter-spacing:-.04em}
+.steps p{margin:0;font-size:14px;line-height:1.65;color:var(--muted)}
+
+.illustrative-note{margin:26px 0 0;font-size:12px;color:#6f7074}
+
+.faq{padding-top:150px;padding-bottom:150px;display:grid;grid-template-columns:.8fr 1.2fr;gap:8vw;align-items:start;background:#050505}
+.faq h2{font-size:clamp(38px,4.4vw,64px);line-height:1.04}
+.faq-list{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:26px 0;font:520 clamp(18px,1.5vw,22px)/1.3 var(--font-manrope),sans-serif;letter-spacing:-.03em;transition:color .2s}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--orange2)}
+.faq summary:focus-visible{outline:2px solid var(--orange);outline-offset:4px}
+.faq summary i{flex:0 0 28px;height:28px;border:1px solid #3a3a3d;border-radius:50%;position:relative;transition:.25s}
+.faq summary i:before,.faq summary i:after{content:"";position:absolute;left:50%;top:50%;width:10px;height:1px;background:var(--paper);translate:-50% -50%;transition:.25s}
+.faq summary i:after{rotate:90deg}
+.faq details[open] summary i{border-color:var(--orange);background:var(--orange)}
+.faq details[open] summary i:after{rotate:0deg}
+.faq details p{margin:0;padding:0 52px 28px 0;font-size:16px;line-height:1.7;color:var(--muted);max-width:640px}
+
+@media(max-width:1000px){
+.steps{grid-template-columns:1fr;border-top:0;border-left:1px solid var(--line)}
+.steps li,.steps li+li{padding:0 0 38px 28px;border-left:0}
+.steps li:before,.steps li+li:before{top:4px;left:-4px}
+.steps h3{margin:10px 0 10px;font-size:26px}
+.steps p{font-size:16px}
+.faq{grid-template-columns:1fr;gap:44px}
+}
+@media(max-width:900px){
+.problem,.steps-section,.faq{padding-top:100px;padding-bottom:100px}
+.compare{grid-template-columns:1fr;margin-top:50px}
+.compare-col{padding:26px 22px}
+.faq details p{padding-right:0}
+}
+@media(max-width:560px){
+.hero-cinematic .button.secondary{width:100%;justify-content:center}
+.hero-includes li{font-size:10px;padding:7px 10px}
+}
+/* O <picture> do hero sai do fluxo para não virar item do flex/grid do hero. */
+.hero-cinematic picture{position:absolute;inset:0;z-index:0}
+@media(max-width:560px){.hero-cinematic .hero-copy{width:100%}.hero-cinematic .actions{flex-direction:column;align-items:stretch}}
