@@ -28,6 +28,14 @@ export function CrmFrame({ children, label, priority = false }: { children: Reac
   );
 }
 
+export function CrmScreen({ children, label }: { children: React.ReactNode; label: string }) {
+  return (
+    <div className="screen-stage">
+      <div className="screen" role="img" aria-label={label}><div className="crm" aria-hidden="true">{children}</div></div>
+    </div>
+  );
+}
+
 const kpis = [
   ["FATURAMENTO", "R$ 48.320", "+18%", "#10b981"],
   ["NEGÓCIOS GANHOS", "37", "+9", "#3b82f6"],
@@ -145,18 +153,21 @@ export function PhoneChat() {
     <div className="phone-stage" role="img" aria-label="Simulação de conversa no WhatsApp em que o agente de IA atende um lead, tira dúvidas e agenda uma avaliação">
       <div className="phone-chip chip-ai" aria-hidden="true"><i>✦</i><div><small>AGENTE DE IA</small><b>Respondendo no WhatsApp</b></div><span className="wave"><u /><u /><u /><u /></span></div>
       <div className="phone" aria-hidden="true">
-        <div className="phone-notch" />
-        <div className="phone-bar"><span>21:47</span><span className="phone-status"><i /><i /><i /></span></div>
-        <div className="wa-head"><span>S</span><div><b>Studio Uno</b><small>online</small></div></div>
-        <div className="wa-thread">
-          <p className="me m1">Oi! Vi o anúncio de vocês. Como funciona a avaliação?<small>21:47</small></p>
-          <p className="them m2">Oi, Ana! 👋 A avaliação dura 30 minutos. Você pensa em começar quando?<small>21:47</small></p>
-          <p className="me m3">Queria começar ainda este mês<small>21:48</small></p>
-          <p className="them m4">Perfeito. Tenho quinta às 14h ou sexta às 10h. Qual fica melhor?<small>21:48</small></p>
-          <p className="me m5">Quinta, 14h<small>21:49</small></p>
-          <p className="them m6">Agendado ✅ Quinta, 14h. Te envio um lembrete na véspera.<small>21:49</small></p>
+        <img className="phone-photo" src="/assets/phone.webp" alt="" width={1024} height={1536} loading="lazy" decoding="async" />
+        <div className="phone-screen">
+          <div className="phone-notch" />
+          <div className="phone-bar"><span>21:47</span><span className="phone-status"><i /><i /><i /></span></div>
+          <div className="wa-head"><span>S</span><div><b>Studio Uno</b><small>online</small></div></div>
+          <div className="wa-thread">
+            <p className="me m1">Oi! Vi o anúncio de vocês. Como funciona a avaliação?<small>21:47</small></p>
+            <p className="them m2">Oi, Ana! 👋 A avaliação dura 30 minutos. Você pensa em começar quando?<small>21:47</small></p>
+            <p className="me m3">Queria começar ainda este mês<small>21:48</small></p>
+            <p className="them m4">Perfeito. Tenho quinta às 14h ou sexta às 10h. Qual fica melhor?<small>21:48</small></p>
+            <p className="me m5">Quinta, 14h<small>21:49</small></p>
+            <p className="them m6">Agendado ✅ Quinta, 14h. Te envio um lembrete na véspera.<small>21:49</small></p>
+          </div>
+          <div className="wa-input"><span>Mensagem</span><i /></div>
         </div>
-        <div className="wa-input"><span>Mensagem</span><i /></div>
       </div>
       <div className="phone-chip chip-deal" aria-hidden="true"><i>✓</i><div><small>NO CRM</small><b>Avaliação agendada · qui, 14h</b></div></div>
       <div className="phone-chip chip-score" aria-hidden="true"><div><small>NOTA DA IA</small><b>94</b></div><div><small>FUNIL</small><b>Qualificação → Reunião</b></div></div>
