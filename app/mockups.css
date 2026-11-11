@@ -274,3 +274,23 @@
 @media(max-width:900px){.deliveries{padding-top:10px;padding-bottom:100px}}
 @media(max-width:560px){.delivery-grid{grid-template-columns:1fr}.delivery-grid li:last-child{grid-column:auto}.delivery-grid li{padding:26px 22px 28px}}
 .compare-col small{display:block}
+
+/* ---- Oferta: os cinco serviços avulsos e o que entra no lugar de cada um ---- */
+.offer{padding-top:150px;padding-bottom:150px;background:#050505}
+.offer .section-heading{margin-bottom:60px}
+.offer h2{max-width:1180px}
+.offer h2 em{display:block;margin-top:.12em}
+.offer .section-heading>p{max-width:620px;color:var(--muted);font-size:17px!important;line-height:1.7}
+.delivery-grid small{display:block;margin-top:24px;font-size:12px;line-height:1.45;color:#77787b}
+.delivery-grid small s{text-decoration-color:rgba(255,75,10,.7)}
+.delivery-grid small+h3{margin-top:10px}
+.offer-close{display:flex;justify-content:space-between;align-items:center;gap:40px;margin-top:14px;padding:30px 34px;border:1px solid rgba(255,75,10,.45);border-radius:18px;background:radial-gradient(circle at 90% 0%,rgba(255,75,10,.16),transparent 55%),#100c0a}
+.offer-close ul{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0}
+.offer-close li{display:flex;align-items:center;gap:9px;padding:10px 16px 10px 12px;border:1px solid rgba(255,255,255,.14);border-radius:999px;font-size:14px;font-weight:500;white-space:nowrap}
+.offer-close li:before{content:"✓";display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#ff861f,#ff4b0a);color:#fff;font-size:11px}
+.offer-close p{margin:0;max-width:420px;font:520 clamp(18px,1.6vw,23px)/1.35 var(--font-manrope),sans-serif;letter-spacing:-.03em;color:var(--paper)}
+@supports (animation-timeline:view()){@media (prefers-reduced-motion:no-preference){
+.offer .section-heading,.offer-close{animation:revealUp linear both;animation-timeline:view();animation-range:entry 0% entry 42%}
+}}
+@media(max-width:1100px){.offer-close{flex-direction:column;align-items:flex-start;gap:24px}}
+@media(max-width:900px){.offer{padding-top:100px;padding-bottom:100px}.offer-close{padding:24px 22px}.offer-close li{white-space:normal}}
