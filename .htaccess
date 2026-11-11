@@ -1,6 +1,10 @@
 Options -MultiViews
 RewriteEngine On
 
+# Garante o tipo correto das imagens modernas em servidores sem o mapeamento.
+AddType image/avif .avif
+AddType image/webp .webp
+
 # O deploy Git da Hostinger copia a RAIZ do repositorio para public_html, mas os
 # arquivos publicaveis do site ficam em hostinger-files/. Este arquivo faz a
 # ponte: bloqueia o codigo-fonte e serve o site a partir daquela pasta.
