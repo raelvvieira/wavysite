@@ -6,7 +6,7 @@ const nav = ["Dashboard", "Anúncios", "Funis de Vendas", "Agenda", "Conversas",
 function Sidebar({ active }: { active: string }) {
   return (
     <aside className="crm-side">
-      <div className="crm-brand">WAVY<span>CRM</span></div>
+      <div className="crm-brand"><img src="/assets/wavy-crm-logo.png" alt="" width={390} height={64} /></div>
       <ul>
         {nav.map((n) => (
           <li key={n} className={n === active ? "on" : undefined}><i />{n}{n === "Conversas" && <b>12</b>}</li>
