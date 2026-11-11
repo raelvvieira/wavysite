@@ -1,7 +1,18 @@
 /* Mockups do produto (WAVY CRM) e seções que os usam.
    As telas escalam com a largura: --u vale 1px quando a moldura tem 1120px. */
-.crm-stage{position:relative}
-.crm-frame{container-type:inline-size;--u:calc(100cqw/1148);padding:calc(100cqw/1148*10);border-radius:calc(100cqw/1148*22);background:linear-gradient(160deg,#2a2a2d,#0d0d0f 40%);border:1px solid rgba(255,255,255,.14);box-shadow:0 60px 140px rgba(0,0,0,.6),0 0 0 1px rgba(0,0,0,.6)}
+/* A tela do CRM fica dentro de uma foto de notebook. A área útil da tela na foto
+   (1536x1024) vai de x 286 a 1251 e de y 131 a 758, já abaixo do notch. */
+.laptop-stage{position:relative}
+.laptop{position:relative;container-type:inline-size}
+/* O fundo preto da foto some com o blend "screen", deixando o brilho da página passar.
+   Tampa e base ganham um fundo preto próprio para não ficarem translúcidas. */
+.laptop:before,.laptop:after{content:"";position:absolute;background:#000}
+.laptop:before{left:17.7%;top:9.8%;width:64.65%;height:65.6%;border-radius:calc(100cqw*.012) calc(100cqw*.012) 0 0}
+.laptop:after{left:10.7%;top:77.5%;width:78.6%;height:4.4%;border-radius:0 0 calc(100cqw*.012) calc(100cqw*.012)}
+.laptop-photo{position:relative;z-index:1;display:block;width:100%;height:auto;mix-blend-mode:screen;-webkit-mask-image:linear-gradient(#000 84%,transparent 97%);mask-image:linear-gradient(#000 84%,transparent 97%)}
+.laptop-screen{position:absolute;z-index:2;left:18.62%;top:12.79%;width:62.83%;height:61.23%;overflow:hidden;border-radius:calc(100cqw*.004) calc(100cqw*.004) 0 0;--u:calc(100cqw*.6283/1120);background:#f4f4f5}
+.laptop-screen:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(118deg,rgba(255,255,255,.10) 0%,rgba(255,255,255,.03) 22%,transparent 42%);box-shadow:inset 0 0 calc(100cqw*.02) rgba(0,0,0,.28)}
+.laptop-screen .crm{height:100%;aspect-ratio:auto;border-radius:0}
 @keyframes crmGrow{from{transform:scaleY(0)}}
 @keyframes crmWide{from{transform:scaleX(0)}}
 @keyframes crmDots{0%,60%,100%{opacity:.35;translate:0 0}30%{opacity:1;translate:0 -2px}}
@@ -116,14 +127,13 @@
 .hero-product .lead-copy{margin:0 auto;max-width:700px;color:#b9babd}
 .hero-product .actions{justify-content:center;flex-wrap:wrap;align-items:center;gap:14px;margin-bottom:0}
 .hero-product .button.secondary{min-height:58px;padding:0 22px;border-color:rgba(255,255,255,.22);background:rgba(5,5,5,.4)}
-.hero-stage{position:relative;max-width:1180px;margin:76px auto 0}
-.hero-stage .crm-stage{mask-image:linear-gradient(#000 58%,transparent 97%);-webkit-mask-image:linear-gradient(#000 58%,transparent 97%)}
+.hero-stage{position:relative;max-width:1500px;margin:10px auto -60px}
 .float-card{position:absolute;z-index:3;display:flex;align-items:center;gap:13px;text-align:left;padding:14px 18px 14px 14px;border-radius:18px;background:rgba(22,22,24,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.14);box-shadow:0 24px 60px rgba(0,0,0,.5);animation:bob 7s ease-in-out infinite}
 .float-card>i{font-style:normal;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#ff861f,#ff4b0a);color:#fff;font-size:16px}
 .float-card small{display:block;font-size:10px;letter-spacing:.14em;color:#9a9b9e}
 .float-card b{font:600 14px/1.3 var(--font-inter),sans-serif;color:var(--paper)}
-.float-card.left{left:-56px;top:52%}
-.float-card.right{right:-48px;top:64%;animation-delay:-3.5s}
+.float-card.left{left:6%;top:46%}
+.float-card.right{right:6%;top:60%;animation-delay:-3.5s}
 @keyframes bob{50%{translate:0 -10px}}
 
 /* ---- Plataforma (abas sem JS) ---- */
@@ -210,7 +220,7 @@
 .founder-sign b{display:block;font:600 18px var(--font-manrope),sans-serif;letter-spacing:-.02em}
 .founder-sign small{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#8f9195}
 
-@media(max-width:1280px){.float-card.left{left:-12px}.float-card.right{right:-12px}}
+@media(max-width:1280px){.float-card.left{left:0}.float-card.right{right:0}}
 @media(max-width:1100px){
 .ai-section{grid-template-columns:1fr;gap:70px}
 .chip-ai{right:-110px}.chip-deal{left:-120px}.chip-score{right:-100px}
@@ -224,10 +234,11 @@
 .ai-points li{grid-template-columns:1fr;gap:6px}
 }
 @media(max-width:700px){
-/* Em telas estreitas a tela do CRM mantém largura legível e é cortada à direita. */
-.crm-stage{overflow:hidden;border-radius:14px;mask-image:linear-gradient(90deg,#000 78%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 78%,transparent)}
-.hero-stage .crm-stage{mask-image:linear-gradient(90deg,#000 78%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 78%,transparent)}
-.crm-frame{width:720px}
+/* Em telas estreitas o notebook vira um close: a foto passa da largura da tela
+   para o conteúdo continuar legível. */
+.laptop-stage{overflow:hidden;margin-left:-20px;margin-right:-20px}
+.laptop{width:158%;margin-left:-29%}
+.hero-stage{margin:24px 0 -30px}
 .float-card{display:none}
 .hero-product .actions{flex-direction:column;align-items:stretch}
 .hero-product .button.secondary{justify-content:center}
@@ -275,22 +286,15 @@
 @media(max-width:560px){.delivery-grid{grid-template-columns:1fr}.delivery-grid li:last-child{grid-column:auto}.delivery-grid li{padding:26px 22px 28px}}
 .compare-col small{display:block}
 
-/* ---- Oferta: os cinco serviços avulsos e o que entra no lugar de cada um ---- */
-.offer{padding-top:150px;padding-bottom:150px;background:#050505}
-.offer .section-heading{margin-bottom:60px}
-.offer h2{max-width:1180px}
-.offer h2 em{display:block;margin-top:.12em}
-.offer .section-heading>p{max-width:620px;color:var(--muted);font-size:17px!important;line-height:1.7}
-.delivery-grid small{display:block;margin-top:24px;font-size:12px;line-height:1.45;color:#77787b}
-.delivery-grid small s{text-decoration-color:rgba(255,75,10,.7)}
-.delivery-grid small+h3{margin-top:10px}
-.offer-close{display:flex;justify-content:space-between;align-items:center;gap:40px;margin-top:14px;padding:30px 34px;border:1px solid rgba(255,75,10,.45);border-radius:18px;background:radial-gradient(circle at 90% 0%,rgba(255,75,10,.16),transparent 55%),#100c0a}
-.offer-close ul{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0}
-.offer-close li{display:flex;align-items:center;gap:9px;padding:10px 16px 10px 12px;border:1px solid rgba(255,255,255,.14);border-radius:999px;font-size:14px;font-weight:500;white-space:nowrap}
-.offer-close li:before{content:"✓";display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#ff861f,#ff4b0a);color:#fff;font-size:11px}
-.offer-close p{margin:0;max-width:420px;font:520 clamp(18px,1.6vw,23px)/1.35 var(--font-manrope),sans-serif;letter-spacing:-.03em;color:var(--paper)}
-@supports (animation-timeline:view()){@media (prefers-reduced-motion:no-preference){
-.offer .section-heading,.offer-close{animation:revealUp linear both;animation-timeline:view();animation-range:entry 0% entry 42%}
-}}
-@media(max-width:1100px){.offer-close{flex-direction:column;align-items:flex-start;gap:24px}}
-@media(max-width:900px){.offer{padding-top:100px;padding-bottom:100px}.offer-close{padding:24px 22px}.offer-close li{white-space:normal}}
+.platform-tabs .laptop-stage{max-width:1500px;margin:-30px auto -50px}
+@media(max-width:700px){.platform-tabs .laptop-stage{margin:-10px -20px -20px}}
+
+/* Coluna "Do jeito comum" mais legível: estava apagada demais ao lado da coluna da WAVY. */
+.compare-col{background:#101012;border-color:rgba(255,255,255,.16)}
+.compare-col small{color:#b4b5b8}
+.compare-col li{color:#d2d3d5}
+.compare-col li i{border-color:#6a6b6f;color:#c2c3c6}
+.compare-col.wavy{background:radial-gradient(circle at 85% 0%,rgba(255,75,10,.16),transparent 55%),#100c0a;border-color:rgba(255,75,10,.45)}
+.compare-col.wavy small{color:var(--orange2)}
+.compare-col.wavy li{color:var(--paper)}
+.compare-col.wavy li i{border-color:transparent;color:#fff}

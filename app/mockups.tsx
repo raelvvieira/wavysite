@@ -17,10 +17,13 @@ function Sidebar({ active }: { active: string }) {
   );
 }
 
-export function CrmFrame({ children, label }: { children: React.ReactNode; label: string }) {
+export function CrmFrame({ children, label, priority = false }: { children: React.ReactNode; label: string; priority?: boolean }) {
   return (
-    <div className="crm-stage" role="img" aria-label={label}>
-      <div className="crm-frame"><div className="crm" aria-hidden="true">{children}</div></div>
+    <div className="laptop-stage">
+      <div className="laptop" role="img" aria-label={label}>
+        <img className="laptop-photo" src="/assets/laptop.webp" alt="" width={1536} height={1024} loading={priority ? "eager" : "lazy"} fetchPriority={priority ? "high" : "auto"} decoding="async" />
+        <div className="laptop-screen" aria-hidden="true"><div className="crm">{children}</div></div>
+      </div>
     </div>
   );
 }
