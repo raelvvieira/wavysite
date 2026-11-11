@@ -30,3 +30,12 @@ RewriteRule ^termos-de-uso/?$ hostinger-files/termos-de-uso/index.html [L]
 
 # Pagina inicial e fallback.
 RewriteRule ^ hostinger-files/index.html [L]
+
+# O HTML das paginas nao deve ficar preso no cache do navegador: sem esta regra,
+# quem ja visitou o site continua vendo a versao antiga depois de uma publicacao.
+# Os arquivos em /assets tem nome com hash e seguem com cache longo.
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
