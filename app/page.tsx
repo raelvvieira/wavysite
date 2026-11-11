@@ -16,21 +16,6 @@ function Header() {
   return <header className="header"><Logo /><nav aria-label="Navegação principal"><a href="#plataforma">Plataforma</a><a href="#ia">IA de atendimento</a><a href="#como-funciona">Como funciona</a><a href="#resultados">Resultados</a><a href="#faq">Perguntas</a><a className="nav-cta" href="/crm">Conhecer o CRM <span>↗</span></a></nav><details className="mobile-menu"><summary aria-label="Abrir menu"><span /><span /></summary><div><a href="#plataforma">Plataforma</a><a href="#ia">IA de atendimento</a><a href="#como-funciona">Como funciona</a><a href="#resultados">Resultados</a><a href="#faq">Perguntas</a><a href="/crm">CRM</a></div></details></header>;
 }
 
-const stages = [
-  ["01", "Tráfego pago", "Anúncios, artes e roteiros"],
-  ["02", "Rastreamento", "Do clique até a venda"],
-  ["03", "Site", "Páginas feitas para converter"],
-  ["04", "CRM", "Atendimento e playbook de vendas"],
-];
-
-function GrowthLoop() {
-  return <div className="loop-wrap"><div className="loop-orbit"><span className="loop-core">WAVY<br/><b>GROWTH</b><br/>SYSTEM<small>O sistema aprende e melhora<br/>a cada ciclo.</small></span><i className="orbit-dot" /></div><div className="loop-list">{stages.map(([n,t,s])=><div className="loop-item" key={n}><span>{n}</span><div><b>{t}</b><small>{s}</small></div></div>)}</div></div>;
-}
-
-function RevenueDiagnostic() {
-  return <div className="conversion-flow standalone four-steps"><article className="conversion-card ads"><div><small>01 / AQUISIÇÃO</small><b>Anúncios</b></div><strong>363</strong><span>Leads gerados pelas campanhas</span></article><div className="conversion-path"><i/><span>LEAD</span></div><article className="conversion-card conversations"><div><small>02 / CONTATO</small><b>Conversas<br/>iniciadas</b></div><strong>98%</strong><span>Oportunidades que iniciaram contato</span></article><div className="conversion-path second"><i/><span>LEAD</span></div><article className="conversion-card appointments"><div><small>03 / GARGALO</small><b>Agendamentos</b></div><strong>30%</strong><span>Conversas que avançaram para uma reunião</span><aside><i>✦</i><p><b>Sugestão</b>Deixe dois horários para o lead escolher.</p></aside></article><div className="conversion-path third"><i/><span>LEAD</span></div><article className="conversion-card sales"><div><small>04 / RESULTADO</small><b>Vendas</b></div><strong>5%</strong><span>Oportunidades convertidas em clientes</span></article></div>;
-}
-
 const partnerLogos = [
   ["abpr.webp","ABPR"],["deni-haut.webp","Deni Haut"],["heiner-hofmann.webp","Heiner Hofmann"],["jrg.webp","JRG Empreendimentos"],
   ["kitesurf.webp","Kitesurf Adventure"],["loane-tomello.webp","Loane Tomello"],["mauro-kwitko.webp","Dr. Mauro Kwitko"],["nubeauty.webp","NuBeauty"]
@@ -38,56 +23,49 @@ const partnerLogos = [
 
 function PartnerMarquee(){const logos=[...partnerLogos,...partnerLogos];return <section className="partner-marquee" aria-label="Empresas parceiras"><div className="partner-track">{logos.map(([file,name],i)=><div className="partner-logo" key={`${file}-${i}`} aria-hidden={i>=partnerLogos.length}><img src={`/assets/partners/${file}`} alt={i<partnerLogos.length?name:""} loading="lazy" decoding="async"/></div>)}</div></section>}
 
-const pillars = [
-  {n:"01",t:"Tráfego pago",tag:"AQUISIÇÃO",desc:"Campanhas no Meta Ads e no Google Ads, com artes e roteiros feitos pelo mesmo time. O objetivo é oportunidade com intenção de compra, não volume de cliques.",chips:["Mídia paga","Artes","Roteiros","Testes"]},
-  {n:"02",t:"Rastreamento",tag:"DADOS CONECTADOS",desc:"Eventos configurados para ligar clique, lead, oportunidade e receita. É o que permite saber qual anúncio trouxe a venda, e não só o lead.",chips:["Eventos","UTMs","APIs","Atribuição"]},
-  {n:"03",t:"Site e landing pages",tag:"DESENVOLVIMENTO WEB",desc:"Páginas e sistemas construídos para comunicar o valor da sua oferta e tirar atrito do caminho até o contato.",chips:["Sites","Landing pages","Sistemas","UX"]},
-  {n:"04",t:"CRM e processo comercial",tag:"GESTÃO COMERCIAL",desc:"Funil organizado, WhatsApp e Instagram no mesmo lugar e um playbook de vendas para o seu time transformar interesse em venda.",chips:["CRM","Playbook","WhatsApp","Conversão"]},
-];
-
-function PillarVisual({index}:{index:number}) {
-  if(index===0) return <div className="mini-ui traffic-ui"><div className="traffic-top"><span>CAMPANHA / ATIVA</span><b>● DISTRIBUINDO</b></div><div className="creative-stack"><i>AD 01</i><i>AD 02</i><i>AD 03</i></div><div className="traffic-route"><span/><span/><span/></div><div className="traffic-result"><small>OPORTUNIDADES</small><b>184</b><em>↑ 18%</em></div></div>;
-  if(index===1) return <div className="mini-ui events"><span>LeadCreated</span><span>CRMQualified</span><span>SaleAttributed</span><i>DATA CONNECTED</i></div>;
-  if(index===2) return <div className="mini-ui funnel"><span>128</span><span>74</span><span>31</span><span>12</span></div>;
-  return <div className="mini-ui crm-board"><div><span>LEADS</span><i>Mariana A.</i><i>Roberto M.</i><i>Clínica Vitta</i></div><div><span>NEGOCIAÇÃO</span><i>Studio Uno</i><i>Lucas F.</i></div><div><span>FECHAMENTO</span><i>Grupo Prime</i></div></div>;
-}
-
-function AIFlow(){return <div className="ai-console"><div className="console-bar"><span>WAVY INTELLIGENCE</span><span className="online">● ANALISANDO</span></div><div className="console-body"><div className="creative-preview"><span>CREATIVE / 04</span><div className="creative-art"><i>Performance<br/>começa depois<br/>do clique.</i></div><small>VARIAÇÃO GERADA</small></div><div className="funnel-preview"><span>FUNNEL / LIVE</span>{[92,68,41,24].map((v,i)=><div className="funnel-row" key={v}><small>{["Leads","Contato","Oportunidade","Venda"][i]}</small><i style={{width:`${v}%`}}/><b>{v}</b></div>)}<div className="alert">⚡ Perda acima do padrão no primeiro contato</div></div><div className="message-preview"><span>SALES MESSAGE / SUGGESTION</span><div className="chat">Olá, Ana. Vi que você pediu uma análise da operação. Posso te fazer duas perguntas rápidas para entender o cenário?</div><button>USAR MENSAGEM ↗</button></div></div><div className="insight-strip"><b>INSIGHT 07</b><span>Priorizar criativo B + reduzir tempo de resposta para &lt; 5 min</span><i>IMPACTO ESTIMADO ↑</i></div></div>}
 
 const comparison = {
   common: [
-    "Uma agência para os anúncios, outro parceiro para o site e uma ferramenta solta para atender.",
-    "Relatório de cliques, impressões e alcance.",
-    "O lead chega no WhatsApp e ninguém sabe de qual anúncio ele veio.",
-    "Cada parte cuida do próprio número. Ninguém olha para a venda.",
+    "Um gestor de tráfego ou uma agência",
+    "Um designer para as artes",
+    "Uma ferramenta de atendimento para WhatsApp e Instagram",
+    "Um CRM à parte",
+    "E alguém para montar o relatório no fim do mês",
   ],
   wavy: [
-    "Um time cuida de anúncio, rastreamento, site e CRM.",
-    "Dashboard com investimento, leads e vendas na mesma tela.",
-    "Cada oportunidade é acompanhada do clique até o fechamento.",
-    "Um responsável pelo caminho inteiro e ajustes a cada ciclo.",
+    "Um serviço só, com tudo isso dentro",
+    "Um contrato",
+    "Um time que responde pelo resultado, do anúncio à venda",
   ],
 };
 
+const deliveries = [
+  ["01", "Tráfego pago", "Campanhas no Meta Ads e no Google Ads, do planejamento ao ajuste de cada semana.", "M21 3 10 14M21 3l-7 18-4-7-7-4 18-7Z"],
+  ["02", "Criativos", "Artes e roteiros feitos pelo nosso time, trocados conforme o resultado pede.", "M4 5h16v14H4zM4 15l4.5-4.5 4 4L15 12l5 5M9 9.5h.01"],
+  ["03", "Atendimento omnichannel", "WhatsApp e Instagram na mesma caixa de entrada, com o histórico de cada cliente.", "M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12Z"],
+  ["04", "CRM com IA", "Um agente que atende e qualifica, e um funil que mostra em quem focar.", "M5 4h4v14H5zM10.5 4h4v9h-4zM16 4h3.5v6H16z"],
+  ["05", "Dashboard", "Quanto você investiu, quanto voltou e quanto custou cada venda, na sua tela.", "M3 5h18v11H3zM8 20h8M12 16v4"],
+];
+
 function Comparison() {
-  return <div className="compare"><article className="compare-col"><small>DO JEITO COMUM</small><ul>{comparison.common.map(t=><li key={t}><i aria-hidden="true">×</i>{t}</li>)}</ul></article><article className="compare-col wavy"><small>COM A WAVY</small><ul>{comparison.wavy.map(t=><li key={t}><i aria-hidden="true">✓</i>{t}</li>)}</ul></article></div>;
+  return <div className="compare"><article className="compare-col"><small>DO JEITO COMUM</small><ul>{comparison.common.map(t=><li key={t}><i aria-hidden="true">×</i>{t}</li>)}</ul></article><article className="compare-col wavy"><small>COM A WAVY</small><ul>{comparison.wavy.map(t=><li key={t}><i aria-hidden="true">✓</i>{t}</li>)}</ul><p className="compare-close">Você contrata uma vez, fala com um time só e sabe de quem cobrar.</p></article></div>;
 }
 
 const steps = [
-  ["01", "Diagnóstico", "Analisamos seus anúncios, seu atendimento e seus dados atuais para encontrar onde as vendas estão se perdendo."],
-  ["02", "Estrutura", "Configuramos o rastreamento, ajustamos o site ou a landing page e organizamos o funil no CRM."],
-  ["03", "Campanhas no ar", "Criamos artes, roteiros e anúncios voltados para quem tem intenção real de compra."],
-  ["04", "Atendimento conectado", "Os leads entram no CRM e seu time atende com um playbook de vendas claro."],
-  ["05", "Leitura e ajuste", "Acompanhamos os números no dashboard e ajustamos anúncio, página e abordagem a partir do que virou venda."],
+  ["01", "Diagnóstico", "A gente olha seus anúncios, seu atendimento e seus números para achar onde as vendas estão escapando."],
+  ["02", "Estrutura", "Deixamos o rastreamento, a página e o funil do CRM prontos antes de colocar dinheiro em anúncio."],
+  ["03", "Campanhas no ar", "Criamos as artes, os roteiros e os anúncios para falar com quem quer comprar de verdade."],
+  ["04", "Atendimento", "O cliente cai no CRM, a IA responde na hora e o seu time segue um roteiro de vendas claro."],
+  ["05", "Ajuste", "A gente acompanha o que virou venda e mexe no anúncio, na página ou na abordagem."],
 ];
 
 const faqs = [
-  ["Preciso contratar outra agência para artes ou site?", "Não. Artes, roteiros, landing pages e sites fazem parte das frentes da WAVY. A ideia é justamente ter um time só respondendo pelo caminho até a venda."],
-  ["Vocês cuidam só do marketing ou também do comercial?", "Dos dois. Organizamos o funil e o playbook de vendas no CRM e acompanhamos onde as oportunidades esfriam, para o seu time aproveitar melhor os leads que o tráfego gera."],
-  ["A IA atende sozinha? E se o lead quiser falar com uma pessoa?", "O agente de IA responde, tira dúvidas, qualifica e agenda dentro do WAVY CRM. A conversa fica registrada e o seu time pode assumir o atendimento quando quiser."],
-  ["Como eu acompanho os resultados?", "Pelo WAVY Dashboard, que reúne Meta Ads, Google Ads e os dados da operação comercial em uma só visão: quanto foi investido, o que gerou resultado e onde estão as oportunidades de melhoria."],
-  ["Para que tipo de empresa a WAVY é indicada?", "Para empresas que vendem por atendimento, como clínicas, imobiliárias, educação e serviços, e que já anunciam ou querem anunciar, mas não enxergam com clareza o que vira venda."],
-  ["Como começa?", "Por uma conversa de diagnóstico. Você conta como funcionam hoje sua captação e seu atendimento, e mostramos onde estão os gargalos e o que a operação incluiria no seu caso."],
+  ["Preciso contratar outra agência para as artes ou para o site?", "Não precisa. Artes, roteiros e páginas já estão dentro do serviço. A ideia é justamente você ter um time só para cobrar."],
+  ["Vocês cuidam só do marketing ou do comercial também?", "Dos dois. A gente organiza o funil e o roteiro de vendas no CRM e acompanha onde os clientes estão esfriando, para o seu time aproveitar melhor o que o tráfego traz."],
+  ["A IA atende sozinha? E se o cliente quiser falar com uma pessoa?", "Ela responde, tira dúvidas, qualifica e agenda. Tudo fica registrado no CRM, e qualquer pessoa do seu time pode assumir a conversa na hora que quiser."],
+  ["Como eu acompanho os resultados?", "Pelo dashboard. Ele junta Meta Ads, Google Ads e os dados do seu comercial e mostra quanto você investiu, o que deu retorno e onde dá para melhorar."],
+  ["Para que tipo de empresa a WAVY serve?", "Para quem vende conversando com o cliente: clínicas, imobiliárias, cursos, prestadores de serviço. Faz mais sentido para quem já anuncia, ou quer começar, e ainda não sabe dizer o que vira venda."],
+  ["Como a gente começa?", "Com uma conversa. Você conta como os clientes chegam e como são atendidos hoje, e a gente mostra onde está o gargalo e o que faria no seu caso."],
 ];
 
 function Footer() {
@@ -105,35 +83,27 @@ export default function Home() {
 
     <PartnerMarquee/>
 
-    <section className="problem section-shell" id="problema"><span className="eyebrow"><i/>O PROBLEMA</span><h2>Hoje são vários fornecedores.<br/><em className="gradient-text">E nenhum responde pela venda.</em></h2><p>Anúncio gera clique. O que gera venda é o caminho depois dele: a página, o rastreamento, o atendimento. Quando cada parte fica com um fornecedor diferente, ninguém enxerga o caminho inteiro.</p><Comparison/></section>
+    <section className="problem section-shell" id="problema"><h2>Você não precisa pagar por 5 serviços diferentes <em className="gradient-text">sem nenhum deles responder pelo seu crescimento.</em></h2><Comparison/></section>
 
-    <section className="platform section-shell" id="plataforma"><span className="eyebrow"><i/>A PLATAFORMA</span><h2>WhatsApp, Instagram, funil e anúncios. <em className="gradient-text">Na mesma tela.</em></h2><p className="platform-intro">O WAVY CRM é onde a operação acontece. Seu time atende, acompanha cada negócio e vê o retorno dos anúncios sem trocar de ferramenta.</p><div className="platform-tabs"><input type="radio" name="platform-tab" id="tab-conversas" defaultChecked/><input type="radio" name="platform-tab" id="tab-funil"/><input type="radio" name="platform-tab" id="tab-dashboard"/><div className="tab-bar"><label htmlFor="tab-conversas">Conversas</label><label htmlFor="tab-funil">Funil de vendas</label><label htmlFor="tab-dashboard">Dashboard</label></div>
-      <div className="tab-panel panel-conversas"><CrmFrame label="Tela de conversas do WAVY CRM, com WhatsApp e Instagram na mesma caixa de entrada e o agente de IA respondendo"><CrmInbox/></CrmFrame><div className="tab-caption"><p><b>Caixa de entrada omnichannel.</b> WhatsApp e Instagram no mesmo lugar, com o agente de IA respondendo e o histórico de cada contato ao lado.</p><a href="/crm">Conhecer o WAVY CRM <Arrow/></a></div></div>
-      <div className="tab-panel panel-funil"><CrmFrame label="Tela de funil de vendas do WAVY CRM, com nota da IA e próximo passo em cada negócio"><CrmKanban/></CrmFrame><div className="tab-caption"><p><b>Funil com nota da IA.</b> Cada negócio recebe uma nota e um próximo passo sugerido, para o time saber em quem focar primeiro.</p><a href="/crm">Conhecer o WAVY CRM <Arrow/></a></div></div>
-      <div className="tab-panel panel-dashboard"><CrmFrame label="Dashboard do WAVY CRM com faturamento, retorno geral e custo por venda dos anúncios"><CrmDashboard/></CrmFrame><div className="tab-caption"><p><b>Anúncios no resultado do negócio.</b> Investimento, retorno e custo por venda ao lado do faturamento, e não só cliques e alcance.</p><a href="/dashboard">Conhecer o WAVY Dashboard <Arrow/></a></div></div>
+    <section className="deliveries section-shell" id="servico"><div className="section-heading"><h2>Tudo o que você precisa para vender,<br/><em className="gradient-text">num serviço só.</em></h2><p>Não são cinco produtos vendidos em pacote. As cinco partes já vêm ligadas entre si, e você não precisa fazer uma conversar com a outra.</p></div><ol className="delivery-grid">{deliveries.map(([n,t,d,icon])=><li key={n}><span aria-hidden="true">{n}</span><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d={icon}/></svg></i><h3>{t}</h3><p>{d}</p></li>)}</ol></section>
+
+    <section className="platform section-shell" id="plataforma"><span className="eyebrow"><i/>A PLATAFORMA</span><h2>Seu WhatsApp, seu Instagram, seu funil e seus anúncios. <em className="gradient-text">Tudo na mesma tela.</em></h2><p className="platform-intro">É no WAVY CRM que tudo acontece. Seu time atende, acompanha cada negócio e vê quanto os anúncios estão trazendo, sem ficar pulando de uma ferramenta para outra.</p><div className="platform-tabs"><input type="radio" name="platform-tab" id="tab-conversas" defaultChecked/><input type="radio" name="platform-tab" id="tab-funil"/><input type="radio" name="platform-tab" id="tab-dashboard"/><div className="tab-bar"><label htmlFor="tab-conversas">Conversas</label><label htmlFor="tab-funil">Funil de vendas</label><label htmlFor="tab-dashboard">Dashboard</label></div>
+      <div className="tab-panel panel-conversas"><CrmFrame label="Tela de conversas do WAVY CRM, com WhatsApp e Instagram na mesma caixa de entrada e o agente de IA respondendo"><CrmInbox/></CrmFrame><div className="tab-caption"><p><b>Todas as conversas num lugar só.</b> WhatsApp e Instagram chegam na mesma caixa de entrada, com a IA respondendo e o histórico do cliente ali do lado.</p><a href="/crm">Conhecer o WAVY CRM <Arrow/></a></div></div>
+      <div className="tab-panel panel-funil"><CrmFrame label="Tela de funil de vendas do WAVY CRM, com nota da IA e próximo passo em cada negócio"><CrmKanban/></CrmFrame><div className="tab-caption"><p><b>Você sabe em quem focar.</b> A IA dá uma nota para cada negócio e já sugere o próximo passo, para ninguém ficar esquecido no funil.</p><a href="/crm">Conhecer o WAVY CRM <Arrow/></a></div></div>
+      <div className="tab-panel panel-dashboard"><CrmFrame label="Dashboard do WAVY CRM com faturamento, retorno geral e custo por venda dos anúncios"><CrmDashboard/></CrmFrame><div className="tab-caption"><p><b>O que o anúncio trouxe de verdade.</b> Quanto você investiu, quanto voltou e quanto custou cada venda. Nada de relatório só com clique e alcance.</p><a href="/dashboard">Conhecer o WAVY Dashboard <Arrow/></a></div></div>
     </div></section>
 
-    <section className="ai-section section-shell" id="ia"><div><span className="eyebrow"><i/>IA DE ATENDIMENTO</span><h2>A IA atende, qualifica e agenda. <em className="gradient-text">Seu time fecha.</em></h2><p>No WAVY CRM, um agente de IA responde seus leads no WhatsApp e no Instagram em segundos, inclusive fora do horário comercial, e entrega a conversa pronta para o seu time.</p><ul className="ai-points"><li><b>Resposta imediata</b><span>O lead é atendido na hora em que demonstra interesse, não no dia seguinte.</span></li><li><b>Nota da IA</b><span>Cada oportunidade recebe uma nota, para o time priorizar quem está mais perto de comprar.</span></li><li><b>Próximo passo</b><span>O CRM sugere o que fazer em cada negócio para a venda não esfriar.</span></li><li><b>Você no controle</b><span>Seu time assume a conversa quando quiser.</span></li></ul><Button>Agendar diagnóstico</Button></div><PhoneChat/></section>
+    <section className="ai-section section-shell" id="ia"><div><span className="eyebrow"><i/>IA DE ATENDIMENTO</span><h2>A IA <span className="rotator"><em className="gradient-text">atende.</em><em className="gradient-text">qualifica.</em><em className="gradient-text">agenda.</em></span>Seu time fecha.</h2><p>Seu cliente manda mensagem às 21h47 e é atendido na hora. O agente de IA tira as dúvidas, entende o que a pessoa procura e já deixa a reunião marcada. Seu time entra para fechar.</p><ul className="ai-points"><li><b>Responde na hora</b><span>Às três da tarde ou às onze da noite, no WhatsApp e no Instagram. O cliente não esfria esperando alguém ficar livre.</span></li><li><b>Dá nota para cada lead</b><span>Você bate o olho e sabe quem está mais perto de comprar.</span></li><li><b>Sugere o próximo passo</b><span>Para cada negócio, o CRM mostra o que fazer agora.</span></li><li><b>Você continua no controle</b><span>Quando quiser, alguém do seu time assume a conversa.</span></li></ul><Button>Agendar diagnóstico</Button></div><PhoneChat/></section>
 
-    <section className="system-section section-shell" id="sistema"><div className="section-copy"><h2>Quatro frentes.<br/><em className="gradient-text">Um time só.</em></h2><p>Tráfego pago, rastreamento, site e CRM funcionam como um ciclo: o que aprendemos no atendimento volta para o anúncio, e cada rodada fica mais eficiente que a anterior.</p><Button>Agendar diagnóstico</Button></div><GrowthLoop/></section>
-
-    <section className="steps-section section-shell" id="como-funciona"><div className="section-heading"><span className="eyebrow"><i/>COMO FUNCIONA</span><h2>Como a operação<br/><em className="gradient-text">roda na prática.</em></h2></div><ol className="steps">{steps.map(([n,t,d])=><li key={n}><span>{n}</span><h3>{t}</h3><p>{d}</p></li>)}</ol></section>
-
-    <section className="journey-section section-shell"><div className="section-heading"><span className="eyebrow"><i/>EXEMPLO DE DIAGNÓSTICO</span><h2>Saber quantas oportunidades foram geradas é o básico. <em className="gradient-text">Mas e saber por que algumas não converteram?</em></h2><p>Com a operação conectada, dá para ver qual anúncio trouxe a melhor oportunidade, como ela foi atendida, onde o interesse esfriou e o que precisa mudar para vender mais.</p></div><RevenueDiagnostic/><p className="illustrative-note">Números ilustrativos, para mostrar como o diagnóstico é apresentado.</p></section>
-
-    <section className="pillars section-shell" id="pilares"><div className="section-heading"><span className="eyebrow"><i/>O QUE ENTREGAMOS</span><h2>Tudo o que fica entre<br/><em className="gradient-text">o anúncio e a venda.</em></h2></div><div className="pillar-list">{pillars.map((p,i)=><article className="pillar" key={p.n}><div className="pillar-number">{p.n}</div><div className="pillar-copy"><small>{p.tag}</small><h3>{p.t}</h3><p>{p.desc}</p><div className="chips">{p.chips.map(c=><span key={c}>{c}</span>)}</div></div><PillarVisual index={i}/></article>)}</div></section>
-
-    <section className="recognition section-shell"><div className="recognition-grid"><h2><span>Se isso acontece na sua empresa,</span> o problema não é falta de leads.<br/><em className="gradient-text">É o que acontece depois do clique.</em></h2><div className="pain-list"><p>Você investe mais em tráfego, mas as vendas não crescem na mesma proporção.</p><p>Recebe relatórios cheios de cliques e alcance, mas ainda não sabe o que realmente trouxe dinheiro.</p><p>Percebe que bons leads estão chegando, mas muitos somem antes de falar com alguém.</p><p>O comercial culpa a qualidade dos leads. O marketing culpa o atendimento. E você continua sem uma resposta clara.</p></div></div><div className="recognition-turn"><h3>Quando marketing e vendas operam juntos, sua empresa vende mais. <em className="gradient-text">É essa conexão que construímos com você.</em></h3></div><Button>Agendar diagnóstico</Button></section>
+    <section className="steps-section section-shell" id="como-funciona"><div className="section-heading"><span className="eyebrow"><i/>COMO FUNCIONA</span><h2>Como a gente trabalha,<br/><em className="gradient-text">do primeiro dia à venda.</em></h2></div><ol className="steps">{steps.map(([n,t,d])=><li key={n}><span>{n}</span><h3>{t}</h3><p>{d}</p></li>)}</ol></section>
 
     <section className="founder section-shell"><div className="founder-photo"><img src="/assets/founder.webp" alt="Rael Vieira, da WAVY" width={1000} height={1000} loading="lazy" decoding="async"/></div><div className="founder-copy"><span className="eyebrow"><i/>QUEM ESTÁ POR TRÁS</span><h2>Prazer, <em className="gradient-text">Rael Vieira.</em></h2><p>Sou estrategista digital há mais de 4 anos e sempre fui apaixonado por vendas. Já fui gerente comercial em grandes empresas de tecnologia no Brasil e faturei mais de R$ 200 mil por mês no e-commerce.</p><p>Já ajudei negócios a sair do zero e passar de 10 vezes de retorno sobre o investimento em anúncios. Vivo do marketing digital, escalando produtos e serviços para mim e para os meus clientes.</p><dl className="founder-stats"><div><dt>+4 anos</dt><dd>como estrategista digital</dd></div><div><dt>+R$ 200 mil</dt><dd>por mês no e-commerce</dd></div><div><dt>+10x</dt><dd>de ROAS em negócios que saíram do zero</dd></div></dl><div className="founder-sign"><b>Rael Vieira</b><small>Estrategista digital · WAVY</small></div></div></section>
 
-    <section className="proof section-shell" id="resultados"><h2>Parcerias reais,<br/><em className="gradient-text">resultados comprovados.</em></h2><div className="testimonial-grid"><article className="testimonial-card"><blockquote>“Antes, investíamos em anúncios sem enxergar com clareza o que realmente virava venda. A WAVY conectou o marketing ao nosso processo comercial e hoje conseguimos tomar decisões com muito mais segurança.”</blockquote><div><b>Dr. Loan Tomiello</b><small>Dentista e Mentor</small></div></article><article className="testimonial-card"><blockquote>“O trabalho foi muito além do tráfego pago. A equipe entendeu como atendíamos os leads, encontrou pontos que faziam oportunidades esfriarem e nos ajudou a organizar um processo mais eficiente.”</blockquote><div><b>Giovani</b><small>JRG Empreendimentos Imobiliários</small></div></article><article className="testimonial-card"><blockquote>“Passamos a entender melhor a origem das oportunidades e o que precisava ser melhorado em cada etapa do funil. Hoje marketing e vendas trabalham com a mesma visão.”</blockquote><div><b>Heiner Hofmann</b><small>CEO Heiner Academy</small></div></article></div></section>
+    <section className="proof section-shell" id="resultados"><h2>Quem já trabalha<br/><em className="gradient-text">com a gente.</em></h2><div className="testimonial-grid"><article className="testimonial-card"><blockquote>“Antes, investíamos em anúncios sem enxergar com clareza o que realmente virava venda. A WAVY conectou o marketing ao nosso processo comercial e hoje conseguimos tomar decisões com muito mais segurança.”</blockquote><div><b>Dr. Loan Tomiello</b><small>Dentista e Mentor</small></div></article><article className="testimonial-card"><blockquote>“O trabalho foi muito além do tráfego pago. A equipe entendeu como atendíamos os leads, encontrou pontos que faziam oportunidades esfriarem e nos ajudou a organizar um processo mais eficiente.”</blockquote><div><b>Giovani</b><small>JRG Empreendimentos Imobiliários</small></div></article><article className="testimonial-card"><blockquote>“Passamos a entender melhor a origem das oportunidades e o que precisava ser melhorado em cada etapa do funil. Hoje marketing e vendas trabalham com a mesma visão.”</blockquote><div><b>Heiner Hofmann</b><small>CEO Heiner Academy</small></div></article></div></section>
 
-    <section className="faq section-shell" id="faq"><div className="faq-heading"><span className="eyebrow"><i/>PERGUNTAS FREQUENTES</span><h2>Antes de conversar,<br/><em className="gradient-text">o que costumam perguntar.</em></h2></div><div className="faq-list">{faqs.map(([q,a])=><details key={q}><summary>{q}<i aria-hidden="true"/></summary><p>{a}</p></details>)}</div></section>
+    <section className="faq section-shell" id="faq"><div className="faq-heading"><span className="eyebrow"><i/>PERGUNTAS FREQUENTES</span><h2>Antes da conversa,<br/><em className="gradient-text">as dúvidas de sempre.</em></h2></div><div className="faq-list">{faqs.map(([q,a])=><details key={q}><summary>{q}<i aria-hidden="true"/></summary><p>{a}</p></details>)}</div></section>
 
-    <section className="word-motion" aria-label="Performance e crescimento"><div>PERFORMANCE</div><div>CRESCIMENTO</div></section>
-
-    <section className="final-cta section-shell"><h2><span>O mercado não espera.</span>Um time, uma operação,<br/><em>do anúncio à venda.</em></h2><Button>Agendar diagnóstico</Button></section>
+    <section className="final-cta section-shell"><h2><span>O próximo passo é uma conversa.</span>Vamos escalar <span className="rotator"><em className="gradient-text">seu tráfego?</em><em className="gradient-text">seu atendimento?</em><em className="gradient-text">suas vendas?</em></span></h2><Button>Agendar diagnóstico</Button></section>
 
     <a className="whatsapp-float" href={WHATSAPP} target="_blank" rel="noreferrer" aria-label="Falar com a WAVY pelo WhatsApp"><img src="/assets/whatsapp-float.webp" alt="" width={62} height={62}/></a>
     <Footer/>

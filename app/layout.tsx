@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://wavymarketing.com.br"),
   title: "WAVY — Tráfego pago, CRM omnichannel e atendimento com IA",
   description: "Agência de marketing de performance que acompanha o seu processo comercial do anúncio ao fechamento, com CRM omnichannel e IA no atendimento.",
-  icons: { icon: "/favicon.svg" },
+  icons: { icon: [{ url: "/favicon-48.png", sizes: "48x48", type: "image/png" }, { url: "/favicon-192.png", sizes: "192x192", type: "image/png" }], shortcut: "/favicon.ico", apple: "/apple-touch-icon.png" },
   other: { "codex-preview": "development" },
   openGraph: {
     type: "website",
