@@ -105,8 +105,14 @@
 .hero-product{position:relative;isolation:isolate;overflow:hidden;padding-top:168px;text-align:center;background:#050505}
 .hero-product:before{content:"";position:absolute;z-index:-1;left:50%;top:330px;width:min(1500px,150vw);height:900px;translate:-50% 0;background:radial-gradient(closest-side,rgba(255,96,20,.5),rgba(216,45,32,.2) 55%,transparent);filter:blur(40px)}
 .hero-product:after{content:"";position:absolute;z-index:-2;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 50% 30%,#000,transparent 70%)}
-.hero-product h1{font-size:clamp(34px,5vw,76px);line-height:1.02;margin:22px auto 28px;max-width:1180px;text-wrap:balance}
-.hero-product h1 em{display:inline}
+.hero-product h1{font-size:clamp(38px,6.2vw,96px);line-height:1.02;margin:22px auto 28px;max-width:1180px;text-wrap:balance}
+/* Título rotativo: a parte fixa fica em cima e os três termos se revezam embaixo. */
+.rotator{display:block;position:relative;height:1.2em;line-height:1.2;overflow:hidden}
+.rotator em{position:absolute;inset:0;display:block;white-space:nowrap;opacity:0;animation:rotWord 9s cubic-bezier(.2,.8,.2,1) infinite}
+.rotator em:nth-child(2){animation-delay:3s}
+.rotator em:nth-child(3){animation-delay:6s}
+@keyframes rotWord{0%{opacity:0;translate:0 70%;filter:blur(10px)}5%,30%{opacity:1;translate:0 0;filter:blur(0)}35%,100%{opacity:0;translate:0 -70%;filter:blur(10px)}}
+@media (prefers-reduced-motion:reduce){.rotator{height:auto;overflow:visible}.rotator em{position:static;opacity:1;white-space:normal}}
 .hero-product .lead-copy{margin:0 auto;max-width:700px;color:#b9babd}
 .hero-product .actions{justify-content:center;flex-wrap:wrap;align-items:center;gap:14px;margin-bottom:0}
 .hero-product .button.secondary{min-height:58px;padding:0 22px;border-color:rgba(255,255,255,.22);background:rgba(5,5,5,.4)}
