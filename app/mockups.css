@@ -118,12 +118,14 @@
 .hero-product:after{content:"";position:absolute;z-index:-2;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 50% 30%,#000,transparent 70%)}
 .hero-product h1{font-size:clamp(38px,6.2vw,96px);line-height:1.02;margin:22px auto 28px;max-width:1180px;text-wrap:balance}
 /* Título rotativo: a parte fixa fica em cima e os três termos se revezam embaixo. */
-.rotator{display:block;position:relative;height:1.2em;line-height:1.2;overflow:hidden}
-.rotator em{position:absolute;inset:0;display:block;white-space:nowrap;opacity:0;animation:rotWord 6s cubic-bezier(.2,.8,.2,1) infinite}
+/* Os termos ficam empilhados na mesma célula de um grid, e não em position:absolute,
+   para o rotador ter a largura do termo mais longo e nunca cortar texto. */
+.rotator{display:grid;justify-items:center;height:1.2em;line-height:1.2;overflow:hidden}
+.rotator em{grid-area:1/1;display:block;white-space:nowrap;opacity:0;animation:rotWord 6s cubic-bezier(.2,.8,.2,1) infinite}
 .rotator em:nth-child(2){animation-delay:2s}
 .rotator em:nth-child(3){animation-delay:4s}
 @keyframes rotWord{0%{opacity:0;translate:0 70%;filter:blur(10px)}5%,30%{opacity:1;translate:0 0;filter:blur(0)}35%,100%{opacity:0;translate:0 -70%;filter:blur(10px)}}
-@media (prefers-reduced-motion:reduce){.rotator{height:auto;overflow:visible}.rotator em{position:static;opacity:1;white-space:normal}}
+@media (prefers-reduced-motion:reduce){.rotator{display:block;height:auto;overflow:visible}.rotator em{opacity:1;white-space:normal}}
 .hero-product .lead-copy{margin:0 auto;max-width:700px;color:#b9babd}
 .hero-product .actions{justify-content:center;flex-wrap:wrap;align-items:center;gap:14px;margin-bottom:0}
 .hero-product .button.secondary{min-height:58px;padding:0 22px;border-color:rgba(255,255,255,.22);background:rgba(5,5,5,.4)}
@@ -260,7 +262,7 @@
 .problem>*,.compare-col,.platform>.eyebrow,.platform>h2,.platform>p,.platform-tabs,.ai-section>*,.steps-section .section-heading,.steps li,.founder>*,.proof>h2,.testimonial-card,.faq>*,.final-cta>*{animation:revealUp linear both;animation-timeline:view();animation-range:entry 0% entry 42%}
 .problem>.compare{animation:none}
 }}
-.final-cta h2>.rotator{font-size:1em;letter-spacing:inherit;line-height:1.2;margin:0;color:inherit}
+.final-cta h2>.rotator{display:grid;font-size:1em;letter-spacing:inherit;line-height:1.2;margin:0;color:inherit}
 
 /* ---- Comparativo e as cinco entregas ---- */
 .problem h2{max-width:1180px}
@@ -298,3 +300,5 @@
 .compare-col.wavy small{color:var(--orange2)}
 .compare-col.wavy li{color:var(--paper)}
 .compare-col.wavy li i{border-color:transparent;color:#fff}
+
+.ai-section .rotator{justify-items:start}
