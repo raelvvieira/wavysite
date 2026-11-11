@@ -108,9 +108,9 @@
 .hero-product h1{font-size:clamp(38px,6.2vw,96px);line-height:1.02;margin:22px auto 28px;max-width:1180px;text-wrap:balance}
 /* Título rotativo: a parte fixa fica em cima e os três termos se revezam embaixo. */
 .rotator{display:block;position:relative;height:1.2em;line-height:1.2;overflow:hidden}
-.rotator em{position:absolute;inset:0;display:block;white-space:nowrap;opacity:0;animation:rotWord 9s cubic-bezier(.2,.8,.2,1) infinite}
-.rotator em:nth-child(2){animation-delay:3s}
-.rotator em:nth-child(3){animation-delay:6s}
+.rotator em{position:absolute;inset:0;display:block;white-space:nowrap;opacity:0;animation:rotWord 6s cubic-bezier(.2,.8,.2,1) infinite}
+.rotator em:nth-child(2){animation-delay:2s}
+.rotator em:nth-child(3){animation-delay:4s}
 @keyframes rotWord{0%{opacity:0;translate:0 70%;filter:blur(10px)}5%,30%{opacity:1;translate:0 0;filter:blur(0)}35%,100%{opacity:0;translate:0 -70%;filter:blur(10px)}}
 @media (prefers-reduced-motion:reduce){.rotator{height:auto;overflow:visible}.rotator em{position:static;opacity:1;white-space:normal}}
 .hero-product .lead-copy{margin:0 auto;max-width:700px;color:#b9babd}
@@ -237,3 +237,16 @@
 }
 @media(max-width:400px){.phone-stage{scale:.82;margin:-40px 0}.chip-ai{right:-10px}.chip-deal{left:-10px}.chip-score{right:-6px}}
 @media(max-width:560px){.hero-product .eyebrow{letter-spacing:.12em;font-size:10px}}
+
+/* O rotador fora do hero herda o alinhamento do título em que está. */
+.final-cta .rotator em{color:transparent}
+.ai-section .rotator{margin:.02em 0}
+
+/* Entrada das seções ao rolar, no mesmo movimento do título do hero.
+   Só onde o navegador anima por rolagem sem JS; nos demais o conteúdo fica visível. */
+@keyframes revealUp{from{opacity:0;translate:0 44px;filter:blur(10px)}to{opacity:1;translate:0 0;filter:none}}
+@supports (animation-timeline:view()){@media (prefers-reduced-motion:no-preference){
+.problem>*,.compare-col,.platform>.eyebrow,.platform>h2,.platform>p,.platform-tabs,.ai-section>*,.steps-section .section-heading,.steps li,.founder>*,.proof>h2,.testimonial-card,.faq>*,.final-cta>*{animation:revealUp linear both;animation-timeline:view();animation-range:entry 0% entry 42%}
+.problem>.compare{animation:none}
+}}
+.final-cta h2>.rotator{font-size:1em;letter-spacing:inherit;line-height:1.2;margin:0;color:inherit}
