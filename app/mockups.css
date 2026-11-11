@@ -397,22 +397,24 @@
 .platform-tabs .screen-stage{margin-right:-20px}
 }
 
-/* ---- Celular em foto: a conversa fica na área da tela (223..797 x 113..1417 de 1024x1536) ---- */
-.phone-stage{width:330px;padding:0}
-.phone{width:550px;height:auto;margin:-52px -110px;padding:0;border-radius:0;background:none;box-shadow:none;display:block;container-type:inline-size}
-.phone:before{content:"";position:absolute;left:20%;top:6.2%;width:60%;height:87.5%;border-radius:calc(100cqw*.075);background:#000}
+/* ---- Celular em foto, em ângulo: a conversa é projetada na tela com uma
+   transformação de perspectiva calculada a partir dos quatro cantos da tela na foto
+   (1024x1536, exibida com 640px de largura). ---- */
+.phone-stage{width:290px;height:772px;padding:0}
+.phone{position:absolute;left:-176px;top:-88px;width:640px;height:960px;margin:0;padding:0;border-radius:0;background:none;box-shadow:none;display:block}
 .phone>*{position:relative}
-.phone-photo{position:relative;z-index:1;display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(90deg,transparent 3%,#000 15%,#000 85%,transparent 97%),linear-gradient(transparent 1%,#000 5%,#000 95%,transparent 99%);mask-image:linear-gradient(90deg,transparent 3%,#000 15%,#000 85%,transparent 97%),linear-gradient(transparent 1%,#000 5%,#000 95%,transparent 99%);-webkit-mask-composite:source-in;mask-composite:intersect}
-.phone-screen{position:absolute!important;z-index:2;left:21.78%;top:7.36%;width:56.15%;height:84.96%;border-radius:calc(100cqw*.06);overflow:hidden;display:flex;flex-direction:column;background:#efeae2}
+.phone-photo{position:absolute;inset:0;z-index:1;display:block;width:100%;height:100%;-webkit-mask-image:linear-gradient(90deg,transparent 16%,#000 25%,#000 76%,transparent 86%),linear-gradient(transparent 3%,#000 7.5%,#000 91.5%,transparent 96%);mask-image:linear-gradient(90deg,transparent 16%,#000 25%,#000 76%,transparent 86%),linear-gradient(transparent 3%,#000 7.5%,#000 91.5%,transparent 96%);-webkit-mask-composite:source-in;mask-composite:intersect}
+.phone-screen{position:absolute!important;z-index:2;left:0;top:0;width:300px;height:740px;transform-origin:0 0;transform:matrix3d(0.93370314,0.16325169,0,0.0003134598,0,1.0228885,0,0,0,0,1,0,215.625,95.4375,0,1);border-radius:47px/38px;overflow:hidden;display:flex;flex-direction:column;background:#efeae2}
 .phone-screen>*{position:relative}
-.phone-screen .phone-notch{position:absolute;z-index:3;top:1.46%;left:50%;translate:-50% 0;width:23.8%;height:2.99%;border-radius:99px;background:#000}
-.phone-screen .phone-bar{height:6%;flex:none;border-radius:0;padding:0 26px;align-items:center}
-.phone-screen .wa-input{border-radius:0;padding-bottom:20px}
-.chip-ai{top:44px;right:-150px}
-.chip-deal{bottom:118px;left:-215px}
-.chip-score{bottom:36px;right:-120px}
-@media(max-width:1100px){.chip-ai{right:-150px}.chip-deal{left:-160px}.chip-score{right:-130px}}
-@media(max-width:700px){.chip-ai{right:-34px;top:-34px}.chip-deal{left:-30px;bottom:84px}.chip-score{right:-26px;bottom:-30px}.phone-stage{margin:30px 0 40px!important}}
+.phone-screen:after{content:"";position:absolute;inset:0;z-index:4;pointer-events:none;background:linear-gradient(105deg,rgba(255,255,255,.14) 0%,rgba(255,255,255,.04) 24%,transparent 46%)}
+.phone-screen .phone-notch{position:absolute;z-index:3;top:1.5%;left:50%;translate:-46% 0;width:29%;height:4.5%;border-radius:99px;background:#000}
+.phone-screen .phone-bar{height:7.4%;flex:none;border-radius:0;padding:0 24px;align-items:center}
+.phone-screen .wa-input{border-radius:0;padding-bottom:26px}
+.chip-ai{top:70px;right:-190px}
+.chip-deal{bottom:170px;left:-230px}
+.chip-score{bottom:60px;right:-160px}
+@media(max-width:1100px){.chip-ai{right:-150px}.chip-deal{left:-180px}.chip-score{right:-130px}}
+@media(max-width:700px){.chip-ai{right:-50px;top:-30px}.chip-deal{left:-44px;bottom:110px}.chip-score{right:-40px;bottom:-26px}.phone-stage{margin:20px 0 30px!important}}
 @media(max-width:400px){.chip-ai{right:-14px}.chip-deal{left:-14px}.chip-score{right:-10px}}
 
 /* ---- /crm: seções de canais, permissões e segurança com tipografia maior ---- */
