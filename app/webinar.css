@@ -73,3 +73,10 @@
 .wb-audience-grid article:last-child{grid-column:auto}
 .wb-hero .float-card.left,.wb-hero .float-card.right{display:none}
 }
+
+/* Botão verde do WhatsApp: é a ação principal desta página. */
+.wa-button{display:inline-flex;align-items:center;gap:14px;min-height:66px;padding:0 34px 0 28px;border-radius:999px;background:#25d366;color:#04310f;font:700 17px/1 var(--font-manrope),sans-serif;letter-spacing:-.01em;box-shadow:0 14px 40px rgba(37,211,102,.35),inset 0 1px 0 rgba(255,255,255,.35);transition:translate .2s,box-shadow .2s,background .2s}
+.wa-button:hover{translate:0 -2px;background:#2fe374;box-shadow:0 20px 52px rgba(37,211,102,.5),inset 0 1px 0 rgba(255,255,255,.35)}
+.wa-button .brand-icon{width:28px;height:28px;flex:none}
+.webinar-page .final-cta .wa-button{margin-top:30px}
+@media(max-width:560px){.wa-button{width:100%;justify-content:center;min-height:62px;padding:0 20px;font-size:16px}}

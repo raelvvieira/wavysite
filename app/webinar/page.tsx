@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 };
 
 function Join({ children = "Entrar no grupo do WhatsApp" }: { children?: React.ReactNode }) {
-  return <a className="button branded-button" href={EVENT.groupUrl} target="_blank" rel="noreferrer"><span className="button-mark"><img src="/assets/wavy-button-mark.jpg" alt="" width={64} height={64}/></span><span className="button-label">{children}</span></a>;
+  return <a className="wa-button" href={EVENT.groupUrl} target="_blank" rel="noreferrer"><BrandIcon name="whatsapp"/><span>{children}</span></a>;
 }
 
 const facts = [
@@ -69,7 +69,7 @@ const navLinks = [
 
 export default function WebinarPage() {
   return <main className="webinar-page" id="top">
-    <IslandHeader home="/" links={navLinks} cta={{ href: EVENT.groupUrl, label: "Entrar no grupo", external: true }} />
+    <IslandHeader home="/" links={navLinks} cta={{ href: EVENT.groupUrl, label: "Entrar no grupo", external: true, whatsapp: true }} />
 
     <section className="hero-product wb-hero section-shell"><span className="wb-badge"><i/>LIVE GRATUITA · TODA QUINTA, 19H</span><h1>A nova era do tráfego pago fecha o ciclo com <span className="rotator"><em className="gradient-text">CRM</em><em className="gradient-text">IA no WhatsApp</em><em className="gradient-text">métricas de verdade</em></span></h1><p className="lead-copy">Uma aula ao vivo para mostrar como anúncio, CRM e atendimento com inteligência artificial trabalham juntos para você escalar com previsibilidade, sabendo o retorno de cada canal, de cada anúncio e de cada criativo.</p><dl className="wb-facts">{facts.map(([k,v])=><div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl><div className="actions"><Join/></div><p className="hero-fineprint">Você entra no grupo e recebe o link da live por lá.</p>
       <div className="hero-stage"><div className="float-card ads meta" aria-hidden="true"><i><BrandIcon name="meta"/></i><div><small>META ADS</small><b>ROAS de 10,5x neste criativo</b><em>↗ o melhor da campanha</em></div></div><div className="float-card left" aria-hidden="true"><i>✦</i><div><small>CUSTO DE AQUISIÇÃO</small><b>R$ 149,73 por cliente</b></div></div><div className="float-card right" aria-hidden="true"><i>✓</i><div><small>AGENTE DE IA</small><b>Respondeu no WhatsApp em 8 s</b></div></div><CrmFrame label="Dashboard do WAVY CRM com faturamento, retorno dos anúncios e custo por venda" priority><CrmDashboard/></CrmFrame></div></section>

@@ -5,16 +5,16 @@ export const CRM_URL = "https://crm.wavymarketing.com.br/login";
 
 type NavLink = { href: string; label: string };
 
-export function IslandHeader({ home, links, cta }: { home: string; links: NavLink[]; cta: NavLink & { external?: boolean } }) {
+export function IslandHeader({ home, links, cta }: { home: string; links: NavLink[]; cta: NavLink & { external?: boolean; whatsapp?: boolean } }) {
   const ctaProps = cta.external ? { target: "_blank", rel: "noreferrer" } : {};
   return (
     <header className="island">
       <a className="island-logo" href={home} aria-label="WAVY — início"><img src="/assets/wavy-logo.webp" alt="WAVY" width={480} height={138} /></a>
       <nav aria-label="Navegação principal">{links.map((l) => <a key={l.href} href={l.href}>{l.label}</a>)}</nav>
-      <a className="island-cta" href={cta.href} {...ctaProps}>{cta.label} <span aria-hidden="true">↗</span></a>
+      <a className={cta.whatsapp ? "island-cta wa" : "island-cta"} href={cta.href} {...ctaProps}>{cta.label} <span aria-hidden="true">↗</span></a>
       <details className="island-menu">
         <summary aria-label="Abrir menu"><span /><span /></summary>
-        <div>{links.map((l) => <a key={l.href} href={l.href}>{l.label}</a>)}<a className="island-menu-cta" href={cta.href} {...ctaProps}>{cta.label} <span aria-hidden="true">↗</span></a></div>
+        <div>{links.map((l) => <a key={l.href} href={l.href}>{l.label}</a>)}<a className={cta.whatsapp ? "island-menu-cta wa" : "island-menu-cta"} href={cta.href} {...ctaProps}>{cta.label} <span aria-hidden="true">↗</span></a></div>
       </details>
     </header>
   );
