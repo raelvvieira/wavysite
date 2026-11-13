@@ -1,82 +1,135 @@
-/* ---- Página /webinar: captação para a live ---- */
+/* ---- Página /webinar: convite curto para a live ---- */
 .webinar-page{background:#050505}
-.wb-hero h1{font-size:clamp(34px,5.2vw,82px);max-width:1240px}
+.webinar-page h2 em.gradient-text,.wb-hero h1 em{display:block;padding-bottom:.12em}
+.wb-hero{position:relative;isolation:isolate;overflow:hidden;padding-top:176px;padding-bottom:70px;text-align:center}
+.wb-hero:before{content:"";position:absolute;z-index:-1;left:50%;bottom:-420px;width:min(1400px,150vw);height:760px;translate:-50% 0;background:radial-gradient(closest-side,rgba(255,96,20,.42),rgba(216,45,32,.14) 55%,transparent);filter:blur(40px)}
+.wb-hero:after{content:"";position:absolute;z-index:-2;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse at 50% 30%,#000,transparent 70%);mask-image:radial-gradient(ellipse at 50% 30%,#000,transparent 70%)}
+.wb-hero h1{font-size:clamp(34px,5vw,78px);line-height:1.02;max-width:1180px;margin:26px auto 24px;text-wrap:balance}
+.wb-hero .lead-copy{margin:0 auto;max-width:640px;font-size:clamp(17px,1.4vw,20px);color:#c2c3c6}
+.wb-actions{display:flex;justify-content:center;margin-top:36px}
 .wb-badge{display:inline-flex;align-items:center;gap:10px;padding:9px 16px;border-radius:999px;border:1px solid rgba(255,75,10,.5);background:rgba(255,75,10,.12);font-size:11.5px;font-weight:600;letter-spacing:.16em;color:#ffb48a}
-.wb-badge i{width:7px;height:7px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 0 rgba(255,75,10,.7);animation:wbPulse 1.8s infinite}
-@keyframes wbPulse{70%{box-shadow:0 0 0 9px rgba(255,75,10,0)}100%{box-shadow:0 0 0 0 rgba(255,75,10,0)}}
-.wb-facts{display:grid;grid-template-columns:repeat(4,1fr);max-width:860px;margin:38px auto 0;border:1px solid rgba(255,255,255,.14);border-radius:20px;background:rgba(14,14,16,.6);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);overflow:hidden}
+.wb-badge i{width:7px;height:7px;border-radius:50%;background:var(--orange);animation:wbPulse 1.8s infinite}
+@keyframes wbPulse{0%{box-shadow:0 0 0 0 rgba(255,75,10,.7)}70%{box-shadow:0 0 0 9px rgba(255,75,10,0)}100%{box-shadow:0 0 0 0 rgba(255,75,10,0)}}
+.wb-facts{display:grid;grid-template-columns:repeat(4,1fr);max-width:820px;margin:44px auto 0;border:1px solid rgba(255,255,255,.14);border-radius:20px;background:rgba(14,14,16,.6);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);overflow:hidden}
 .wb-facts div{padding:18px 16px}
 .wb-facts div+div{border-left:1px solid rgba(255,255,255,.1)}
 .wb-facts dt{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:#8f9195}
 .wb-facts dd{margin:8px 0 0;font:600 clamp(15px,1.35vw,19px)/1.2 var(--font-manrope),sans-serif;letter-spacing:-.02em;color:var(--paper)}
-.wb-hero .actions{margin-top:30px}
 
-.wb-cycle{padding-top:150px;padding-bottom:150px}
-.wb-cycle h2 em,.wb-audience h2 em{display:block}
-.wb-cycle .section-heading>p{max-width:640px;color:var(--muted);font-size:17px!important;line-height:1.7}
-.wb-cycle .section-heading{margin-bottom:60px}
-.wb-compare{display:grid;grid-template-columns:.8fr 1.2fr;gap:16px}
-.wb-compare article{padding:36px;border-radius:20px;border:1px solid rgba(255,255,255,.16);background:#101012;display:flex;flex-direction:column}
-.wb-compare small{font-size:12px;letter-spacing:.16em;font-weight:600;color:#b4b5b8}
-.wb-compare ol{list-style:none;margin:26px 0 0;padding:0}
-.wb-usual li{padding:17px 0 17px 30px;border-top:1px solid var(--line);position:relative;font-size:17px;color:#d2d3d5}
-.wb-usual li:before{content:"";position:absolute;left:4px;top:25px;width:8px;height:8px;border-radius:50%;background:#55565a}
-.wb-usual>p{margin:auto 0 0;padding:18px 20px;border:1px dashed rgba(255,255,255,.22);border-radius:14px;font-size:15.5px;line-height:1.5;color:#c9c9cb}
-.wb-usual ol{margin-bottom:26px}
-.wb-full{border-color:rgba(255,75,10,.45)!important;background:radial-gradient(circle at 85% 0%,rgba(255,75,10,.16),transparent 55%),#100c0a!important}
-.wb-full small{color:var(--orange2)!important}
-.wb-full ol{display:grid;grid-template-columns:1fr 1fr;gap:0 34px}
-.wb-full li{display:grid;grid-template-columns:auto 1fr;gap:16px;padding:20px 0;border-top:1px solid rgba(255,255,255,.12)}
-.wb-full li>span{font:600 13px/1.6 var(--font-manrope),sans-serif;color:var(--orange2);letter-spacing:.06em}
-.wb-full li b{font:600 20px/1.2 var(--font-manrope),sans-serif;letter-spacing:-.03em;color:var(--paper)}
-.wb-full li p{margin:6px 0 0;font-size:15px;line-height:1.55;color:#b4b5b8}
-.wb-loop{display:flex;align-items:center;gap:12px;margin:22px 0 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font:520 clamp(17px,1.5vw,21px)/1.35 var(--font-manrope),sans-serif;letter-spacing:-.03em;color:var(--paper)}
-.wb-loop i{font-style:normal;display:grid;place-items:center;width:34px;height:34px;flex:none;border-radius:50%;background:linear-gradient(135deg,#ff861f,#ff4b0a);color:#fff;font-size:18px}
-
-.wb-agenda{padding-top:40px;padding-bottom:150px}
-.wb-agenda .eyebrow,.wb-audience .eyebrow,.wb-demo .eyebrow{display:block;margin-bottom:26px}
-.wb-agenda-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.wb-agenda-grid li{position:relative;overflow:hidden;padding:34px 28px 36px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#111113,#0a0a0b);transition:border-color .3s,translate .3s,background .3s}
-.wb-agenda-grid li:hover{border-color:rgba(255,75,10,.5);translate:0 -6px;background:radial-gradient(circle at 80% 0%,rgba(255,75,10,.16),transparent 60%),#100c0a}
-.wb-agenda-grid span{position:absolute;top:6px;right:20px;font:700 84px/1 var(--font-manrope),sans-serif;letter-spacing:-.06em;color:rgba(255,255,255,.05)}
-.wb-agenda-grid small{font-size:11.5px;letter-spacing:.16em;font-weight:600;color:var(--orange2)}
-.wb-agenda-grid h3{font-size:clamp(22px,1.9vw,27px);line-height:1.15;letter-spacing:-.04em;margin:46px 0 12px}
-.wb-agenda-grid p{margin:0;font-size:15.5px;line-height:1.6;color:var(--muted)}
-.wb-cta-row{display:flex;justify-content:center;margin-top:56px}
-
-.wb-audience{padding-top:150px;padding-bottom:150px}
-.wb-audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.wb-audience-grid article{padding:34px 30px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#111113,#0a0a0b)}
-.wb-audience-grid span{font:600 13px var(--font-manrope),sans-serif;letter-spacing:.06em;color:var(--orange2)}
-.wb-audience-grid h3{font-size:clamp(23px,2vw,29px);letter-spacing:-.04em;margin:38px 0 12px}
-.wb-audience-grid p{margin:0;font-size:16px;line-height:1.6;color:var(--muted)}
-
-.webinar-page .final-cta h2 em{display:block}
+.wa-button{display:inline-flex;align-items:center;gap:14px;min-height:66px;padding:0 34px 0 28px;border-radius:999px;background:#25d366;color:#04310f;font:700 17px/1 var(--font-manrope),sans-serif;letter-spacing:-.01em;box-shadow:0 14px 40px rgba(37,211,102,.35),inset 0 1px 0 rgba(255,255,255,.35);transition:translate .2s,box-shadow .2s,background .2s}
+.wa-button:hover{translate:0 -2px;background:#2fe374;box-shadow:0 20px 52px rgba(37,211,102,.5),inset 0 1px 0 rgba(255,255,255,.35)}
+.wa-button .brand-icon{width:28px;height:28px;flex:none}
+.webinar-page .final-cta{min-height:0;padding-top:130px;padding-bottom:130px}
+.webinar-page .final-cta .wa-button{margin-top:30px}
 .webinar-page .final-cta h2>span{letter-spacing:.02em}
 
-@supports (animation-timeline:view()){@media (prefers-reduced-motion:no-preference){
-.wb-cycle .section-heading,.wb-compare article,.wb-agenda .section-heading,.wb-agenda-grid li,.wb-audience .section-heading,.wb-audience-grid article{animation:revealUp linear both;animation-timeline:view();animation-range:entry 0% entry 42%}
-}}
-@media(max-width:1000px){
-.wb-compare{grid-template-columns:1fr}
-.wb-agenda-grid,.wb-audience-grid{grid-template-columns:1fr 1fr}
-.wb-audience-grid article:last-child{grid-column:1/-1}
+.wb-heading{text-align:center;margin-bottom:60px}
+.wb-heading h2{font-size:clamp(36px,4.6vw,68px);line-height:1.04}
+.wb-heading p{margin:18px auto 0;max-width:560px;font-size:17px;line-height:1.6;color:var(--muted)}
+
+/* Fluxograma animado: um cliente de exemplo atravessa as cinco etapas, uma por vez. */
+.wb-flow-section{padding-top:110px;padding-bottom:120px}
+.wb-flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:34px}
+.wb-flow li{position:relative}
+.wb-flow li:not(:last-child):before,.wb-flow li:not(:last-child):after{content:"";position:absolute;top:78px;left:100%;width:34px;height:2px}
+.wb-flow li:not(:last-child):before{background:rgba(255,255,255,.14)}
+.wb-flow li:not(:last-child):after{background:linear-gradient(90deg,#ff861f,#ff4b0a);transform-origin:left;box-shadow:0 0 12px rgba(255,96,20,.9)}
+.wb-node{height:100%;display:flex;flex-direction:column;align-items:flex-start;padding:24px 22px 22px;border-radius:22px;border:1px solid rgba(255,75,10,.35);background:radial-gradient(circle at 85% 0%,rgba(255,75,10,.14),transparent 60%),#0e0b0a}
+.wb-scene{width:100%;height:108px;display:flex;align-items:center}
+.wb-ads{display:flex;gap:10px}
+.wb-ads i{display:grid;place-items:center;width:62px;height:62px;border-radius:18px;background:#fff}
+.wb-ads svg{width:32px;height:32px}
+.wb-ads i:first-child{animation:wbTap 12s ease-in-out infinite}
+@keyframes wbTap{0%,1%{scale:1}3%{scale:.88}6%,100%{scale:1}}
+.wb-chat{width:100%;display:flex;flex-direction:column;gap:7px}
+.wb-chat p{margin:0;max-width:88%;padding:8px 11px;border-radius:12px;font-size:12.5px;line-height:1.35}
+.wb-chat .in{align-self:flex-start;background:#fff;color:#111;border-top-left-radius:3px}
+.wb-chat .out{align-self:flex-end;background:#25d366;color:#04310f;border-top-right-radius:3px}
+.wb-chat .out b{display:block;font-size:10px;letter-spacing:.06em;opacity:.8}
+.wb-kanban{position:relative;width:100%;height:96px;display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.wb-kanban>div{border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:7px 6px}
+.wb-kanban small{display:block;margin:0!important;font-size:9px!important;letter-spacing:.08em!important;color:#9a9b9e!important;text-transform:uppercase}
+.wb-kanban u{display:block;height:16px;margin-top:38px;border-radius:5px;background:rgba(255,255,255,.1)}
+.wb-card{position:absolute;top:27px;left:6px;width:calc((100% - 12px)/3 - 12px);height:26px;border-radius:7px;display:grid;place-items:center;background:linear-gradient(135deg,#ff861f,#ff4b0a);color:#fff;font-size:11px;font-weight:700;box-shadow:0 6px 16px rgba(255,75,10,.45);animation:wbCard 12s cubic-bezier(.6,0,.2,1) infinite}
+@keyframes wbCard{0%,32%{translate:0 0;rotate:0deg}36%{rotate:-4deg}40%,47%{translate:calc(100% + 18px) 0;rotate:0deg}51%{rotate:-4deg}55%,92%{translate:calc(200% + 36px) 0;rotate:0deg}98%,100%{translate:0 0;rotate:0deg}}
+.wb-sale i{font-style:normal;display:grid;place-items:center;width:62px;height:62px;border-radius:50%;background:#10b981;color:#fff;font-size:28px;font-weight:700;box-shadow:0 0 0 8px rgba(16,185,129,.16)}
+.wb-metrics{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.wb-metrics div{padding:11px 10px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.wb-metrics small{display:block;margin:0!important;font-size:10px!important;letter-spacing:.12em!important;color:#9a9b9e!important}
+.wb-metrics b{display:block;margin:5px 0 0!important;font:700 17px/1 var(--font-manrope),sans-serif!important;letter-spacing:-.03em;background:linear-gradient(105deg,#ff861f,#ff4b0a 48%,#d82d20);-webkit-background-clip:text;background-clip:text;color:transparent!important;white-space:nowrap}
+.wb-node .brand-icon.meta{color:#0081fb}
+.wb-node .brand-icon.whatsapp{color:#25d366}
+.wb-node>small{margin-top:22px;font-size:11.5px;letter-spacing:.16em;font-weight:600;color:var(--orange2)}
+.wb-node>b{margin:8px 0 20px;font:600 clamp(18px,1.55vw,22px)/1.2 var(--font-manrope),sans-serif;letter-spacing:-.03em;color:var(--paper)}
+.wb-chip{margin-top:auto;display:inline-block;padding:9px 13px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);font-size:13px;font-weight:600;line-height:1.3;color:#e4e4e6}
+.wb-flow .n4 .wb-chip,.wb-flow .n5 .wb-chip{background:rgba(16,185,129,.14);border-color:rgba(16,185,129,.4);color:#6ee7b7}
+.wb-loop{display:flex;justify-content:center;align-items:center;gap:12px;margin:44px 0 0;text-align:left;font:520 clamp(17px,1.5vw,21px)/1.35 var(--font-manrope),sans-serif;letter-spacing:-.03em;color:var(--paper)}
+.wb-loop i{font-style:normal;display:grid;place-items:center;width:34px;height:34px;flex:none;border-radius:50%;background:linear-gradient(135deg,#ff861f,#ff4b0a);color:#fff;font-size:18px;animation:wbSpin 12s linear infinite}
+@keyframes wbSpin{to{rotate:360deg}}
+.wb-note{margin:14px 0 0;text-align:center;font-size:12.5px;color:#6f7074}
+@keyframes wbOn1{0%,0%{border-color:rgba(255,255,255,.14);box-shadow:none;translate:0 0}4%,17%{border-color:rgba(255,96,20,.9);box-shadow:0 0 0 1px rgba(255,96,20,.5),0 22px 60px rgba(255,75,10,.28);translate:0 -6px}21%,100%{border-color:rgba(255,75,10,.35);box-shadow:none;translate:0 0}}
+@keyframes wbChip1{0%,2%{opacity:0;translate:0 8px;scale:.94}6%,92%{opacity:1;translate:0 0;scale:1}98%,100%{opacity:0;translate:0 0;scale:1}}
+@keyframes wbLine1{0%,12%{scale:0 1}18%,92%{scale:1 1}98%,100%{scale:0 1}}
+@keyframes wbLineV1{0%,12%{scale:1 0}18%,92%{scale:1 1}98%,100%{scale:1 0}}
+@keyframes wbOn2{0%,15%{border-color:rgba(255,255,255,.14);box-shadow:none;translate:0 0}19%,32%{border-color:rgba(255,96,20,.9);box-shadow:0 0 0 1px rgba(255,96,20,.5),0 22px 60px rgba(255,75,10,.28);translate:0 -6px}36%,100%{border-color:rgba(255,75,10,.35);box-shadow:none;translate:0 0}}
+@keyframes wbChip2{0%,17%{opacity:0;translate:0 8px;scale:.94}21%,92%{opacity:1;translate:0 0;scale:1}98%,100%{opacity:0;translate:0 0;scale:1}}
+@keyframes wbLine2{0%,27%{scale:0 1}33%,92%{scale:1 1}98%,100%{scale:0 1}}
+@keyframes wbLineV2{0%,27%{scale:1 0}33%,92%{scale:1 1}98%,100%{scale:1 0}}
+@keyframes wbOn3{0%,30%{border-color:rgba(255,255,255,.14);box-shadow:none;translate:0 0}34%,47%{border-color:rgba(255,96,20,.9);box-shadow:0 0 0 1px rgba(255,96,20,.5),0 22px 60px rgba(255,75,10,.28);translate:0 -6px}51%,100%{border-color:rgba(255,75,10,.35);box-shadow:none;translate:0 0}}
+@keyframes wbChip3{0%,32%{opacity:0;translate:0 8px;scale:.94}36%,92%{opacity:1;translate:0 0;scale:1}98%,100%{opacity:0;translate:0 0;scale:1}}
+@keyframes wbLine3{0%,42%{scale:0 1}48%,92%{scale:1 1}98%,100%{scale:0 1}}
+@keyframes wbLineV3{0%,42%{scale:1 0}48%,92%{scale:1 1}98%,100%{scale:1 0}}
+@keyframes wbOn4{0%,45%{border-color:rgba(255,255,255,.14);box-shadow:none;translate:0 0}49%,62%{border-color:rgba(255,96,20,.9);box-shadow:0 0 0 1px rgba(255,96,20,.5),0 22px 60px rgba(255,75,10,.28);translate:0 -6px}66%,100%{border-color:rgba(255,75,10,.35);box-shadow:none;translate:0 0}}
+@keyframes wbChip4{0%,47%{opacity:0;translate:0 8px;scale:.94}51%,92%{opacity:1;translate:0 0;scale:1}98%,100%{opacity:0;translate:0 0;scale:1}}
+@keyframes wbLine4{0%,57%{scale:0 1}63%,92%{scale:1 1}98%,100%{scale:0 1}}
+@keyframes wbLineV4{0%,57%{scale:1 0}63%,92%{scale:1 1}98%,100%{scale:1 0}}
+@keyframes wbOn5{0%,60%{border-color:rgba(255,255,255,.14);box-shadow:none;translate:0 0}64%,77%{border-color:rgba(255,96,20,.9);box-shadow:0 0 0 1px rgba(255,96,20,.5),0 22px 60px rgba(255,75,10,.28);translate:0 -6px}81%,100%{border-color:rgba(255,75,10,.35);box-shadow:none;translate:0 0}}
+@keyframes wbChip5{0%,62%{opacity:0;translate:0 8px;scale:.94}66%,92%{opacity:1;translate:0 0;scale:1}98%,100%{opacity:0;translate:0 0;scale:1}}
+@media (prefers-reduced-motion:no-preference){
+.wb-chat .out{animation:wbChip2 12s ease-in-out infinite}
+.wb-sale i{animation:wbChip4 12s ease-in-out infinite}
+.wb-metrics div{animation:wbChip5 12s ease-in-out infinite}
+.wb-flow .n1 .wb-node{animation:wbOn1 12s ease-in-out infinite}.wb-flow .n1 .wb-chip{animation:wbChip1 12s ease-in-out infinite}
+.wb-flow .n1:after{animation:wbLine1 12s ease-in-out infinite}
+.wb-flow .n2 .wb-node{animation:wbOn2 12s ease-in-out infinite}.wb-flow .n2 .wb-chip{animation:wbChip2 12s ease-in-out infinite}
+.wb-flow .n2:after{animation:wbLine2 12s ease-in-out infinite}
+.wb-flow .n3 .wb-node{animation:wbOn3 12s ease-in-out infinite}.wb-flow .n3 .wb-chip{animation:wbChip3 12s ease-in-out infinite}
+.wb-flow .n3:after{animation:wbLine3 12s ease-in-out infinite}
+.wb-flow .n4 .wb-node{animation:wbOn4 12s ease-in-out infinite}.wb-flow .n4 .wb-chip{animation:wbChip4 12s ease-in-out infinite}
+.wb-flow .n4:after{animation:wbLine4 12s ease-in-out infinite}
+.wb-flow .n5 .wb-node{animation:wbOn5 12s ease-in-out infinite}.wb-flow .n5 .wb-chip{animation:wbChip5 12s ease-in-out infinite}
 }
-@media(max-width:900px){.wb-cycle,.wb-audience{padding-top:100px;padding-bottom:100px}.wb-agenda{padding-bottom:100px}}
+
+.wb-take{padding-top:30px;padding-bottom:120px}
+.wb-take-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.wb-take-grid li{padding:30px 28px 32px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#111113,#0a0a0b)}
+.wb-take-grid span{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#ff861f,#ff4b0a);color:#fff;font:700 17px var(--font-manrope),sans-serif}
+.wb-take-grid h3{font-size:clamp(22px,2vw,28px);letter-spacing:-.04em;margin:28px 0 10px}
+.wb-take-grid p{margin:0;font-size:16px;line-height:1.6;color:var(--muted)}
+.wb-host{display:flex;align-items:center;gap:20px;max-width:720px;margin:44px auto 0;padding:16px 26px 16px 16px;border:1px solid rgba(255,255,255,.14);border-radius:999px;background:#0e0e10}
+.wb-host img{width:68px;height:68px;border-radius:50%;object-fit:cover;flex:none}
+.wb-host p{margin:0;font-size:15.5px;line-height:1.5;color:#b4b5b8}
+.wb-host b{color:var(--paper);font-weight:600}
+
+@supports (animation-timeline:view()){@media (prefers-reduced-motion:no-preference){
+.wb-heading,.wb-take-grid li,.wb-host{animation:revealUp linear both;animation-timeline:view();animation-range:entry 0% entry 42%}
+}}
+@media(max-width:1100px){
+.wb-flow{grid-template-columns:1fr;gap:26px;max-width:520px;margin:0 auto}
+.wb-flow li:not(:last-child):before,.wb-flow li:not(:last-child):after{top:100%;left:52px;width:2px;height:26px}
+.wb-flow li:not(:last-child):after{background:linear-gradient(#ff861f,#ff4b0a);transform-origin:top}
+.wb-flow .n1:after{animation-name:wbLineV1}.wb-flow .n2:after{animation-name:wbLineV2}.wb-flow .n3:after{animation-name:wbLineV3}.wb-flow .n4:after{animation-name:wbLineV4}
+.wb-chip{align-self:flex-start}
+.wb-scene{max-width:300px}
+.wb-take-grid{grid-template-columns:1fr}
+}
+@media(max-width:900px){.wb-hero{padding-top:128px;padding-bottom:50px}.wb-flow-section{padding-top:80px;padding-bottom:90px}.wb-take{padding-bottom:90px}.webinar-page .final-cta{padding-top:100px;padding-bottom:100px}.wb-heading{margin-bottom:44px}}
 @media(max-width:700px){
 .wb-facts{grid-template-columns:1fr 1fr}
 .wb-facts div:nth-child(3){border-left:0}
 .wb-facts div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.1)}
-.wb-compare article{padding:26px 22px}
-.wb-full ol{grid-template-columns:1fr}
-.wb-agenda-grid,.wb-audience-grid{grid-template-columns:1fr}
-.wb-audience-grid article:last-child{grid-column:auto}
-.wb-hero .float-card.left,.wb-hero .float-card.right{display:none}
+.wb-host{border-radius:24px;align-items:flex-start;padding:18px}
+.wb-loop{align-items:flex-start}
 }
-
-/* Botão verde do WhatsApp: é a ação principal desta página. */
-.wa-button{display:inline-flex;align-items:center;gap:14px;min-height:66px;padding:0 34px 0 28px;border-radius:999px;background:#25d366;color:#04310f;font:700 17px/1 var(--font-manrope),sans-serif;letter-spacing:-.01em;box-shadow:0 14px 40px rgba(37,211,102,.35),inset 0 1px 0 rgba(255,255,255,.35);transition:translate .2s,box-shadow .2s,background .2s}
-.wa-button:hover{translate:0 -2px;background:#2fe374;box-shadow:0 20px 52px rgba(37,211,102,.5),inset 0 1px 0 rgba(255,255,255,.35)}
-.wa-button .brand-icon{width:28px;height:28px;flex:none}
-.webinar-page .final-cta .wa-button{margin-top:30px}
-@media(max-width:560px){.wa-button{width:100%;justify-content:center;min-height:62px;padding:0 20px;font-size:16px}}
+@media(max-width:560px){.wa-button{width:100%;justify-content:center;min-height:62px;padding:0 20px;font-size:16px}.wb-actions{display:block}}
+@media (prefers-reduced-motion:reduce){.wb-card,.wb-ads i:first-child,.wb-loop i{animation:none}}
