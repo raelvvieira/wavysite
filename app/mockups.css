@@ -448,3 +448,13 @@
 .hero-stage{display:flex;flex-direction:column}
 .hero-stage .laptop-stage{order:2;margin-top:8px}
 }
+
+/* ---- Símbolos oficiais das plataformas ---- */
+.brand-icon{display:block;fill:currentColor}
+.crm-page .platform-icon{width:60px;height:60px;border-radius:16px;margin-bottom:0}
+.crm-page .platform-icon .brand-icon{width:34px;height:34px}
+.crm-page .platform-icon.whatsapp{background:#25d366;color:#fff}
+.crm-page .platform-icon.instagram{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%);color:#fff}
+.crm-page .platform-cards article{justify-content:flex-start;border-radius:18px}
+.crm-page .platform-cards small{margin-top:auto;padding-top:60px}
+.float-card.ads.meta .brand-icon{width:30px;height:30px;color:#0081fb}
