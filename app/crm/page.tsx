@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BrandIcon } from "../brand-icons";
 import { CRM_URL, IslandHeader, SiteFooter } from "../chrome";
 import { CrmDashboard, CrmFrame, CrmInbox, CrmKanban, CrmScreen, PhoneChat } from "../mockups";
 
@@ -121,7 +122,7 @@ export default function CrmPage() {
       </article>)}
     </section>
 
-    <section className="integration-section section-shell" id="canais"><div className="integration-heading"><span>CANAIS CONECTADOS</span><h2>WhatsApp e Instagram.<br/><em className="gradient-text">Uma única caixa de entrada.</em></h2><p>As contas são conectadas somente com autorização da sua empresa. Cada cliente visualiza exclusivamente as conversas vinculadas às contas que conectou.</p></div><div className="platform-cards"><article><div className="platform-icon whatsapp">✆</div><small>API OFICIAL DA META</small><h3>WhatsApp Business Platform</h3><p>Recebimento e resposta das mensagens, modelos aprovados e envio para contatos que autorizaram.</p></article><article><div className="platform-icon instagram">◎</div><small>PERFIL PROFISSIONAL</small><h3>Instagram Direct</h3><p>As mensagens recebidas no Direct chegam na mesma caixa, com o histórico do contato.</p></article></div></section>
+    <section className="integration-section section-shell" id="canais"><div className="integration-heading"><span>CANAIS CONECTADOS</span><h2>WhatsApp e Instagram.<br/><em className="gradient-text">Uma única caixa de entrada.</em></h2><p>As contas são conectadas somente com autorização da sua empresa. Cada cliente visualiza exclusivamente as conversas vinculadas às contas que conectou.</p></div><div className="platform-cards"><article><div className="platform-icon whatsapp"><BrandIcon name="whatsapp"/></div><small>API OFICIAL DA META</small><h3>WhatsApp Business Platform</h3><p>Recebimento e resposta das mensagens, modelos aprovados e envio para contatos que autorizaram.</p></article><article><div className="platform-icon instagram"><BrandIcon name="instagram"/></div><small>PERFIL PROFISSIONAL</small><h3>Instagram Direct</h3><p>As mensagens recebidas no Direct chegam na mesma caixa, com o histórico do contato.</p></article></div></section>
 
     <section className="crm-flow section-shell" id="consentimento"><div><span>CONEXÃO E PERMISSÕES</span><h2>Uma conexão transparente, iniciada por você.</h2><p>O responsável pela empresa é direcionado ao ambiente oficial da Meta, onde consulta as permissões solicitadas antes de autorizar o acesso. Nenhuma conta é conectada sem esse consentimento.</p><ol>{flowSteps.map(([title,text],i)=><li key={title}><i>{i+1}</i><div><b>{title}</b><small>{text}</small></div></li>)}</ol></div><div className="crm-use-card"><span>APÓS A AUTORIZAÇÃO</span><h3>As APIs da Meta são utilizadas para:</h3><ul>{apiUses.map(item=><li key={item}><i>✓</i>{item}</li>)}</ul></div></section>
 

@@ -9,6 +9,8 @@ html{scroll-padding-top:104px}
 .island nav a{padding:10px 17px;border-radius:999px;font:500 15.5px/1 var(--font-manrope),sans-serif;letter-spacing:-.015em;color:#c9c9cb;transition:background .2s,color .2s}
 .island nav a:hover{background:rgba(255,255,255,.08);color:#fff}
 .island-cta{flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 20px;border-radius:999px;background:linear-gradient(105deg,#ff6b1a,#ff4b0a 58%,#f13b13);color:#fff;font:600 15px/1 var(--font-manrope),sans-serif;letter-spacing:-.01em;box-shadow:0 8px 26px rgba(255,75,10,.3);transition:translate .2s,box-shadow .2s}
+.island-cta.wa{background:#25d366;color:#04310f;box-shadow:0 8px 26px rgba(37,211,102,.3)}
+.island-cta.wa:hover{box-shadow:0 12px 32px rgba(37,211,102,.45)}
 .island-cta:hover{translate:0 -1px;box-shadow:0 12px 32px rgba(255,75,10,.45)}
 .island-menu{display:none}
 @media(max-width:900px){
@@ -26,6 +28,7 @@ html{scroll-padding-top:104px}
 .island-menu>div{position:absolute;left:0;right:0;top:72px;display:grid;gap:2px;padding:12px;border-radius:26px;background:rgba(14,14,16,.96);border:1px solid rgba(255,255,255,.13);box-shadow:0 24px 60px rgba(0,0,0,.6)}
 .island-menu>div a{padding:15px 16px;border-radius:16px;font:500 17px/1 var(--font-manrope),sans-serif;color:#e4e4e6}
 .island-menu>div a:active{background:rgba(255,255,255,.08)}
+.island-menu>div .island-menu-cta.wa{background:#25d366;color:#04310f}
 .island-menu>div .island-menu-cta{margin-top:6px;text-align:center;background:linear-gradient(105deg,#ff6b1a,#ff4b0a 58%,#f13b13);color:#fff;font-weight:600}
 }
 @media(max-width:420px){.island-cta{display:none}}
