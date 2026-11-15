@@ -43,12 +43,6 @@ const flow: { tag: string; title: string; chip: string; scene: React.ReactNode }
     scene: <div className="wb-metrics"><div><small>CAC</small><b>R$ 149,73</b></div><div><small>ROAS</small><b>8,7x</b></div></div> },
 ];
 
-const takeaways = [
-  ["A conta do seu CAC", "O passo a passo para calcular quanto custa cada cliente, contando a venda e não só o lead."],
-  ["O mapa das quatro etapas", "O que ligar em cada uma: anúncio, IA no WhatsApp, CRM e métricas."],
-  ["Sua lista de ajustes", "O que pausar, o que escalar e o que arrumar no atendimento."],
-];
-
 const fitYes = [
   "Você já investe em tráfego pago.",
   "Você vende conversando com o cliente, pelo WhatsApp ou pelo Instagram.",
@@ -91,9 +85,7 @@ export default function WebinarPage() {
 
     <section className="wb-fit section-shell" id="para-quem"><div className="wb-heading"><h2>Essa live <em className="gradient-text">não é para todo mundo.</em></h2></div><div className="wb-fit-grid"><article className="yes"><small>É PARA VOCÊ SE</small><ul>{fitYes.map(t=><li key={t}><i aria-hidden="true">✓</i>{t}</li>)}</ul></article><article className="no"><small>NÃO É PARA VOCÊ SE</small><ul>{fitNo.map(t=><li key={t}><i aria-hidden="true">×</i>{t}</li>)}</ul></article></div></section>
 
-    <section className="wb-proof section-shell" id="prova"><div className="wb-heading"><h2>Não é teoria. <em className="gradient-text">É o que roda na operação.</em></h2></div><div className="wb-host"><img src="/assets/founder.webp" alt="Rael Vieira" width={1000} height={1000} loading="lazy" decoding="async"/><div><small>QUEM APRESENTA</small><b>Rael Vieira, estrategista digital da WAVY</b><dl>{stats.map(([n,d])=><div key={n}><dt>{n}</dt><dd>{d}</dd></div>)}</dl></div></div><div className="wb-quotes">{quotes.map(([q,n,r])=><figure key={n}><blockquote>{q}</blockquote><figcaption><b>{n}</b><span>{r}</span></figcaption></figure>)}</div></section>
-
-    <section className="wb-take section-shell" id="conteudo"><div className="wb-heading"><h2>Você sai da live <em className="gradient-text">com três coisas na mão.</em></h2></div><ol className="wb-take-grid">{takeaways.map(([t,d],i)=><li key={t}><span aria-hidden="true">{i+1}</span><h3>{t}</h3><p>{d}</p></li>)}</ol><div className="wb-actions"><Join/></div></section>
+    <section className="wb-proof section-shell" id="prova"><div className="wb-heading"><h2>Não é teoria. <em className="gradient-text">É o que roda na operação.</em></h2></div><div className="wb-host"><img src="/assets/founder.webp" alt="Rael Vieira" width={1000} height={1000} loading="lazy" decoding="async"/><div><small>QUEM APRESENTA</small><b>Rael Vieira, estrategista digital da WAVY</b><dl>{stats.map(([n,d])=><div key={n}><dt>{n}</dt><dd>{d}</dd></div>)}</dl></div></div><div className="wb-quotes">{quotes.map(([q,n,r])=><figure key={n}><blockquote>{q}</blockquote><figcaption><b>{n}</b><span>{r}</span></figcaption></figure>)}</div><div className="wb-actions"><Join/></div></section>
 
     <section className="final-cta section-shell"><h2><span>{EVENT.date} · {EVENT.time} · {EVENT.price}</span>Chega de anunciar <em className="gradient-text">no escuro.</em></h2><Join>Quero participar da live</Join></section>
 

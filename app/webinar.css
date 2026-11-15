@@ -158,3 +158,4 @@
 }
 @media(max-width:560px){.wa-button{width:100%;justify-content:center;min-height:62px;padding:0 20px;font-size:16px}.wb-actions{display:block}}
 @media (prefers-reduced-motion:reduce){.wb-card,.wb-ads i:first-child,.wb-loop i{animation:none}}
+.wb-proof .wb-actions{margin-top:48px}
