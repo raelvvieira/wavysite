@@ -12,7 +12,7 @@ const EVENT = {
 };
 
 export const metadata: Metadata = {
-  title: "Live gratuita: tráfego pago com previsibilidade | WAVY",
+  title: "Live gratuita: tráfego, CRM e IA para escalar com previsibilidade | WAVY",
   description: "Toda quinta, às 19h: o sistema que junta anúncio, IA no WhatsApp e CRM para você saber quanto custa cada cliente e escalar com previsibilidade.",
 };
 
@@ -44,28 +44,56 @@ const flow: { tag: string; title: string; chip: string; scene: React.ReactNode }
 ];
 
 const takeaways = [
-  ["Seu custo por cliente", "Quanto custa trazer cada cliente, contando a venda e não só o lead."],
-  ["O retorno de cada anúncio", "Qual canal, qual anúncio e qual criativo devolvem o dinheiro investido."],
-  ["O sistema para replicar", "Como ligar anúncio, IA no WhatsApp e CRM no seu negócio."],
+  ["A conta do seu CAC", "O passo a passo para calcular quanto custa cada cliente, contando a venda e não só o lead."],
+  ["O mapa das quatro etapas", "O que ligar em cada uma: anúncio, IA no WhatsApp, CRM e métricas."],
+  ["Sua lista de ajustes", "O que pausar, o que escalar e o que arrumar no atendimento."],
+];
+
+const fitYes = [
+  "Você já investe em tráfego pago.",
+  "Você vende conversando com o cliente, pelo WhatsApp ou pelo Instagram.",
+  "Seu time demora para responder e você sabe que perde venda por isso.",
+  "Você quer aumentar a verba, mas não sabe dizer o que está funcionando.",
+];
+const fitNo = [
+  "Você procura um truque de anúncio para vender amanhã.",
+  "Você não pretende mudar nada no seu atendimento.",
+  "Você quer só assistir, sem aplicar.",
+];
+
+const stats = [
+  ["+10x", "de ROAS em negócios que saíram do zero"],
+  ["+R$ 200 mil", "por mês no e-commerce"],
+  ["+4 anos", "como estrategista digital"],
+];
+
+const quotes = [
+  ["“Antes, investíamos em anúncios sem enxergar com clareza o que realmente virava venda. A WAVY conectou o marketing ao nosso processo comercial e hoje conseguimos tomar decisões com muito mais segurança.”", "Dr. Loan Tomiello", "Dentista e Mentor"],
+  ["“O trabalho foi muito além do tráfego pago. A equipe entendeu como atendíamos os leads, encontrou pontos que faziam oportunidades esfriarem e nos ajudou a organizar um processo mais eficiente.”", "Giovani", "JRG Empreendimentos Imobiliários"],
+  ["“Passamos a entender melhor a origem das oportunidades e o que precisava ser melhorado em cada etapa do funil. Hoje marketing e vendas trabalham com a mesma visão.”", "Heiner Hofmann", "CEO Heiner Academy"],
 ];
 
 const navLinks = [
   { href: "#fluxo", label: "Como funciona" },
-  { href: "#conteudo", label: "O que você leva" },
+  { href: "#para-quem", label: "Para quem é" },
+  { href: "#prova", label: "Resultados" },
 ];
 
 export default function WebinarPage() {
   return <main className="webinar-page" id="top">
     <IslandHeader home="/" links={navLinks} cta={{ href: EVENT.groupUrl, label: "Entrar no grupo", external: true, whatsapp: true }} />
 
-    <section className="wb-hero section-shell"><span className="wb-badge"><i/>LIVE GRATUITA · TODA QUINTA, 19H</span><h1>Chega de rodar tráfego pago <em className="gradient-text">sem saber quanto custa cada cliente.</em></h1><p className="lead-copy">Ao vivo, eu mostro o sistema que liga anúncio, IA no WhatsApp e CRM, para você escalar sabendo o que volta.</p><div className="wb-actions"><Join/></div><dl className="wb-facts">{facts.map(([k,v])=><div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl></section>
+    <section className="wb-hero section-shell"><span className="wb-badge"><i/>LIVE GRATUITA · TODA QUINTA, 19H</span><h1>A estratégia de tráfego, CRM e atendimento com IA <em className="gradient-text">que já levou negócios a mais de 10x de ROAS.</em></h1><p className="lead-copy">Saiba seu CAC e seu ROAS por canal, por anúncio e por criativo, e invista com segurança no que dá mais retorno.</p><div className="wb-actions"><Join/></div><dl className="wb-facts">{facts.map(([k,v])=><div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl></section>
 
-    <section className="wb-flow-section section-shell" id="fluxo"><div className="wb-heading"><h2>Um cliente, <em className="gradient-text">do clique à venda.</em></h2><p>É este caminho que você vai ver montado ao vivo.</p></div>
+    <section className="wb-flow-section section-shell" id="fluxo"><div className="wb-heading"><h2>Um cliente, <em className="gradient-text">do clique à venda.</em></h2><p>Hoje o anúncio fica num lugar, a conversa em outro e a venda num terceiro. Na live, você vê os três ligados.</p></div>
       <ol className="wb-flow" aria-label="Exemplo do caminho de um cliente: anúncio, atendimento com IA, CRM, venda e resultado">{flow.map((f,i)=><li key={f.tag} className={`n${i+1}`}><div className="wb-node"><div className="wb-scene" aria-hidden="true">{f.scene}</div><small>{f.tag}</small><b>{f.title}</b><span className="wb-chip">{f.chip}</span></div></li>)}</ol>
       <p className="wb-loop"><i aria-hidden="true">↻</i>Com a venda ligada ao anúncio, você sabe qual criativo escalar.</p><p className="wb-note">Exemplo ilustrativo.</p></section>
 
-    <section className="wb-take section-shell" id="conteudo"><div className="wb-heading"><h2>Você sai da live <em className="gradient-text">sabendo três coisas.</em></h2></div><ol className="wb-take-grid">{takeaways.map(([t,d],i)=><li key={t}><span aria-hidden="true">{i+1}</span><h3>{t}</h3><p>{d}</p></li>)}</ol>
-      <div className="wb-host"><img src="/assets/founder.webp" alt="Rael Vieira" width={1000} height={1000} loading="lazy" decoding="async"/><p><b>Com Rael Vieira,</b> estrategista digital da WAVY. Já ajudou negócios a sair do zero e passar de 10x de retorno sobre o investimento em anúncios.</p></div></section>
+    <section className="wb-fit section-shell" id="para-quem"><div className="wb-heading"><h2>Essa live <em className="gradient-text">não é para todo mundo.</em></h2></div><div className="wb-fit-grid"><article className="yes"><small>É PARA VOCÊ SE</small><ul>{fitYes.map(t=><li key={t}><i aria-hidden="true">✓</i>{t}</li>)}</ul></article><article className="no"><small>NÃO É PARA VOCÊ SE</small><ul>{fitNo.map(t=><li key={t}><i aria-hidden="true">×</i>{t}</li>)}</ul></article></div></section>
+
+    <section className="wb-proof section-shell" id="prova"><div className="wb-heading"><h2>Não é teoria. <em className="gradient-text">É o que roda na operação.</em></h2></div><div className="wb-host"><img src="/assets/founder.webp" alt="Rael Vieira" width={1000} height={1000} loading="lazy" decoding="async"/><div><small>QUEM APRESENTA</small><b>Rael Vieira, estrategista digital da WAVY</b><dl>{stats.map(([n,d])=><div key={n}><dt>{n}</dt><dd>{d}</dd></div>)}</dl></div></div><div className="wb-quotes">{quotes.map(([q,n,r])=><figure key={n}><blockquote>{q}</blockquote><figcaption><b>{n}</b><span>{r}</span></figcaption></figure>)}</div></section>
+
+    <section className="wb-take section-shell" id="conteudo"><div className="wb-heading"><h2>Você sai da live <em className="gradient-text">com três coisas na mão.</em></h2></div><ol className="wb-take-grid">{takeaways.map(([t,d],i)=><li key={t}><span aria-hidden="true">{i+1}</span><h3>{t}</h3><p>{d}</p></li>)}</ol><div className="wb-actions"><Join/></div></section>
 
     <section className="final-cta section-shell"><h2><span>{EVENT.date} · {EVENT.time} · {EVENT.price}</span>Chega de anunciar <em className="gradient-text">no escuro.</em></h2><Join>Quero participar da live</Join></section>
 
