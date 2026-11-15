@@ -13,7 +13,7 @@ const EVENT = {
 
 export const metadata: Metadata = {
   title: "Live gratuita: tráfego, CRM e IA para escalar com previsibilidade | WAVY",
-  description: "Toda quinta, às 19h: o sistema que junta anúncio, IA no WhatsApp e CRM para você saber quanto custa cada cliente e escalar com previsibilidade.",
+  description: "Toda quinta, às 19h: como rastrear cada real do tráfego pago com um sistema só, que une tráfego pelas regras do Andromeda, CRM inteligente e atendimento com IA.",
 };
 
 function Join({ children = "Entrar no grupo do WhatsApp" }: { children?: React.ReactNode }) {
@@ -43,7 +43,14 @@ const flow: { tag: string; title: string; chip: string; scene: React.ReactNode }
     scene: <div className="wb-metrics"><div><small>CAC</small><b>R$ 149,73</b></div><div><small>ROAS</small><b>8,7x</b></div></div> },
 ];
 
+const pillars = [
+  ["Tráfego pelas regras do Andromeda", "Como o Meta distribui anúncios hoje, a matriz de ângulos por etapa do funil e o volume de criativos que o sistema pede."],
+  ["CRM inteligente", "Cada conversa no funil, com a nota do lead, o próximo passo e o dinheiro parado em cada etapa."],
+  ["Atendimento com IA", "Resposta em segundos, qualificação de cada lead e recuperação de quem parou de responder."],
+];
+
 const fitYes = [
+  "Você já trocou de gestor de tráfego e nunca viu a prova do resultado.",
   "Você já investe em tráfego pago.",
   "Você vende conversando com o cliente, pelo WhatsApp ou pelo Instagram.",
   "Seu time demora para responder e você sabe que perde venda por isso.",
@@ -69,6 +76,7 @@ const quotes = [
 
 const navLinks = [
   { href: "#fluxo", label: "Como funciona" },
+  { href: "#conteudo", label: "O que você vai ver" },
   { href: "#para-quem", label: "Para quem é" },
   { href: "#prova", label: "Resultados" },
 ];
@@ -77,11 +85,13 @@ export default function WebinarPage() {
   return <main className="webinar-page" id="top">
     <IslandHeader home="/" links={navLinks} cta={{ href: EVENT.groupUrl, label: "Entrar no grupo", external: true, whatsapp: true }} />
 
-    <section className="wb-hero section-shell"><span className="wb-badge"><i/>LIVE GRATUITA · TODA QUINTA, 19H</span><h1>A estratégia de tráfego, CRM e atendimento com IA <em className="gradient-text">que já levou negócios a mais de 10x de ROAS.</em></h1><p className="lead-copy">Saiba seu CAC e seu ROAS por canal, por anúncio e por criativo, e invista com segurança no que dá mais retorno.</p><div className="wb-actions"><Join/></div><dl className="wb-facts">{facts.map(([k,v])=><div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl></section>
+    <section className="wb-hero section-shell"><span className="wb-badge"><i/>LIVE GRATUITA · TODA QUINTA, 19H</span><h1>A estratégia de tráfego, CRM e atendimento com IA <em className="gradient-text">que já levou negócios a mais de 10x de ROAS.</em></h1><p className="lead-copy">Ao vivo, eu mostro como rastrear cada real investido com um sistema só: tráfego pelas regras do Andromeda, CRM inteligente e atendimento com IA. Você vê seu CAC e seu ROAS e investe no que dá mais retorno.</p><div className="wb-actions"><Join/></div><dl className="wb-facts">{facts.map(([k,v])=><div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl></section>
 
     <section className="wb-flow-section section-shell" id="fluxo"><div className="wb-heading"><h2>Um cliente, <em className="gradient-text">do clique à venda.</em></h2><p>Hoje o anúncio fica num lugar, a conversa em outro e a venda num terceiro. Na live, você vê os três ligados.</p></div>
       <ol className="wb-flow" aria-label="Exemplo do caminho de um cliente: anúncio, atendimento com IA, CRM, venda e resultado">{flow.map((f,i)=><li key={f.tag} className={`n${i+1}`}><div className="wb-node"><div className="wb-scene" aria-hidden="true">{f.scene}</div><small>{f.tag}</small><b>{f.title}</b><span className="wb-chip">{f.chip}</span></div></li>)}</ol>
       <p className="wb-loop"><i aria-hidden="true">↻</i>Com a venda ligada ao anúncio, você sabe qual criativo escalar.</p><p className="wb-note">Exemplo ilustrativo.</p></section>
+
+    <section className="wb-take section-shell" id="conteudo"><div className="wb-heading"><h2>O que você vai ver <em className="gradient-text">desenhado ao vivo.</em></h2><p>Primeiro, as 7 dores de quem investe em tráfego e o que cada uma custa. Depois, os três pilares que resolvem.</p></div><ol className="wb-take-grid">{pillars.map(([t,d],i)=><li key={t}><span aria-hidden="true">{i+1}</span><h3>{t}</h3><p>{d}</p></li>)}</ol></section>
 
     <section className="wb-fit section-shell" id="para-quem"><div className="wb-heading"><h2>Essa live <em className="gradient-text">não é para todo mundo.</em></h2></div><div className="wb-fit-grid"><article className="yes"><small>É PARA VOCÊ SE</small><ul>{fitYes.map(t=><li key={t}><i aria-hidden="true">✓</i>{t}</li>)}</ul></article><article className="no"><small>NÃO É PARA VOCÊ SE</small><ul>{fitNo.map(t=><li key={t}><i aria-hidden="true">×</i>{t}</li>)}</ul></article></div></section>
 
