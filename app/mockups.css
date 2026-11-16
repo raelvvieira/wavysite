@@ -458,3 +458,44 @@
 .crm-page .platform-cards article{justify-content:flex-start;border-radius:18px}
 .crm-page .platform-cards small{margin-top:auto;padding-top:60px}
 .float-card.ads.meta .brand-icon{width:30px;height:30px;color:#0081fb}
+
+/* ================= Home: seções claras alternando com as escuras =================
+   Comparativo + cinco entregas e "Como a gente trabalha" passam para o fundo de papel
+   que a seção de depoimentos já usa. Hero, plataforma, IA e fechamento seguem escuros. */
+.home-page :is(.problem,.deliveries,.steps-section){background:#f4f1eb;color:#111112}
+.home-page .problem{padding-top:130px;padding-bottom:60px}
+.home-page .deliveries{padding-top:60px;padding-bottom:130px}
+.home-page .steps-section{padding-top:130px;padding-bottom:130px}
+.home-page :is(.problem,.deliveries,.steps-section) h2{color:#111112}
+.home-page :is(.deliveries,.steps-section) .section-heading>p{color:#55565a}
+.home-page .steps-section .eyebrow{color:#6f7074}
+/* comparativo */
+.home-page .compare-col{background:#fff;border-color:rgba(0,0,0,.12);box-shadow:0 20px 50px rgba(40,22,8,.07)}
+.home-page .compare-col small{color:#6f7074}
+.home-page .compare-col li{color:#4a4b4f;border-top-color:rgba(0,0,0,.1)}
+.home-page .compare-col li i{border-color:#b9babd;color:#77787b}
+.home-page .compare-col.wavy{background:#fff;border-color:rgba(255,75,10,.55);box-shadow:0 24px 60px rgba(255,75,10,.12)}
+.home-page .compare-col.wavy small{color:#e2470c}
+.home-page .compare-col.wavy li{color:#111112}
+.home-page .compare-col.wavy li i{border-color:transparent;color:#fff}
+.home-page .compare-close{color:#111112;border-top-color:rgba(0,0,0,.12)}
+/* cinco entregas */
+.home-page .delivery-grid li{background:#fff;border-color:rgba(0,0,0,.12);box-shadow:0 20px 50px rgba(40,22,8,.07)}
+.home-page .delivery-grid li:hover{background:#fff;border-color:rgba(255,75,10,.6);box-shadow:0 26px 60px rgba(255,75,10,.14)}
+.home-page .delivery-grid span{color:rgba(17,17,18,.07)}
+.home-page .delivery-grid i{background:#fff1ea;border-color:rgba(255,75,10,.35)}
+.home-page .delivery-grid svg{stroke:#ff4b0a}
+.home-page .delivery-grid h3{color:#111112}
+.home-page .delivery-grid p{color:#55565a}
+/* como a gente trabalha */
+.home-page .steps{border-top-color:rgba(0,0,0,.16)}
+.home-page .steps li+li{border-left-color:rgba(0,0,0,.12)}
+.home-page .steps li:before{box-shadow:0 0 0 4px rgba(255,75,10,.16)}
+.home-page .steps h3{color:#111112}
+.home-page .steps p{color:#55565a}
+/* transições entre claro e escuro */
+.home-page .platform{padding-top:130px}
+.home-page .founder{border-top:0}
+@media(max-width:1000px){.home-page .steps{border-left-color:rgba(0,0,0,.16)}}
+@media(max-width:900px){.home-page .problem{padding-top:90px;padding-bottom:40px}.home-page .deliveries{padding-top:40px;padding-bottom:90px}.home-page .steps-section{padding-top:90px;padding-bottom:90px}.home-page .platform{padding-top:90px}}
+.home-page .compare-col{border-radius:18px}
