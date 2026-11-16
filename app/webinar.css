@@ -160,14 +160,27 @@
 @media (prefers-reduced-motion:reduce){.wb-card,.wb-ads i:first-child,.wb-loop i{animation:none}}
 .wb-proof .wb-actions{margin-top:48px}
 
-/* ---- Mapa da solução: o quadro inteiro da live ---- */
-.wb-map{padding-top:10px;padding-bottom:120px}
-.wb-map-frame{padding:10px;border-radius:26px;background:linear-gradient(160deg,#3a2a1c,#17110c 40%,#0c0907);border:1px solid rgba(255,138,61,.35);box-shadow:0 50px 120px rgba(0,0,0,.6),0 0 90px rgba(255,75,10,.14)}
-.wb-map-scroll{border-radius:18px;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}
-.wb-map-scroll:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
-.wb-map-scroll img{display:block;width:100%;height:auto;max-width:none}
-.wb-map-hint{display:none;margin:14px 0 0;text-align:center;font-size:13px;color:#8f9195}
+/* ---- Mapa da solução: o quadro da live, pequeno de propósito.
+   Dá a ideia do todo sem deixar ler os detalhes, que ficam para a live. ---- */
+.wb-map{padding-top:110px;padding-bottom:120px}
+.wb-map-frame{max-width:860px;margin:0 auto;padding:9px;border-radius:24px;background:linear-gradient(160deg,#3a2a1c,#17110c 40%,#0c0907);border:1px solid rgba(255,138,61,.35);box-shadow:0 50px 120px rgba(0,0,0,.6),0 0 90px rgba(255,75,10,.14)}
+.wb-map-frame img{display:block;width:100%;height:auto;border-radius:16px}
 @supports (animation-timeline:view()){@media (prefers-reduced-motion:no-preference){
 .wb-map-frame{animation:revealUp linear both;animation-timeline:view();animation-range:entry 0% entry 30%}
 }}
-@media(max-width:900px){.wb-map{padding-bottom:90px}.wb-map-scroll img{width:1000px}.wb-map-hint{display:block}.wb-map-frame{padding:7px;border-radius:20px}.wb-map-scroll{border-radius:14px}}
+@media(max-width:900px){.wb-map{padding-top:80px;padding-bottom:90px}.wb-map-frame{padding:6px;border-radius:18px}.wb-map-frame img{border-radius:12px}}
+
+/* ---- Seções claras: alternam com as escuras para a página respirar ---- */
+.webinar-page .wb-light{background:#f4f1eb;color:#111112;padding-top:120px;padding-bottom:120px}
+.webinar-page .wb-light .wb-heading h2{color:#111112}
+.webinar-page .wb-light .wb-heading p{color:#55565a}
+.webinar-page .wb-light+section{padding-top:120px}
+.webinar-page .wb-light .wb-map-frame{box-shadow:0 40px 90px rgba(40,22,8,.28)}
+.webinar-page .wb-light .wb-fit-grid article{background:#fff;border-color:rgba(0,0,0,.12);box-shadow:0 20px 50px rgba(40,22,8,.07)}
+.webinar-page .wb-light .wb-fit-grid small{color:#6f7074}
+.webinar-page .wb-light .wb-fit-grid li{color:#3a3b3e;border-top-color:rgba(0,0,0,.1)}
+.webinar-page .wb-light .wb-fit-grid .yes{background:#fff;border-color:rgba(255,75,10,.55)}
+.webinar-page .wb-light .wb-fit-grid .yes small{color:#e2470c}
+.webinar-page .wb-light .wb-fit-grid .yes li{color:#111112}
+.webinar-page .wb-light .wb-fit-grid .no li i{border-color:#b9babd;color:#77787b}
+@media(max-width:900px){.webinar-page .wb-light,.webinar-page .wb-light+section{padding-top:84px}.webinar-page .wb-light{padding-bottom:84px}}
