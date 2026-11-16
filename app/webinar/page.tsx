@@ -76,7 +76,7 @@ const quotes = [
 
 const navLinks = [
   { href: "#fluxo", label: "Como funciona" },
-  { href: "#conteudo", label: "O que você vai ver" },
+  { href: "#mapa", label: "O mapa" },
   { href: "#para-quem", label: "Para quem é" },
   { href: "#prova", label: "Resultados" },
 ];
@@ -92,6 +92,8 @@ export default function WebinarPage() {
       <p className="wb-loop"><i aria-hidden="true">↻</i>Com a venda ligada ao anúncio, você sabe qual criativo escalar.</p><p className="wb-note">Exemplo ilustrativo.</p></section>
 
     <section className="wb-take section-shell" id="conteudo"><div className="wb-heading"><h2>O que você vai ver <em className="gradient-text">desenhado ao vivo.</em></h2><p>Primeiro, as 7 dores de quem investe em tráfego e o que cada uma custa. Depois, os três pilares que resolvem.</p></div><ol className="wb-take-grid">{pillars.map(([t,d],i)=><li key={t}><span aria-hidden="true">{i+1}</span><h3>{t}</h3><p>{d}</p></li>)}</ol></section>
+
+    <section className="wb-map section-shell" id="mapa"><div className="wb-heading"><h2>O mapa da solução, <em className="gradient-text">do começo ao fim.</em></h2><p>É este o quadro que eu desenho ao vivo, bloco por bloco. Na live, você entende cada parte dele.</p></div><div className="wb-map-frame"><div className="wb-map-scroll" tabIndex={0} role="group" aria-label="Mapa da live, role para os lados para ver inteiro"><img src="/assets/mapa-da-live.webp" width={2640} height={1590} loading="lazy" decoding="async" alt="Quadro-negro com os nove blocos da live: quem apresenta, o dono de negócio que já trocou de gestor, as 7 dores, o tráfego pelas regras do Andromeda, o CRM inteligente, o atendimento com IA, o ciclo que devolve a venda para o anúncio, a comparação com contratar tudo separado e o próximo passo."/></div></div><p className="wb-map-hint">Arraste para os lados para ver o quadro inteiro.</p></section>
 
     <section className="wb-fit section-shell" id="para-quem"><div className="wb-heading"><h2>Essa live <em className="gradient-text">não é para todo mundo.</em></h2></div><div className="wb-fit-grid"><article className="yes"><small>É PARA VOCÊ SE</small><ul>{fitYes.map(t=><li key={t}><i aria-hidden="true">✓</i>{t}</li>)}</ul></article><article className="no"><small>NÃO É PARA VOCÊ SE</small><ul>{fitNo.map(t=><li key={t}><i aria-hidden="true">×</i>{t}</li>)}</ul></article></div></section>
 
