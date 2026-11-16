@@ -233,3 +233,7 @@
 }}
 @media(max-width:900px){.webinar-page .wb-part,.wb-part.wb-fit{padding-top:84px;padding-bottom:84px}.wb-hero-map{margin-top:40px;padding:6px;border-radius:18px}.wb-hero-map img{border-radius:12px}}
 @media(max-width:700px){.wb-shift{grid-template-columns:1fr}.wb-shift>i{justify-self:center;rotate:90deg}.wb-shift article{padding:22px}.wb-answers li{grid-template-columns:62px 1fr}.wb-answers span{font-size:34px}}
+
+/* O mapa agora é a versão de quadro branco: moldura clara, sem o tom de madeira escura. */
+.wb-hero-map{background:#fff;border-color:rgba(255,255,255,.5);box-shadow:0 50px 120px rgba(0,0,0,.6),0 0 110px rgba(255,75,10,.22)}
+.wb-hero-map figcaption{color:#6f7074}
