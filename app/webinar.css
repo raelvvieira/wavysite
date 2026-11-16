@@ -184,3 +184,52 @@
 .webinar-page .wb-light .wb-fit-grid .yes li{color:#111112}
 .webinar-page .wb-light .wb-fit-grid .no li i{border-color:#b9babd;color:#77787b}
 @media(max-width:900px){.webinar-page .wb-light,.webinar-page .wb-light+section{padding-top:84px}.webinar-page .wb-light{padding-bottom:84px}}
+
+/* ---- Narrativa em partes: texto corrido numa coluna estreita ---- */
+.wb-hero-map{max-width:780px;margin:54px auto 0;padding:8px;border-radius:22px;background:linear-gradient(160deg,#3a2a1c,#17110c 40%,#0c0907);border:1px solid rgba(255,138,61,.35);box-shadow:0 50px 120px rgba(0,0,0,.6),0 0 90px rgba(255,75,10,.16)}
+.wb-hero-map img{display:block;width:100%;height:auto;border-radius:15px}
+.wb-hero-map figcaption{padding:12px 0 6px;font-size:13px;color:#9a9b9e}
+.webinar-page .wb-part{padding-top:120px;padding-bottom:120px}
+.wb-prose{max-width:720px;margin:0 auto}
+.wb-kicker{display:flex;align-items:center;gap:14px;margin-bottom:22px;font:600 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.18em;color:#9a9b9e}
+.wb-kicker:after{content:"";flex:1;height:1px;background:currentColor;opacity:.3}
+.wb-kicker.center{justify-content:center}.wb-kicker.center:after{display:none}
+.wb-prose h2{font-size:clamp(32px,3.9vw,56px);line-height:1.06;margin-bottom:34px}
+.wb-prose p{margin:0 0 20px;font-size:clamp(17px,1.3vw,19px);line-height:1.7;color:#b9babd}
+.wb-prose p b{color:var(--paper);font-weight:600}
+.wb-prose p.wb-punch{margin:30px 0 0;font:600 clamp(22px,2.2vw,30px)/1.25 var(--font-manrope),sans-serif;letter-spacing:-.03em;color:var(--paper)}
+.wb-prose>p:last-child{margin-bottom:0}
+.wb-part .wb-take-grid,.wb-part .wb-fit-grid,.wb-shift,.wb-answers{max-width:1000px;margin:44px auto}
+.wb-part .wb-fit-grid{margin-bottom:0}
+.wb-part.wb-fit{padding-top:120px}
+.wb-under{margin:16px 0 0;text-align:center;font-size:13px;color:#8f9195}
+.wb-shift{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center}
+.wb-shift article{padding:28px;border-radius:18px;border:1px solid rgba(255,255,255,.16);background:#101012}
+.wb-shift small{font-size:12px;letter-spacing:.16em;font-weight:600;color:#9a9b9e}
+.wb-shift ul{list-style:none;margin:16px 0 0;padding:0}
+.wb-shift li{padding:13px 0;border-top:1px solid var(--line);font-size:17px;line-height:1.4;color:#9a9b9e;text-decoration:line-through;text-decoration-color:rgba(255,107,94,.7)}
+.wb-shift .now{border-color:rgba(255,75,10,.5);background:radial-gradient(circle at 85% 0%,rgba(255,75,10,.16),transparent 60%),#100c0a}
+.wb-shift .now small{color:var(--orange2)}
+.wb-shift .now li{color:var(--paper);text-decoration:none}
+.wb-shift>i{font-style:normal;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#ff861f,#ff4b0a);color:#fff;font-size:20px}
+.wb-answers{list-style:none;padding:0;max-width:720px}
+.wb-answers li{display:grid;grid-template-columns:92px 1fr;gap:10px;align-items:start;padding:28px 0;border-top:1px solid rgba(0,0,0,.14)}
+.wb-answers li:last-child{border-bottom:1px solid rgba(0,0,0,.14)}
+.wb-answers span{font:600 46px/1 var(--font-manrope),sans-serif;letter-spacing:-.05em;color:#ff4b0a}
+.wb-answers h3{font-size:clamp(21px,1.8vw,25px);letter-spacing:-.03em;margin:4px 0 8px}
+.wb-answers p{margin:0;font-size:16.5px;line-height:1.6;color:#55565a}
+/* versões claras */
+.webinar-page .wb-light .wb-kicker{color:#6f7074}
+.webinar-page .wb-light .wb-prose h2{color:#111112}
+.webinar-page .wb-light .wb-prose p{color:#4a4b4f}
+.webinar-page .wb-light .wb-prose p b,.webinar-page .wb-light .wb-prose p.wb-punch{color:#111112}
+.webinar-page .wb-light .wb-take-grid li{background:#fff;border-color:rgba(0,0,0,.12);box-shadow:0 20px 50px rgba(40,22,8,.07)}
+.webinar-page .wb-light .wb-take-grid h3{color:#111112}
+.webinar-page .wb-light .wb-take-grid p{color:#55565a}
+.webinar-page .wb-light .wb-answers h3{color:#111112}
+@supports (animation-timeline:view()){@media (prefers-reduced-motion:no-preference){
+.wb-prose,.wb-shift,.wb-answers li,.wb-hero-map{animation:revealUp linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+.wb-hero-map{animation:none}
+}}
+@media(max-width:900px){.webinar-page .wb-part,.wb-part.wb-fit{padding-top:84px;padding-bottom:84px}.wb-hero-map{margin-top:40px;padding:6px;border-radius:18px}.wb-hero-map img{border-radius:12px}}
+@media(max-width:700px){.wb-shift{grid-template-columns:1fr}.wb-shift>i{justify-self:center;rotate:90deg}.wb-shift article{padding:22px}.wb-answers li{grid-template-columns:62px 1fr}.wb-answers span{font-size:34px}}
