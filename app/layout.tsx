@@ -41,6 +41,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         {/* End Google Tag Manager */}
+        {/* Conversão de lead: todo clique num link de WhatsApp (conversa ou grupo) envia
+            o evento Lead ao pixel da Meta, que é carregado pelo GTM, e registra o mesmo
+            clique no dataLayer. Vale para todas as páginas, sem precisar marcar cada botão. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){function h(e){var a=e.target&&e.target.closest?e.target.closest('a[href]'):null;if(!a)return;var u=a.href||'';var g=u.indexOf('chat.whatsapp.com')>-1;if(!g&&u.indexOf('wa.me')===-1&&u.indexOf('api.whatsapp.com')===-1)return;var d={content_name:g?'Grupo do WhatsApp':'WhatsApp',content_category:location.pathname,button_text:(a.getAttribute('aria-label')||a.textContent||'').replace(/\\s+/g,' ').trim().slice(0,60)};try{if(typeof window.fbq==='function')window.fbq('track','Lead',d)}catch(x){}try{window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'whatsapp_lead',lead_destino:d.content_name,lead_pagina:d.content_category,lead_botao:d.button_text})}catch(x){}}document.addEventListener('click',h,true);document.addEventListener('auxclick',function(e){if(e.button===1)h(e)},true)})();`,
+          }}
+        />
       </head>
       <body className={`${inter.variable} ${manrope.variable}`}>
         {/* Google Tag Manager (noscript) */}
