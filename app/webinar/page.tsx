@@ -4,8 +4,8 @@ import { IslandHeader, SiteFooter } from "../chrome";
 
 /* Dados do evento. Tudo o que muda de uma edição para outra fica aqui. */
 const EVENT = {
-  date: "Toda quinta-feira",
-  time: "19h",
+  date: "Quinta-feira",
+  time: "12h",
   format: "Online e ao vivo",
   price: "Gratuito",
   groupUrl: "https://chat.whatsapp.com/G7dJIRMSQ9ZEtc0KxD6L70",
@@ -13,7 +13,7 @@ const EVENT = {
 
 export const metadata: Metadata = {
   title: "Live gratuita: tráfego, CRM e IA para escalar com previsibilidade | WAVY",
-  description: "Toda quinta, às 19h: como rastrear cada real do tráfego pago com um sistema só, que une tráfego pelas regras do Andromeda, CRM inteligente e atendimento com IA.",
+  description: "Quinta-feira, às 12h: como rastrear cada real do tráfego pago com um sistema só, que une tráfego pelas regras do Andromeda, CRM inteligente e atendimento com IA.",
 };
 
 function Join({ children = "Entrar no grupo do WhatsApp" }: { children?: React.ReactNode }) {
@@ -81,7 +81,7 @@ export default function WebinarPage() {
   return <main className="webinar-page" id="top">
     <IslandHeader home="/" links={navLinks} cta={{ href: EVENT.groupUrl, label: "Entrar no grupo", external: true, whatsapp: true }} />
 
-    <section className="wb-hero section-shell"><span className="wb-badge"><i/>LIVE GRATUITA · TODA QUINTA, 19H</span><h1>A estratégia de tráfego +{"\u00a0"}CRM +{"\u00a0"}atendimento com IA <em className="gradient-text">que já levou negócios a mais de 10x de ROAS.</em></h1><p className="lead-copy">Ao vivo, eu mostro como rastrear cada real investido com um sistema só: tráfego pelas regras do Andromeda, CRM inteligente e atendimento com IA. Você vê seu CAC e seu ROAS e investe no que dá mais retorno.</p><div className="wb-actions"><Join/></div><dl className="wb-facts">{facts.map(([k,v])=><div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl><figure className="wb-hero-map"><img src="/assets/mapa-live-branco.webp" width={1200} height={723} decoding="async" alt="Visão geral do quadro da live, com nove blocos desenhados à mão."/><figcaption>O mapa que eu desenho ao vivo, bloco por bloco.</figcaption></figure></section>
+    <section className="wb-hero section-shell"><span className="wb-badge"><i/>LIVE GRATUITA · QUINTA, 12H</span><h1>A estratégia de tráfego +{"\u00a0"}CRM +{"\u00a0"}atendimento com IA <em className="gradient-text">que já levou negócios a mais de 10x de ROAS.</em></h1><p className="lead-copy">Ao vivo, eu mostro como rastrear cada real investido com um sistema só: tráfego pelas regras do Andromeda, CRM inteligente e atendimento com IA. Você vê seu CAC e seu ROAS e investe no que dá mais retorno.</p><div className="wb-actions"><Join/></div><dl className="wb-facts">{facts.map(([k,v])=><div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl><figure className="wb-hero-map"><img src="/assets/mapa-live-branco.webp" width={1200} height={723} decoding="async" alt="Visão geral do quadro da live, com nove blocos desenhados à mão."/><figcaption>O mapa que eu desenho ao vivo, bloco por bloco.</figcaption></figure></section>
 
     <section className="wb-part wb-light section-shell" id="problema"><div className="wb-prose"><span className="wb-kicker">PARTE I · O PROBLEMA</span><h2>Você já trocou de gestor. <em className="gradient-text">A prova do resultado nunca veio.</em></h2><p>Você contratou um gestor de tráfego. Ele prometeu resultado. Passaram três meses e você recebeu relatório de clique, de alcance e de lead. Quando perguntou quanto daquilo virou venda, <b>ninguém soube dizer</b>.</p><p>Aí você trocou de gestor. E a história se repetiu.</p><p>O problema nunca foi a pessoa. O gestor trabalha sem enxergar a venda, e você paga sem enxergar o retorno. <b>Os dois estão no escuro.</b></p><p>Enquanto isso, o lead espera horas por uma resposta. A venda do começo do mês desce na lista do WhatsApp e some. E ninguém sabe quanto dinheiro está parado em cada etapa.</p><p className="wb-punch">Nada disso é problema de anúncio. É falta de rastreabilidade.</p></div></section>
 
