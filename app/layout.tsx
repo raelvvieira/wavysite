@@ -9,7 +9,7 @@ const manrope = Manrope({ variable: "--font-manrope", subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://wavymarketing.com.br"),
   title: "WAVY — Tráfego pago, CRM omnichannel e atendimento com IA",
-  description: "Agência de marketing de performance que acompanha o seu processo comercial do anúncio ao fechamento, com CRM omnichannel e IA no atendimento.",
+  description: "Tráfego pago, CRM e atendimento com IA num serviço só. O sistema que já levou negócios a mais de 10x de ROAS, com o retorno de cada anúncio na sua tela.",
   icons: { icon: [{ url: "/favicon-48.png", sizes: "48x48", type: "image/png" }, { url: "/favicon-192.png", sizes: "192x192", type: "image/png" }], shortcut: "/favicon.ico", apple: "/apple-touch-icon.png" },
   other: { "codex-preview": "development" },
   openGraph: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     siteName: "WAVY",
     title: "WAVY — Tráfego pago, CRM omnichannel e atendimento com IA",
-    description: "Agência de marketing de performance que acompanha o seu processo comercial do anúncio ao fechamento, com CRM omnichannel e IA no atendimento.",
+    description: "Tráfego pago, CRM e atendimento com IA num serviço só. O sistema que já levou negócios a mais de 10x de ROAS, com o retorno de cada anúncio na sua tela.",
     images: [{ url: "/assets/og-wavy.jpg", width: 1200, height: 630, alt: "WAVY" }],
   },
   twitter: { card: "summary_large_image" },
