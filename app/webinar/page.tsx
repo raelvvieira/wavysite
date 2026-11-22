@@ -13,8 +13,8 @@ const EVENT = {
 };
 
 export const metadata: Metadata = {
-  title: "Aula gratuita: Sistema Venda Rastreada, com tráfego, CRM e IA | WAVY",
-  description: "Aula ao vivo e gratuita, quinta-feira às 12h: aprenda o Sistema Venda Rastreada, que une tráfego, CRM inteligente e atendimento com IA e já levou negócios a mais de 10x de ROAS.",
+  title: "Aula gratuita: Método ROAS Previsível, com tráfego, CRM e IA | WAVY",
+  description: "Aula ao vivo e gratuita, quinta-feira às 12h: aprenda o Método ROAS Previsível, que une tráfego, CRM e atendimento com IA para você saber quanto cada anúncio devolve.",
 };
 
 function Join({ children = "Entrar no grupo do WhatsApp" }: { children?: React.ReactNode }) {
@@ -62,7 +62,7 @@ const learn = [
 
 const navLinks = [
   { href: "#resultados", label: "Resultados" },
-  { href: "#sistema", label: "Venda Rastreada" },
+  { href: "#sistema", label: "O método" },
   { href: "#conteudo", label: "O que você aprende" },
 ];
 
@@ -70,13 +70,13 @@ export default function WebinarPage() {
   return <main className="lv" id="top">
     <IslandHeader home="/" links={navLinks} cta={{ href: EVENT.groupUrl, label: "Entrar no grupo", external: true, whatsapp: true }} />
 
-    <section className="lv-hero"><div className="lv-wrap lv-hero-grid"><div><span className="lv-tag live"><i/>Aula gratuita · ao vivo · quinta, 12h</span><h1>Aprenda o Sistema Venda Rastreada, que une tráfego, CRM e IA e já levou negócios a <em>mais de 10x de ROAS.</em></h1><p>Em uma aula ao vivo, eu desenho o sistema que liga cada venda ao anúncio que a trouxe.</p><Join/><small>Gratuito. Você recebe o link da aula pelo grupo.</small></div><figure><img src="/assets/mapa-live-branco.webp" width={1200} height={723} decoding="async" alt="Visão geral do quadro da aula, com nove blocos desenhados à mão."/><figcaption><img src="/assets/founder.webp" width={1000} height={1000} alt="" decoding="async"/><span><b>Com Rael Vieira</b>Estrategista digital da WAVY</span></figcaption></figure></div></section>
+    <section className="lv-hero"><div className="lv-wrap lv-hero-grid"><div><span className="lv-tag live"><i/>Aula gratuita · ao vivo · quinta, 12h</span><h1>Aprenda o Método ROAS Previsível, que une o seu tráfego, CRM e atendimento com IA e pode levar o seu negócio a <em>até 10x de ROAS.</em></h1><p>Em uma aula ao vivo, eu desenho o método que liga cada venda ao anúncio que a trouxe, para você saber quanto cada real investido devolve.</p><Join/><small>Gratuito. Você recebe o link da aula pelo grupo.</small></div><figure><img src="/assets/mapa-live-branco.webp" width={1200} height={723} decoding="async" alt="Visão geral do quadro da aula, com nove blocos desenhados à mão."/><figcaption><img src="/assets/founder.webp" width={1000} height={1000} alt="" decoding="async"/><span><b>Com Rael Vieira</b>Estrategista digital da WAVY</span></figcaption></figure></div></section>
 
     <section className="lv-sec light"><div className="lv-wrap"><span className="lv-tag">Se identificou?</span><h2>Você investe em tráfego e ainda <em>não sabe o que volta?</em></h2><ul className="lv-pains">{pains.map(t=><li key={t}>“{t}”</li>)}</ul><p className="lv-line">Tudo isso tem a mesma causa, que é a falta de rastreabilidade.</p></div></section>
 
-    <section className="lv-sec" id="resultados"><div className="lv-wrap wide"><span className="lv-tag">Na prática</span><h2>Resultados de quem roda o <em>Sistema Venda Rastreada.</em></h2><Cases note="Prints do Gerenciador de Anúncios da Meta, de contas que rodam o Sistema Venda Rastreada. Toque em um print para ampliar."/></div></section>
+    <section className="lv-sec" id="resultados"><div className="lv-wrap wide"><span className="lv-tag">Na prática</span><h2>Resultados de quem roda o <em>Método ROAS Previsível.</em></h2><Cases note="Prints do Gerenciador de Anúncios da Meta, de contas que rodam o Método ROAS Previsível. Toque em um print para ampliar."/></div></section>
 
-    <section className="lv-sec accent" id="sistema"><div className="lv-wrap"><h2>O Sistema Venda Rastreada tem três peças.</h2><ol className="lv-pillars">{pillars.map(([t,d],i)=><li key={t}><span aria-hidden="true">{String(i+1).padStart(2,"0")}</span><h3>{t}</h3><p>{d}</p></li>)}</ol><p className="lv-line">Cada venda é rastreada até o anúncio e volta para o Meta e para o Google Ads, e a campanha passa a buscar quem compra.</p></div></section>
+    <section className="lv-sec accent" id="sistema"><div className="lv-wrap"><h2>O Método ROAS Previsível tem três peças.</h2><ol className="lv-pillars">{pillars.map(([t,d],i)=><li key={t}><span aria-hidden="true">{String(i+1).padStart(2,"0")}</span><h3>{t}</h3><p>{d}</p></li>)}</ol><p className="lv-line">Cada venda é rastreada até o anúncio e volta para o Meta e para o Google Ads, e a campanha passa a buscar quem compra.</p></div></section>
 
     <section className="lv-sec light"><div className="lv-wrap"><span className="lv-tag">Três crenças que custam caro</span><h2>O que faz um negócio anunciar por anos <em>sem sair do lugar.</em></h2><ul className="lv-myths">{myths.map(([m,t])=><li key={m}><s>“{m}”</s><p>{t}</p></li>)}</ul></div></section>
 
@@ -84,7 +84,7 @@ export default function WebinarPage() {
 
     <section className="lv-sec light"><div className="lv-wrap narrow"><span className="lv-tag">Para quem é</span><h2>Essa aula <em>é para você?</em></h2><ul className="lv-fit">{fitYes.map(t=><li key={t} className="yes"><i aria-hidden="true">✓</i>{t}</li>)}{fitNo.map(t=><li key={t} className="no"><i aria-hidden="true">✕</i>{t}</li>)}</ul></div></section>
 
-    <section className="lv-sec lv-final"><div className="lv-wrap narrow"><h2>Na quinta, às 12h, eu te mostro o <em>Sistema Venda Rastreada.</em></h2><Join>Quero assistir à aula</Join><small>{EVENT.format} · {EVENT.price}</small></div></section>
+    <section className="lv-sec lv-final"><div className="lv-wrap narrow"><h2>Na quinta, às 12h, eu te mostro o <em>Método ROAS Previsível.</em></h2><Join>Quero assistir à aula</Join><small>{EVENT.format} · {EVENT.price}</small></div></section>
 
     <SiteFooter links={navLinks} whatsapp={EVENT.groupUrl}/>
   </main>;
