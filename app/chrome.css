@@ -60,29 +60,15 @@ html{scroll-padding-top:104px}
 .sf-bottom{flex-direction:column;align-items:flex-start;margin-top:56px}
 }
 
-/* ---- Cases: cartões escuros que funcionam sobre fundo claro ou escuro ---- */
-.cases{max-width:1180px;margin:0 auto}
-.cases-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.cases-grid li{display:flex;flex-direction:column;min-width:0;padding:30px 30px 26px;border-radius:22px;background:radial-gradient(circle at 90% 0%,rgba(255,75,10,.14),transparent 55%),#0e0e10;border:1px solid rgba(255,255,255,.14);color:#f4f1eb;text-align:left}
-.cases-grid small{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#ff9a5c}
-.case-big{margin:20px 0 22px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
-.case-big b{font:600 clamp(52px,6vw,84px)/.95 var(--font-manrope),sans-serif;letter-spacing:-.05em;background:linear-gradient(105deg,#ff861f,#ff4b0a 48%,#d82d20);-webkit-background-clip:text;background-clip:text;color:transparent}
-.case-big span{font:500 clamp(17px,1.5vw,21px)/1.25 var(--font-manrope),sans-serif;letter-spacing:-.02em;color:#f4f1eb}
-.cases-grid dl{margin:0;border-top:1px solid rgba(255,255,255,.12)}
-.cases-grid dl div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12)}
-.cases-grid dt{font-size:14.5px;color:#a5a6a8}
-.cases-grid dd{margin:0;font-size:15.5px;font-weight:600;color:#f4f1eb;font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
-.case-period{margin:14px 0 0;font-size:13px;color:#8f9195}
-.cases-grid details{margin-top:auto;padding-top:18px}
-.cases-grid summary{cursor:pointer;width:fit-content;list-style:none;font-size:13.5px;font-weight:600;color:#ffb48a;border-bottom:1px solid rgba(255,138,61,.5);padding-bottom:3px}
-.cases-grid summary::-webkit-details-marker{display:none}
-.cases-grid summary:after{content:" ↓"}
-.cases-grid details[open] summary:after{content:" ↑"}
-.cases-grid summary:focus-visible{outline:2px solid #ff8a3d;outline-offset:4px}
-.cases-grid figure{margin:16px 0 0}
-.cases-grid figcaption{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#8f9195;margin-bottom:8px}
-.cases-grid figure div{overflow-x:auto;border-radius:10px;background:#fff}
-.cases-grid figure img{display:block;width:100%;min-width:640px;height:auto;max-width:none}
-.cases-note{margin:20px auto 0;max-width:760px;text-align:center;font-size:13px;line-height:1.6;color:#8f9195}
-@media(max-width:900px){.cases-grid{grid-template-columns:1fr}.cases-grid li{padding:24px 22px}}
-@media(max-width:420px){.cases-grid dl div{flex-direction:column;gap:2px}.cases-grid dd{text-align:left}}
+/* ---- Cases: um número e uma frase por cartão. Cartões escuros, que funcionam
+   sobre fundo claro ou escuro. ---- */
+.cases{margin:0 auto}
+.cases-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cases-grid li{min-width:0;padding:28px 26px 30px;border-radius:22px;background:radial-gradient(circle at 90% 0%,rgba(255,75,10,.14),transparent 55%),#0e0e10;border:1px solid rgba(255,255,255,.14);text-align:left}
+.case-big{margin:0}
+.case-big b{display:block;font:600 clamp(46px,4.6vw,68px)/1 var(--font-manrope),sans-serif;letter-spacing:-.05em;white-space:nowrap;background:linear-gradient(105deg,#ff861f,#ff4b0a 48%,#d82d20);-webkit-background-clip:text;background-clip:text;color:transparent}
+.case-big span{display:block;margin-top:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#ff9a5c}
+.case-text{margin:22px 0 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:16px;line-height:1.55;color:#d2d3d5}
+.cases-note{margin:18px auto 0;text-align:center;font-size:13px;line-height:1.6;color:#8f9195}
+@media(max-width:1100px){.cases-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.cases-grid{grid-template-columns:1fr}.cases-grid li{padding:24px 22px 26px}}
