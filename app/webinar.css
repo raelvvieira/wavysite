@@ -237,3 +237,22 @@
 /* O mapa agora é a versão de quadro branco: moldura clara, sem o tom de madeira escura. */
 .wb-hero-map{background:#fff;border-color:rgba(255,255,255,.5);box-shadow:0 50px 120px rgba(0,0,0,.6),0 0 110px rgba(255,75,10,.22)}
 .wb-hero-map figcaption{color:#6f7074}
+
+/* ---- Três crenças (seção clara) ---- */
+.wb-myths{list-style:none;margin:44px auto 0;padding:0;max-width:1100px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.wb-myths li{display:flex;flex-direction:column;padding:30px 28px 32px;border-radius:20px;background:#fff;border:1px solid rgba(0,0,0,.12);box-shadow:0 20px 50px rgba(40,22,8,.07)}
+.wb-myths small{font:600 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.16em;color:#d92d20}
+.wb-myths h3{margin:18px 0 26px;font-size:clamp(22px,2vw,28px);line-height:1.18;letter-spacing:-.035em;color:#111112;text-decoration:line-through;text-decoration-color:rgba(217,45,32,.75);text-decoration-thickness:2px}
+.wb-myths span{margin-top:auto;padding-top:20px;border-top:1px solid rgba(0,0,0,.12);font:600 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.16em;color:#e2470c}
+.wb-myths p{margin:12px 0 0;font-size:16px;line-height:1.6;color:#3a3b3e}
+/* lista "o que você aprende" em seção escura */
+.webinar-page .wb-part:not(.wb-light) .wb-answers li{border-top-color:rgba(255,255,255,.14)}
+.webinar-page .wb-part:not(.wb-light) .wb-answers li:last-child{border-bottom-color:rgba(255,255,255,.14)}
+.webinar-page .wb-part:not(.wb-light) .wb-answers h3{color:var(--paper)}
+.webinar-page .wb-part:not(.wb-light) .wb-answers p{color:#b4b5b8}
+.wb-part .wb-answers+.wb-actions{margin-top:8px}
+.wb-hero h1{font-size:clamp(30px,4.1vw,62px);max-width:1200px}
+@supports (animation-timeline:view()){@media (prefers-reduced-motion:no-preference){
+.wb-myths li{animation:revealUp linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+}}
+@media(max-width:1000px){.wb-myths{grid-template-columns:1fr}}
