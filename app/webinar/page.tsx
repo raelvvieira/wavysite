@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BrandIcon } from "../brand-icons";
+import { Cases } from "../cases";
 import { IslandHeader, SiteFooter } from "../chrome";
 
 /* Dados do evento. Tudo o que muda de uma edição para outra fica aqui. */
@@ -102,7 +103,7 @@ export default function WebinarPage() {
 
     <section className="wb-part section-shell" id="conteudo"><div className="wb-prose"><span className="wb-kicker">PARTE VI · O QUE VOCÊ APRENDE</span><h2>Você sai da aula <em className="gradient-text">sabendo cinco coisas.</em></h2><p>Cada ponto é um bloco do quadro, que eu desenho na sua frente durante a aula.</p></div><ol className="wb-answers">{answers.map(([t,d],i)=><li key={t}><span aria-hidden="true">{String(i+1).padStart(2,"0")}</span><div><h3>{t}</h3><p>{d}</p></div></li>)}</ol><div className="wb-actions"><Join/></div></section>
 
-    <section className="wb-proof section-shell" id="prova"><div className="wb-heading"><span className="wb-kicker center">NA PRÁTICA</span><h2>Esse sistema já roda na operação <em className="gradient-text">de quem trabalha com a gente.</em></h2></div><div className="wb-host"><img src="/assets/founder.webp" alt="Rael Vieira" width={1000} height={1000} loading="lazy" decoding="async"/><div><small>QUEM APRESENTA</small><b>Rael Vieira, estrategista digital da WAVY</b><dl>{stats.map(([n,d])=><div key={n}><dt>{n}</dt><dd>{d}</dd></div>)}</dl></div></div><div className="wb-quotes">{quotes.map(([q,n,r])=><figure key={n}><blockquote>{q}</blockquote><figcaption><b>{n}</b><span>{r}</span></figcaption></figure>)}</div><div className="wb-actions"><Join/></div></section>
+    <section className="wb-proof section-shell" id="prova"><div className="wb-heading"><span className="wb-kicker center">NA PRÁTICA</span><h2>Esse sistema já roda na operação <em className="gradient-text">de quem trabalha com a gente.</em></h2></div><Cases/><div className="wb-host"><img src="/assets/founder.webp" alt="Rael Vieira" width={1000} height={1000} loading="lazy" decoding="async"/><div><small>QUEM APRESENTA</small><b>Rael Vieira, estrategista digital da WAVY</b><dl>{stats.map(([n,d])=><div key={n}><dt>{n}</dt><dd>{d}</dd></div>)}</dl></div></div><div className="wb-quotes">{quotes.map(([q,n,r])=><figure key={n}><blockquote>{q}</blockquote><figcaption><b>{n}</b><span>{r}</span></figcaption></figure>)}</div><div className="wb-actions"><Join/></div></section>
 
     <section className="final-cta section-shell"><h2><span>{EVENT.date} · {EVENT.time} · {EVENT.price}</span>Na quinta eu te mostro como <em className="gradient-text">parar de anunciar no escuro.</em></h2><Join>Quero assistir à aula</Join></section>
 
