@@ -74,7 +74,7 @@ export default function WebinarPage() {
 
     <section className="lv-sec light"><div className="lv-wrap"><span className="lv-tag">Se identificou?</span><h2>Você investe em tráfego e ainda <em>não sabe o que volta?</em></h2><ul className="lv-pains">{pains.map(t=><li key={t}>“{t}”</li>)}</ul><p className="lv-line">Tudo isso tem a mesma causa, que é a falta de rastreabilidade.</p></div></section>
 
-    <section className="lv-sec" id="resultados"><div className="lv-wrap wide"><span className="lv-tag">Provas reais</span><h2>Resultados de contas <em>que a WAVY opera.</em></h2><Cases/></div></section>
+    <section className="lv-sec" id="resultados"><div className="lv-wrap wide"><span className="lv-tag">O sistema na prática</span><h2>O que acontece quando tráfego, CRM e IA <em>trabalham juntos.</em></h2><Cases note="Prints do Gerenciador de Anúncios da Meta, de contas que rodam este sistema. Toque em um print para ampliar."/></div></section>
 
     <section className="lv-sec accent" id="sistema"><div className="lv-wrap"><h2>O sistema que você vai aprender tem três peças.</h2><ol className="lv-pillars">{pillars.map(([t,d],i)=><li key={t}><span aria-hidden="true">{String(i+1).padStart(2,"0")}</span><h3>{t}</h3><p>{d}</p></li>)}</ol><p className="lv-line">A venda volta para o Meta e para o Google Ads, e a campanha passa a buscar quem compra.</p></div></section>
 
