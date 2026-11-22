@@ -516,3 +516,7 @@
 
 .home-page .proof .cases{margin-bottom:60px}
 .home-page .proof .cases-note{color:#6f7074}
+
+/* Home: a prova vem logo depois dos logos, seguida do comparativo, ambos claros. */
+.home-page .proof{padding-bottom:90px}
+.home-page .problem{border-top:1px solid rgba(0,0,0,.1)}

@@ -258,3 +258,17 @@
 @media(max-width:1000px){.wb-myths{grid-template-columns:1fr}}
 .wb-proof .cases{margin-bottom:14px}
 .wb-proof .cases-note{margin-bottom:40px}
+
+/* Depois de subir a prova para a terceira seção, as partes trocaram de fundo. */
+.webinar-page .wb-light .wb-shift article{background:#fff;border-color:rgba(0,0,0,.12)}
+.webinar-page .wb-light .wb-shift small{color:#6f7074}
+.webinar-page .wb-light .wb-shift li{color:#77787b;border-top-color:rgba(0,0,0,.1)}
+.webinar-page .wb-light .wb-shift .now{background:#fff;border-color:rgba(255,75,10,.55)}
+.webinar-page .wb-light .wb-shift .now small{color:#e2470c}
+.webinar-page .wb-light .wb-shift .now li{color:#111112}
+.webinar-page .wb-proof{padding-top:120px}
+
+/* Os três termos do título ganham um fundo de marca-texto. */
+.wb-hero h1 mark{background:linear-gradient(105deg,#ff6b1a,#ff4b0a 58%,#f13b13);color:#fff;padding:.04em .18em .1em;border-radius:.16em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.wb-hero h1{line-height:1.34}
+.wb-hero h1 em{line-height:1.12;padding-top:.1em}
