@@ -79,3 +79,7 @@
 .lv-pillars,.lv-myths{grid-template-columns:1fr}
 }
 @media(max-width:560px){.lv-pains{grid-template-columns:1fr}.lv h2{margin-bottom:26px}}
+
+/* O nome do método leva um fundo de marca-texto; o resultado segue em laranja. */
+.lv h1 mark{background:linear-gradient(105deg,#ff7a1f,#ff4b0a);color:#fff;padding:.02em .18em .06em;border-radius:.16em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.lv h1{line-height:1.24}
