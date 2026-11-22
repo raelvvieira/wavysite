@@ -75,7 +75,7 @@ export default function WebinarPage() {
 
     <section className="lv-sec" id="resultados"><div className="lv-wrap wide"><span className="lv-tag">Na prática</span><h2>Resultados de quem roda o <em>Método ROAS Previsível.</em></h2><Cases note="Prints do Gerenciador de Anúncios da Meta, de contas que rodam o Método ROAS Previsível. Toque em um print para ampliar."/></div></section>
 
-    <section className="lv-sec light white" id="sistema"><div className="lv-wrap wide"><span className="lv-tag">O que você viu no anúncio</span><h2>O sistema que eu mostrei no anúncio funciona assim, <em>do clique até a venda.</em></h2>
+    <section className="lv-sec light white" id="sistema"><div className="lv-wrap wide"><span className="lv-tag">O sistema por trás</span><h2>O que esses negócios têm em comum é um sistema que o seu gestor de tráfego <em>nunca te mostrou.</em></h2>
       <ol className="lv-flow">
         <li><div className="fl-v fl-ad" aria-hidden="true"><div><span className="fl-ico meta"><BrandIcon name="meta"/></span><span className="fl-ico"><GoogleAds/></span></div><span className="fl-pill"><i/>Lead novo · origem: Meta Ads</span></div><small>01 · Rastreio</small><h3>O lead chega com a origem registrada</h3><p>Você sabe de qual campanha, anúncio e criativo cada contato veio.</p></li>
         <li><div className="fl-v fl-chat" aria-hidden="true"><p className="in">Como funciona a avaliação?</p><p className="out"><b>✦ IA</b>Oi, Ana! Te explico agora.</p></div><small>02 · Atendimento com IA</small><h3>A IA responde no WhatsApp na hora</h3><p>Ela aprende com as suas conversas e atende no tom da sua empresa, para nenhum lead ficar sem resposta.</p></li>
