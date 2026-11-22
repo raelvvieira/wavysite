@@ -513,3 +513,6 @@
 .home-page .ai-section h2 em,.home-page .platform h2 em{display:inline}
 .home-page .final-cta h2 em,.crm-page .final-cta h2 em{display:block;padding-bottom:.12em}
 .crm-page .crm-why h2 em{display:inline}
+
+.home-page .proof .cases{margin-bottom:60px}
+.home-page .proof .cases-note{color:#6f7074}

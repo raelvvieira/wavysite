@@ -256,3 +256,5 @@
 .wb-myths li{animation:revealUp linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
 }}
 @media(max-width:1000px){.wb-myths{grid-template-columns:1fr}}
+.wb-proof .cases{margin-bottom:14px}
+.wb-proof .cases-note{margin-bottom:40px}
