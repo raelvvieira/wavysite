@@ -62,6 +62,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         {children}
+        {/* Ampliação dos prints dos cases: abre por cima da página, com botão de fechar.
+            Fecha também com Esc ou tocando fora da imagem. */}
+        <dialog id="print-zoom" className="print-zoom" aria-label="Print ampliado">
+          <button type="button" className="print-zoom-close" aria-label="Fechar">Fechar ✕</button>
+          <div className="print-zoom-scroll"><img alt="" /></div>
+        </dialog>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var d=document.getElementById('print-zoom');if(!d||!d.showModal)return;var i=d.querySelector('img');document.addEventListener('click',function(e){var a=e.target.closest?e.target.closest('.case-proof a'):null;if(a){e.preventDefault();var s=a.querySelector('img');i.src=a.getAttribute('href');i.alt=s?s.alt:'';d.showModal();return}if(d.open&&(e.target===d||e.target.closest('.print-zoom-close')))d.close()})})();`,
+          }}
+        />
       </body>
     </html>
   );

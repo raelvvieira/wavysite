@@ -32,7 +32,7 @@ export function Cases() {
           </li>
         ))}
       </ul>
-      <p className="cases-note">Prints do Gerenciador de Anúncios da Meta, em contas operadas pela WAVY. Toque em um print para ver em tamanho real.</p>
+      <p className="cases-note">Prints do Gerenciador de Anúncios da Meta, em contas operadas pela WAVY. Toque em um print para ampliar.</p>
     </div>
   );
 }
