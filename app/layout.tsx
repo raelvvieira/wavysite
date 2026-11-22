@@ -4,6 +4,7 @@ import "./globals.css";
 import "./mockups.css";
 import "./chrome.css";
 import "./webinar.css";
+import "./lv.css";
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const manrope = Manrope({ variable: "--font-manrope", subsets: ["latin"] });
 export const metadata: Metadata = {

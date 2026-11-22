@@ -14,7 +14,7 @@ const cases: { big: string; label: string; text: string; prints: Print[] }[] = [
     prints: [{ src: "/assets/cases/livros-antes.webp", w: 1326, h: 186, label: "Antes" }, { src: "/assets/cases/livros-depois.webp", w: 1326, h: 222, label: "Depois" }] },
 ];
 
-export function Cases() {
+export function Cases({ note = "Prints do Gerenciador de Anúncios da Meta, em contas operadas pela WAVY. Toque em um print para ampliar." }: { note?: string }) {
   return (
     <div className="cases">
       <ul className="cases-grid">
@@ -32,7 +32,7 @@ export function Cases() {
           </li>
         ))}
       </ul>
-      <p className="cases-note">Prints do Gerenciador de Anúncios da Meta, em contas operadas pela WAVY. Toque em um print para ampliar.</p>
+      <p className="cases-note">{note}</p>
     </div>
   );
 }
