@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "Aula ao vivo e gratuita, quinta-feira às 12h: aprenda o Método ROAS Previsível, que une tráfego, CRM e atendimento com IA para você saber quanto cada anúncio devolve.",
 };
 
-function Join({ children = "Entrar no grupo do WhatsApp" }: { children?: React.ReactNode }) {
+function Join({ children = "Quero assistir à aula gratuita" }: { children?: React.ReactNode }) {
   return <a className="wa-button" href={EVENT.groupUrl} target="_blank" rel="noreferrer"><BrandIcon name="whatsapp"/><span>{children}</span></a>;
 }
 
@@ -67,9 +67,9 @@ function GoogleAds() {
 
 export default function WebinarPage() {
   return <main className="lv" id="top">
-    <IslandHeader home="/" links={navLinks} cta={{ href: EVENT.groupUrl, label: "Entrar no grupo", external: true, whatsapp: true }} />
+    <IslandHeader home="/" links={navLinks} cta={{ href: EVENT.groupUrl, label: "Assistir à aula", external: true, whatsapp: true }} />
 
-    <section className="lv-hero"><div className="lv-wrap lv-hero-grid"><div><span className="lv-tag live"><i/>Aula gratuita · ao vivo · quinta, 12h</span><h1>Aprenda o <mark>Método ROAS Previsível</mark>, que une o seu tráfego, CRM e atendimento com IA e pode levar o seu negócio a <em>até 10x de ROAS.</em></h1><p>Em uma aula ao vivo, eu desenho o método que liga cada venda ao anúncio que a trouxe, para você saber quanto cada real investido devolve.</p><Join/><small>Gratuito. Você recebe o link da aula pelo grupo.</small></div><figure className="lv-duo"><div className="lv-board"><img src="/assets/mapa-metodo.webp" width={1200} height={723} decoding="async" alt="Visão geral do quadro da aula, com nove blocos desenhados à mão."/></div><img className="lv-person" src="/assets/rael-aula.webp" width={720} height={743} decoding="async" fetchPriority="high" alt="Rael Vieira sorrindo, de camiseta preta"/><figcaption><b>Rael Vieira</b>Estrategista digital da WAVY</figcaption><div className="lv-chip meta" aria-hidden="true"><i><BrandIcon name="meta"/></i><div><small>META ADS</small><b>Você atingiu ROAS de 10,5x</b><em>↗ nesta campanha</em></div></div><div className="lv-chip google" aria-hidden="true"><i><GoogleAds/></i><div><small>GOOGLE ADS</small><b>120 novos leads pelo site</b><em>↗ nos últimos 30 dias</em></div></div></figure></div></section>
+    <section className="lv-hero"><div className="lv-wrap lv-hero-grid"><div><span className="lv-tag live"><i/>Aula gratuita · ao vivo · quinta, 12h</span><h1>Aprenda o <mark>Método ROAS Previsível</mark>, que une o seu tráfego, CRM e atendimento com IA e pode levar o seu negócio a <em>até 10x de ROAS.</em></h1><p>Em uma aula ao vivo, eu desenho o método que liga cada venda ao anúncio que a trouxe, para você saber quanto cada real investido devolve.</p><Join/><small>Você entra no grupo do WhatsApp e recebe o link da aula por lá.</small></div><figure className="lv-duo"><div className="lv-board"><img src="/assets/mapa-metodo.webp" width={1200} height={723} decoding="async" alt="Visão geral do quadro da aula, com nove blocos desenhados à mão."/></div><img className="lv-person" src="/assets/rael-aula.webp" width={720} height={743} decoding="async" fetchPriority="high" alt="Rael Vieira sorrindo, de camiseta preta"/><figcaption><b>Rael Vieira</b>Estrategista digital da WAVY</figcaption><div className="lv-chip meta" aria-hidden="true"><i><BrandIcon name="meta"/></i><div><small>META ADS</small><b>Você atingiu ROAS de 10,5x</b><em>↗ nesta campanha</em></div></div><div className="lv-chip google" aria-hidden="true"><i><GoogleAds/></i><div><small>GOOGLE ADS</small><b>120 novos leads pelo site</b><em>↗ nos últimos 30 dias</em></div></div></figure></div></section>
 
     <section className="lv-sec light"><div className="lv-wrap"><span className="lv-tag">Se identificou?</span><h2>Você investe em tráfego e ainda <em>não sabe quanto $$ volta?</em></h2><ul className="lv-pains">{pains.map(t=><li key={t}>“{t}”</li>)}</ul><p className="lv-line">Tudo isso tem a mesma causa, que é a falta de rastreabilidade.</p></div></section>
 
