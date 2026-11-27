@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 function Join({ children = "Participar da aula gratuita" }: { children?: React.ReactNode }) {
-  return <a className="wa-button" href={EVENT.groupUrl} target="_blank" rel="noreferrer"><BrandIcon name="whatsapp"/><span>{children}</span></a>;
+  return <a className="wa-button" href={EVENT.groupUrl} target="_blank" rel="noreferrer"><span>{children}</span></a>;
 }
 
 const pains = [
