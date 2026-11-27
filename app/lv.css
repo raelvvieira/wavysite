@@ -127,7 +127,7 @@
 @media(max-width:560px){.lv-flow{grid-template-columns:1fr;gap:10px}.fl-v{height:112px}.fl-kb>b{top:56px}}
 @media(prefers-reduced-motion:reduce){.lv-flow li,.lv-flow *,.lv-loop i:before{animation:none!important}}
 
-/* Botões de ação da aula: verde um pouco mais fechado para o texto branco ter leitura, sem ícone. */
-.lv .wa-button{padding:0 32px;background:#16a34a;color:#fff;box-shadow:0 14px 40px rgba(22,163,74,.35),inset 0 1px 0 rgba(255,255,255,.25)}
-.lv .wa-button:hover{background:#19b354}
-.lv .island-cta.wa,.lv .island-menu>div .island-menu-cta.wa{background:#16a34a;color:#fff}
+/* Botões de ação da aula: verde do WhatsApp, texto branco em peso forte com sombra leve para leitura, sem ícone. */
+.lv .wa-button{padding:0 32px;background:#25d366;color:#fff;font-weight:800;text-shadow:0 1px 2px rgba(0,70,25,.45);box-shadow:0 14px 40px rgba(37,211,102,.4),inset 0 1px 0 rgba(255,255,255,.35)}
+.lv .wa-button:hover{background:#2fe374}
+.lv .island-cta.wa,.lv .island-menu>div .island-menu-cta.wa{background:#25d366;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,70,25,.45)}
